@@ -29,7 +29,7 @@
     "install-client": "cd client && npm install",
     "heroku-postbuild": "npm run install-client && npm run build",
     "start": "concurrently --kill-others-on-fail \"npm run start-server\" \"npm run start --prefix client\"",
-    "dev": "npm run lint && tsc && npm start"
+    "dev": "npm run lint && npm run build && npm start"
   },
   "repository": {
     "type": "git",

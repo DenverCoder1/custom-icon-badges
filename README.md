@@ -8,15 +8,14 @@ Allows users to more easily use their own icons and logos to [shields.io badges]
 
 This is still a work in progress. I plan to create a demo site to simplify the process.
 
-- [How to use](#how-to-use)
-- [Existing logos](#existing-logos)
-- [Adding a new logo](#adding-a-new-logo)
+- [⚡ How to use](#-how-to-use)
+- [🖼️ Existing logos](#️-existing-logos)
+- [➕ Adding a new logo](#-adding-a-new-logo)
 	- [Parameters](#parameters)
 	- [Example request body](#example-request-body)
-- [Deploying it on your own](#deploying-it-on-your-own)
-	- [Deploy to Heroku](#deploy-to-heroku)
+- [📤 Deploying it on your own](#-deploying-it-on-your-own)
 
-## How to use
+## ⚡ How to use
 
 1. Get a badge URL from [shields.io](https://shields.io/).
 
@@ -32,7 +31,7 @@ Preview:
 
 ![img](https://user-images.githubusercontent.com/20955511/126047615-7f47d37f-30af-4feb-b29c-9498422d9c93.png)
 
-## Existing logos
+## 🖼️ Existing logos
 
 The following are examples of existing logos that are already available.
 
@@ -46,7 +45,7 @@ The following are examples of existing logos that are already available.
 | `pr`     | ![img](https://custom-icon-badges.herokuapp.com/badge/Pull%20Request-purple.svg?logo=pr) |
 
 
-## Adding a new logo
+## ➕ Adding a new logo
 
 Send a POST request to <https://custom-icon-badges.herokuapp.com/> with a JSON body including `slug`, `type`, and `data`.
 
@@ -68,7 +67,7 @@ You can preview how the icon will look by following the [custom logo example](ht
 }
 ```
 
-## Deploying it on your own
+## 📤 Deploying it on your own
 
 If you can, it is preferable to host the files on your own server.
 

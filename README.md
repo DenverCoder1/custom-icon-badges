@@ -1,5 +1,9 @@
 # Custom Icon Badges
 
+![stars](https://custom-icon-badges.herokuapp.com/github/stars/DenverCoder1/custom-icon-badges?logo=star)
+![issues](https://custom-icon-badges.herokuapp.com/github/issues-raw/DenverCoder1/custom-icon-badges?logo=issue)
+![license](https://custom-icon-badges.herokuapp.com/github/license/denvercoder1/custom-icon-badges?logo=repo)
+
 Allows users to more easily use their own icons and logos to [shields.io badges](https://github.com/badges/shields).
 
 This is still a work in progress. I plan to create a demo site to simplify the process.

@@ -16,7 +16,7 @@ https://<base url>/badge/play-station-blue.svg?logo=controller&logoColor=white
 
 Preview:
 
-https://user-images.githubusercontent.com/20955511/126047615-7f47d37f-30af-4feb-b29c-9498422d9c93.png
+![preview](https://user-images.githubusercontent.com/20955511/126047615-7f47d37f-30af-4feb-b29c-9498422d9c93.png)
 
 # Adding a new logo
 

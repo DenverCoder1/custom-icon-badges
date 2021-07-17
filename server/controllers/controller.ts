@@ -23,7 +23,7 @@ async function getBadge(req: Request, res: Response) {
   // build url using request params and query
   const params = Object.values(req.params).join("/");
   const query = Object.keys(newQuery).map(key => `${key}=${encodeURIComponent(req.query[key] as string)}`).join("&");
-  const url = `https://img.shields.io/badge/${params}?${query}`;
+  const url = `https://img.shields.io/${params}?${query}`;
   // get svg from url with axios
   const svg = await axios.get(url);
   // send svg with 200 response

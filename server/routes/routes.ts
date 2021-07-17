@@ -3,7 +3,7 @@ import controller from "../controllers/controller";
 
 const routes = express.Router();
 
-routes.get("/badge/*", controller.getBadge);
+routes.get("/*", controller.getBadge);
 
 routes.post("/", controller.postIcon);
 

@@ -5,10 +5,11 @@ Allows users to more easily use their own icons and logos to [shields.io badges]
 This is still a work in progress. I plan to create a demo site to simplify the process.
 
 - [How to use](#how-to-use)
+- [Existing logos](#existing-logos)
 - [Adding a new logo](#adding-a-new-logo)
 	- [Parameters](#parameters)
 	- [Example request body](#example-request-body)
-- [📤 Deploying it on your own](#-deploying-it-on-your-own)
+- [Deploying it on your own](#deploying-it-on-your-own)
 	- [Deploy to Heroku](#deploy-to-heroku)
 
 ## How to use
@@ -20,12 +21,26 @@ This is still a work in progress. I plan to create a demo site to simplify the p
 3. Use any available slug as the logo query parameter.
 
 ```md
-https://custom-icon-badges.herokuapp.com/badge/play-station-blue.svg?logo=controller&logoColor=white
+https://custom-icon-badges.herokuapp.com/badge/play-station-blue.svg?logo=controller
 ```
 
 Preview:
 
-![preview](https://user-images.githubusercontent.com/20955511/126047615-7f47d37f-30af-4feb-b29c-9498422d9c93.png)
+![img](https://user-images.githubusercontent.com/20955511/126047615-7f47d37f-30af-4feb-b29c-9498422d9c93.png)
+
+## Existing logos
+
+The following are examples of existing logos that are already available.
+
+| Slug     | Example                                                                                                  |
+| -------- | -------------------------------------------------------------------------------------------------------- |
+| `issue`  | ![img](https://custom-icon-badges.herokuapp.com/badge/Issue-E61B23.svg?logo=issue)       |
+| `fork`   | ![img](https://custom-icon-badges.herokuapp.com/badge/Fork-orange.svg?logo=fork)         |
+| `star`   | ![img](https://custom-icon-badges.herokuapp.com/badge/Star-yellow.svg?logo=star)         |
+| `commit` | ![img](https://custom-icon-badges.herokuapp.com/badge/Commit-green.svg?logo=commit)     |
+| `repo`   | ![img](https://custom-icon-badges.herokuapp.com/badge/Repo-blue.svg?logo=repo)         |
+| `pr`     | ![img](https://custom-icon-badges.herokuapp.com/badge/Pull%20Request-purple.svg?logo=pr) |
+
 
 ## Adding a new logo
 
@@ -49,7 +64,7 @@ You can preview how the icon will look by following the [custom logo example](ht
 }
 ```
 
-## 📤 Deploying it on your own
+## Deploying it on your own
 
 If you can, it is preferable to host the files on your own server.
 

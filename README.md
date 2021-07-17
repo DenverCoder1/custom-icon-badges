@@ -74,7 +74,8 @@ If you can, it is preferable to host the files on your own server.
 
 Doing this can lead to better uptime and more control over customization (you can modify the code for your usage).
 
-### Deploy to Heroku
+<details>
+  <summary>Deploy to Heroku</summary>
 
   1. Sign in to **Heroku** or create a new account at <https://heroku.com>
   2. Click the Deploy button below
@@ -92,3 +93,5 @@ Doing this can lead to better uptime and more control over customization (you ca
 ![image](https://user-images.githubusercontent.com/20955511/126048656-6525abba-20e0-441c-ad8d-f9bec8eb73d6.png)
 
   7. Scroll down to the **Domains** section to find the URL you will use in place of `custom-icon-badges.herokuapp.com`
+	
+</details>

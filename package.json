@@ -24,7 +24,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start-server": "tsc && NODE_OPTIONS='--experimental-specifier-resolution=node --require dotenv/config' node dist/index.js",
+    "lint": "tslint --project . --fix",
+    "start-server": "npm run lint && tsc && NODE_OPTIONS='--experimental-specifier-resolution=node --require dotenv/config' node dist/index.js",
     "build": "cd client && npm run build",
     "install-client": "cd client && npm install",
     "heroku-postbuild": "npm run install-client && npm run build",

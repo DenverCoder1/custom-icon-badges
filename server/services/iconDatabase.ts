@@ -20,7 +20,7 @@ async function insertIcon(slug: string, type: string, data: string): Promise<{ s
   // make all slugs lowercase
   slug = slug.toLowerCase();
   // create item
-  const item = { slug, type, data }
+  const item = { slug, type, data };
   // insert item
   await icons.insert(item);
   // return inserted item
@@ -30,6 +30,6 @@ async function insertIcon(slug: string, type: string, data: string): Promise<{ s
 const defaultExport = {
   checkSlugExists,
   insertIcon,
-}
+};
 
 export default defaultExport;

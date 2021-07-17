@@ -1,5 +1,5 @@
-import axios from 'axios';
-import { Request, Response } from 'express';
+import axios from "axios";
+import { Request, Response } from "express";
 import iconDatabase from "../services/iconDatabase";
 
 async function getBadge(req: Request, res: Response) {
@@ -18,7 +18,7 @@ async function getBadge(req: Request, res: Response) {
     return;
   }
   // replace logo slug parameter with data url
-  const newQuery = req.query
+  const newQuery = req.query;
   newQuery["logo"] = `data:image/${item.type};base64,${item.data}`;
   // build url using request params and query
   const params = Object.values(req.params).join("/");
@@ -31,7 +31,7 @@ async function getBadge(req: Request, res: Response) {
 }
 
 async function postIcon(req: Request, res: Response) {
-  let { slug, type, data } = req.body;
+  const { slug, type, data } = req.body;
   if (!slug || !type || !data) {
     res.status(400).json({ message: "Bad request.", body: { slug, type, data } });
     return;
@@ -62,6 +62,6 @@ async function postIcon(req: Request, res: Response) {
 const defaultExport = {
   getBadge,
   postIcon
-}
+};
 
 export default defaultExport;

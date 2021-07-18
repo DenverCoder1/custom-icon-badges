@@ -12,10 +12,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Install modules
-      run: npm install
-    - name: Run CI
-      run: npm ci
+      run: yarn && yarn install-client
     - name: Run build
-      run: npm run build
-    - name: Run test
-      run: npm test
+      run: yarn build
+    - name: Run tests
+      run: yarn test

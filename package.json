@@ -12,7 +12,6 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "monk": "^7.3.4",
-    "nanoid": "^3.1.23",
     "typescript": "^4.3.5",
     "web-vitals": "^2.1.0"
   },
@@ -21,15 +20,9 @@
     "@typescript-eslint/eslint-plugin": "^4.28.3",
     "@typescript-eslint/parser": "^4.28.3",
     "babel-eslint": "9.x",
-    "eslint": "5.x",
-    "eslint-config-react-app": "^6.0.0",
-    "eslint-plugin-flowtype": "2.x",
-    "eslint-plugin-import": "2.x",
-    "eslint-plugin-jest": "^24.3.6",
-    "eslint-plugin-jsx-a11y": "6.x",
-    "eslint-plugin-react": "7.x",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "eslint-plugin-testing-library": "^4.9.0"
+    "eslint": "^7.31.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4"
   },
   "type": "module",
   "scripts": {
@@ -43,7 +36,9 @@
     "test": "yarn test-server && yarn test-client",
     "test-server": "jest",
     "test-client": "cd client && yarn test",
-    "lint": "yarn eslint . --ext .ts,.tsx"
+    "lint": "yarn lint-server && yarn lint-client",
+    "lint-server": "yarn eslint . --ext .ts,.tsx --fix",
+    "lint-client": "cd client && yarn lint"
   },
   "repository": {
     "type": "git",

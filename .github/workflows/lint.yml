@@ -14,4 +14,4 @@ jobs:
     - name: Install modules
       run: yarn
     - name: Run lint script
-      run: yarn lint
+      run: npm run lint

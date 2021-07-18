@@ -15,5 +15,7 @@ jobs:
       run: yarn && yarn install-client
     - name: Run build
       run: yarn build
+      env:
+        SKIP_PREFLIGHT_CHECK: true
     - name: Run tests
       run: yarn test

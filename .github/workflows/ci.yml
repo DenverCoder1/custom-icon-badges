@@ -12,10 +12,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Install modules
-      run: yarn
+      run: npm install
     - name: Run CI
       run: npm ci
     - name: Run build
-      run: yarn build
+      run: npm run build
     - name: Run test
-      run: yarn test
+      run: npm test

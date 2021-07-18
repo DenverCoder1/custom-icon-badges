@@ -1,14 +1,19 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-          Coming soon!
-        </p>
-        <a className="App-link" href="https://github.com/DenverCoder1/custom-icon-badges">GitHub</a>
+        <h1>Custom Icon Badges</h1>
+        <a
+          className="App-link"
+          href="https://github.com/DenverCoder1/custom-icon-badges"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
       </header>
     </div>
   );

@@ -10,9 +10,11 @@ This is still a work in progress. I plan to create a demo site to simplify the p
 
 - [⚡ How to use](#-how-to-use)
 - [🖼️ Existing logos](#️-existing-logos)
+  - [Octicons](#octicons)
+  - [Miscelanious](#miscelanious)
 - [➕ Adding a new logo](#-adding-a-new-logo)
-	- [Parameters](#parameters)
-	- [Example request body](#example-request-body)
+  - [Parameters](#parameters)
+  - [Example request body](#example-request-body)
 - [📤 Deploying it on your own](#-deploying-it-on-your-own)
 
 ## ⚡ How to use
@@ -33,16 +35,25 @@ Preview:
 
 ## 🖼️ Existing logos
 
-The following are examples of existing logos that are already available.
+The following are examples of existing icons and logos that are already available.
 
-| Slug     | Example                                                                                                  |
-| -------- | -------------------------------------------------------------------------------------------------------- |
-| `issue`  | ![img](https://custom-icon-badges.herokuapp.com/badge/Issue-E61B23.svg?logo=issue)       |
+### Octicons
+
+| Slug     | Example                                                                                  |
+| -------- | ---------------------------------------------------------------------------------------- |
+| `issue`  | ![img](https://custom-icon-badges.herokuapp.com/badge/Issue-red.svg?logo=issue)          |
 | `fork`   | ![img](https://custom-icon-badges.herokuapp.com/badge/Fork-orange.svg?logo=fork)         |
 | `star`   | ![img](https://custom-icon-badges.herokuapp.com/badge/Star-yellow.svg?logo=star)         |
-| `commit` | ![img](https://custom-icon-badges.herokuapp.com/badge/Commit-green.svg?logo=commit)     |
-| `repo`   | ![img](https://custom-icon-badges.herokuapp.com/badge/Repo-blue.svg?logo=repo)         |
+| `commit` | ![img](https://custom-icon-badges.herokuapp.com/badge/Commit-green.svg?logo=commit)      |
+| `repo`   | ![img](https://custom-icon-badges.herokuapp.com/badge/Repo-blue.svg?logo=repo)           |
 | `pr`     | ![img](https://custom-icon-badges.herokuapp.com/badge/Pull%20Request-purple.svg?logo=pr) |
+
+### Miscelanious
+
+| Slug         | Example                                                                                    |
+| ------------ | ------------------------------------------------------------------------------------------ |
+| `controller` | ![img](https://custom-icon-badges.herokuapp.com/badge/Controller-blue.svg?logo=controller) |
+| `swi-prolog` | ![img](https://custom-icon-badges.herokuapp.com/badge/Prolog-E61B23.svg?logo=swi-prolog)   |
 
 
 ## ➕ Adding a new logo

@@ -11,8 +11,8 @@
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "eslint-config-react-app": "^6.0.0",
-    "eslint-plugin-flowtype": "^5.8.0",
-    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-flowtype": "2.x",
+    "eslint-plugin-import": "2.x",
     "eslint-plugin-testing-library": "^4.9.0",
     "express": "^4.17.1",
     "monk": "^7.3.4",
@@ -24,8 +24,11 @@
     "@types/express": "^4.17.13",
     "@typescript-eslint/eslint-plugin": "^4.28.3",
     "@typescript-eslint/parser": "^4.28.3",
-    "eslint": "^7.31.0",
-    "eslint-plugin-jest": "^24.3.6"
+    "babel-eslint": "9.x",
+    "eslint": "5.x",
+    "eslint-plugin-jest": "^24.3.6",
+    "eslint-plugin-jsx-a11y": "6.x",
+    "eslint-plugin-react": "7.x"
   },
   "type": "module",
   "scripts": {

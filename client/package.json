@@ -31,7 +31,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "yarn eslint . --ext .ts,.tsx --fix"
+    "lint": "yarn eslint . --ext .ts,.tsx",
+    "fix": "yarn eslint . --ext .ts,.tsx --fix"
   },
   "browserslist": {
     "production": [

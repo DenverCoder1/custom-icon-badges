@@ -37,8 +37,11 @@
     "test-server": "jest",
     "test-client": "cd client && yarn test",
     "lint": "yarn lint-server && yarn lint-client",
-    "lint-server": "yarn eslint . --ext .ts,.tsx --fix",
-    "lint-client": "cd client && yarn lint"
+    "lint-server": "yarn eslint . --ext .ts,.tsx",
+    "lint-client": "cd client && yarn lint",
+    "fix": "yarn fix-server && yarn fix-client",
+    "fix-server": "yarn eslint . --ext .ts,.tsx --fix",
+    "fix-client": "cd client && yarn fix"
   },
   "repository": {
     "type": "git",

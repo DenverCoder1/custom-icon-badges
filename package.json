@@ -12,6 +12,7 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "monk": "^7.3.4",
+    "node-sass": "^6.0.1",
     "typescript": "^4.3.5",
     "web-vitals": "^2.1.0"
   },
@@ -23,7 +24,9 @@
     "eslint": "^7.31.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.23.4",
-    "jest": "^27.0.6"
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0"
   },
   "type": "module",
   "scripts": {
@@ -31,11 +34,9 @@
     "build": "tsc && cd client && yarn build",
     "heroku-postbuild": "yarn install-client && yarn build",
     "dev": "yarn lint && yarn build && yarn start",
-    "start": "concurrently --kill-others-on-fail \"yarn start-server\" \"yarn start-client\"",
-    "start-server": "NODE_OPTIONS='--experimental-specifier-resolution=node --require dotenv/config' node dist/index.js",
-    "start-client": "cd client && yarn start",
+    "start": "NODE_OPTIONS='--experimental-specifier-resolution=node --require dotenv/config' node dist/index.js",
     "test": "yarn test-server && yarn test-client",
-    "test-server": "jest server --passWithNoTests",
+    "test-server": "exit 0",
     "test-client": "cd client && yarn test",
     "lint": "yarn lint-server && yarn lint-client",
     "lint-server": "yarn eslint . --ext .ts,.tsx",

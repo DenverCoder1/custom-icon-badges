@@ -95,13 +95,11 @@ Doing this can lead to better uptime and more control over customization (you ca
       <img src="https://www.herokucdn.com/deploy/button.svg" title="Deploy to Heroku" alt="Deploy"/></a>
   </p>
 
-  3. On the page that comes up, click **"Deploy App"** at the end of the form
-  4. Once the app is deployed, click **"Manage App"** to go to the dashboard
-  5. Visit the **"Settings"** tab and click **"Reveal Config Vars"**
-  6. Add the url of a Mongo database as the `DB_URL` config var. The database should have a collection called `icons`. See [getting started](https://docs.atlas.mongodb.com/getting-started/) for more info on setting up a free Mongo Atlas database.
+  3. Add the url of a Mongo database as the `DB_URL` config var. The database should have a collection called `icons`. See [getting started](https://docs.atlas.mongodb.com/getting-started/) for more info on setting up a free Mongo Atlas database.
 
-![image](https://user-images.githubusercontent.com/20955511/126048656-6525abba-20e0-441c-ad8d-f9bec8eb73d6.png)
+![image](https://user-images.githubusercontent.com/20955511/126066250-108fc119-4bc3-4ba0-9b07-0c7402c5790e.png)
 
-  7. Scroll down to the **Domains** section to find the URL you will use in place of `custom-icon-badges.herokuapp.com`
+  4. Click **"Deploy App"** at the end of the form
+  5. Once the app is deployed, you can use `<your-app-name>.herokuapp.com` in place of `custom-icon-badges.herokuapp.com`
 	
 </details>

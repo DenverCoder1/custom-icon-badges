@@ -30,9 +30,9 @@ npm install && npm run install-client
 
 ### Config vars
 
-To work with a database, in a `.env`, include the following:
+To work with a database, add a `.env` file on the root level with the following:
 
-```env
+```bash
 DB_URL=mongodb+srv://<username>:<password>@<cluster>.mongodb.net/<dbname>?retryWrites=true&w=majority&tls=true
 ```
 

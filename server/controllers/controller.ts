@@ -2,7 +2,7 @@ import axios from "axios";
 import { Request, Response } from "express";
 import iconDatabase from "../services/iconDatabase";
 
-async function getBadge(req: Request, res: Response) {
+async function getBadge(req: Request, res: Response): Promise<void> {
   const slug = req.query.logo;
   // check that logo was passed
   if (!slug || typeof slug !== "string") {
@@ -30,7 +30,7 @@ async function getBadge(req: Request, res: Response) {
   res.status(200).contentType("image/svg+xml").send(svg.data);
 }
 
-async function postIcon(req: Request, res: Response) {
+async function postIcon(req: Request, res: Response): Promise<void> {
   const { slug, type, data } = req.body;
   if (!slug || !type || !data) {
     res.status(400).json({ message: "Bad request.", body: { slug, type, data } });

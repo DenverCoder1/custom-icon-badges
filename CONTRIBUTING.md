@@ -25,7 +25,7 @@ cd custom-icon-badges
 ### Installing dependencies
 
 ```bash
-npm install && npm run install-client
+yarn && yarn install-client
 ```
 
 ### Config vars
@@ -49,7 +49,7 @@ yarn dev
 ### Run the app locally (without building)
 
 ```bash
-npm start
+yarn start
 ```
 
 Use <http://localhost:5000/> as the base URL to access the server-side routes

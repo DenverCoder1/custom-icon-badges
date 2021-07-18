@@ -35,7 +35,7 @@
     "start-server": "NODE_OPTIONS='--experimental-specifier-resolution=node --require dotenv/config' node dist/index.js",
     "start-client": "cd client && yarn start",
     "test": "yarn test-server && yarn test-client",
-    "test-server": "jest",
+    "test-server": "jest server --passWithNoTests",
     "test-client": "cd client && yarn test",
     "lint": "yarn lint-server && yarn lint-client",
     "lint-server": "yarn eslint . --ext .ts,.tsx",

@@ -14,7 +14,7 @@ jobs:
     - name: Install modules
       run: yarn
     - name: Run CI
-      run: yarn ci
+      run: npm ci
     - name: Run build
       run: yarn build
     - name: Run test

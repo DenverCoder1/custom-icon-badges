@@ -1,8 +1,9 @@
 # Custom Icon Badges
 
-![stars](https://custom-icon-badges.herokuapp.com/github/stars/DenverCoder1/custom-icon-badges?logo=star)
-![issues](https://custom-icon-badges.herokuapp.com/github/issues-raw/DenverCoder1/custom-icon-badges?logo=issue)
-![license](https://custom-icon-badges.herokuapp.com/github/license/denvercoder1/custom-icon-badges?logo=repo)
+![stars](https://custom-icon-badges.herokuapp.com/github/stars/DenverCoder1/custom-icon-badges?logo=star "stars")
+![issues](https://custom-icon-badges.herokuapp.com/github/issues-raw/DenverCoder1/custom-icon-badges?logo=issue "issues")
+![license](https://custom-icon-badges.herokuapp.com/github/license/denvercoder1/custom-icon-badges?logo=repo "license MIT")
+[![discord](https://img.shields.io/discord/819650821314052106?color=7289DA&logo=discord&logoColor=white)](https://discord.gg/fPrdqh3Zfu "Dev Pro Tips Discussion & Support Server")
 
 Allows users to more easily use their own icons and logos to [shields.io badges](https://github.com/badges/shields).
 
@@ -13,6 +14,10 @@ This is still a work in progress. I plan to create a demo site to simplify the p
   - [Octicons](#octicons)
   - [Miscelanious](#miscelanious)
 - [➕ Adding a new logo](#-adding-a-new-logo)
+- [🤗 Contributing](#-contributing)
+- [📤 Deploying it on your own](#-deploying-it-on-your-own)
+- [💬 Questions?](#-questions)
+- [🤩 Support](#-support)
 
 ## ⚡ How to use
 
@@ -66,11 +71,15 @@ Upload new icons using the demo site!
 
 [![image](https://user-images.githubusercontent.com/20955511/128404656-30af9c39-39a4-4ac8-a4b0-2a077806a94c.png)](https://custom-icon-badges.herokuapp.com)
 
-<!-- ## 📤 Deploying it on your own
+## 🤗 Contributing
 
-If you can, it is preferable to host the files on your own server.
+We welcome contributions!
 
-Doing this can lead to better uptime and more control over customization (you can modify the code for your usage).
+Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+
+## 📤 Deploying it on your own
+
+Deploying on your own is optional. See the steps below.
 
 <details>
   <summary>Deploy to Heroku</summary>
@@ -90,4 +99,25 @@ Doing this can lead to better uptime and more control over customization (you ca
   4. Click **"Deploy App"** at the end of the form
   5. Once the app is deployed, you can use `<your-app-name>.herokuapp.com` in place of `custom-icon-badges.herokuapp.com`
 	
-</details> -->
+</details>
+
+## 💬 Questions?
+
+Feel free to [open an issue](http://github.com/DenverCoder1/custom-icon-badges/issues/new).
+
+## 🤩 Support
+
+💙 If you like this project, give it a ⭐ and share it with friends!
+
+<p align="left">
+  <a href="https://www.youtube.com/channel/UCipSxT7a3rn81vGLw9lqRkg?sub_confirmation=1"><img alt="Youtube" title="Youtube" src="https://img.shields.io/badge/-Subscribe-red?style=for-the-badge&logo=youtube&logoColor=white"/></a>
+  <a href="https://github.com/sponsors/DenverCoder1"><img alt="Sponsor with Github" title="Sponsor with Github" src="https://img.shields.io/badge/-Sponsor-ea4aaa?style=for-the-badge&logo=github&logoColor=white"/></a>
+</p>
+
+[☕ Buy me a coffee](https://ko-fi.com/jlawrence)
+
+---
+
+Made with ❤️ and TypeScript
+
+<a href="https://heroku.com/"><img alt="Powered by Heroku" title="Powered by Heroku" src="https://img.shields.io/badge/-Powered%20by%20Heroku-6567a5?style=for-the-badge&logo=heroku&logoColor=white"/></a>

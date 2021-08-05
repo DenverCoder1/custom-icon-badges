@@ -7,7 +7,8 @@ module.exports = {
   },
   transformIgnorePatterns: [
     // allow transformation
-    "node_modules/(?!bootstrap)"
+    "node_modules/(?!bootstrap)",
+    "node_modules/(?!react-bootstrap)"
   ],
   globals: {
     "ts-jest": {

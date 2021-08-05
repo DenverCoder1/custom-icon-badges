@@ -1,7 +1,7 @@
 import React, { ChangeEvent } from 'react';
 import Form from 'react-bootstrap/esm/Form';
 
-class FileUpload extends React.Component<{ label: string, onFileChange: (fileName: string, dataUrl: string) => void }> {
+class FileUpload extends React.Component<{ label: string, onFileChange: (fileName: string, dataUrl: string) => void, setMessage: (type: string, text: string) => void }> {
 
 	handleChange = (event: ChangeEvent<HTMLInputElement>) => {
 		event.preventDefault();
@@ -12,11 +12,17 @@ class FileUpload extends React.Component<{ label: string, onFileChange: (fileNam
 		if (file) {
 			const reader = new FileReader();
 			reader.addEventListener("load", function () {
-				if (reader.result) {
-					const fileName = file.name;
-					const dataUrl = reader.result.toString();
-					props.onFileChange(fileName, dataUrl);
+				if (!reader.result) return;
+				// files must be less than 8kb
+				if (file.size > 8 * 1024) {
+					props.setMessage("danger", "File must be less than 8kb");
+					return;
 				}
+				// tell form that file is uploaded
+				const fileName = file.name;
+				const dataUrl = reader.result.toString();
+				props.onFileChange(fileName, dataUrl);
+
 			}, false);
 			reader.readAsDataURL(file);
 		}

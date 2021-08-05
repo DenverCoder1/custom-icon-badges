@@ -2,7 +2,6 @@
   "name": "custom-icon-badges-client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:5000",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^12.0.0",
@@ -11,8 +10,11 @@
     "@types/node": "^16.4.12",
     "@types/react": "^17.0.15",
     "@types/react-dom": "^17.0.0",
+    "bootstrap": "5.0.2",
     "react": "^17.0.2",
+    "react-bootstrap": "^2.0.0-beta.4",
     "react-dom": "^17.0.2",
+    "react-github-btn": "^1.2.0",
     "react-scripts": "^4.0.3",
     "typescript": "^4.1.2",
     "web-vitals": "^2.1.0"
@@ -31,7 +33,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --transformIgnorePatterns 'node_modules/(?!(react-github-btn|react-bootstrap))'",
     "eject": "react-scripts eject",
     "lint": "yarn eslint . --ext .ts,.tsx",
     "fix": "yarn eslint . --ext .ts,.tsx --fix"

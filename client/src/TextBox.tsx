@@ -1,7 +1,7 @@
 import React, { ChangeEvent } from 'react';
 import Form from 'react-bootstrap/esm/Form';
 
-class TextBox extends React.Component<{ label: string, value: string, onInputChange: (slug: string) => void }> {
+class TextBox extends React.Component<{ label: string, required: boolean | undefined, value: string, onInputChange: (slug: string) => void }> {
   handleChangeEvent = (event: ChangeEvent<HTMLInputElement>) => {
     this.props.onInputChange(event.target.value);
   }
@@ -11,7 +11,7 @@ class TextBox extends React.Component<{ label: string, value: string, onInputCha
       <Form.Label>{this.props.label}</Form.Label>
       <Form.Control type="text"
         value={this.props.value}
-        required={true}
+        required={this.props.required}
         onChange={this.handleChangeEvent} />
     </Form.Group>
   );

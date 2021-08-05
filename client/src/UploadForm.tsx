@@ -78,7 +78,8 @@ class UploadForm extends React.Component {
       <FileUpload label="Upload an image file"
         onFileChange={this.updateFileData} />
       <TextBox label="Pick a slug (name of the logo)"
-        value={this.state.slug} onInputChange={this.updateSlug} />
+        value={this.state.slug} required={true}
+        onInputChange={this.updateSlug} />
       <BadgePreview label="Preview" url={this.state.previewUrl} />
       {this.state.message.text
         ? (

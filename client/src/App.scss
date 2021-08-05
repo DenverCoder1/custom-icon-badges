@@ -1,3 +1,10 @@
+// change the theme
+$theme-colors: (
+  "primary": #20c997
+);
+
+@import "~bootstrap/scss/bootstrap";
+
 .App {
   text-align: center;
 }
@@ -25,7 +32,11 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: $teal;
+}
+
+.App-link:hover {
+  color: #98f3d8;
 }
 
 @keyframes App-logo-spin {

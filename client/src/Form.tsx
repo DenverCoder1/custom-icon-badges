@@ -1,4 +1,7 @@
 import React, { ChangeEvent } from 'react';
+import Alert from 'react-bootstrap/esm/Alert';
+import Button from 'react-bootstrap/esm/Button';
+import BadgePreview from './BadgePreview';
 import FileUpload from "./FileUpload";
 import TextBox from './TextBox';
 
@@ -60,31 +63,19 @@ class Form extends React.Component {
   }
 
   render = () => (
-    <form onSubmit={this.handleSubmit}>
-      <label>
-        Select an image
-        <FileUpload onFileChange={this.updateFileData} />
-      </label>
-      <label>
-        Pick a slug (name of the logo)
-        <TextBox value={this.state.slug} onInputChange={this.updateSlug} />
-      </label>
+    <form onSubmit={this.handleSubmit} className="Form">
+      <FileUpload label="Upload an image file"
+        onFileChange={this.updateFileData} />
+      <TextBox label="Pick a slug (name of the logo)"
+        value={this.state.slug}
+        onInputChange={this.updateSlug} />
       {this.state.previewUrl
-        ? (
-          <div>
-            <h3>Preview</h3>
-            <img src={this.state.previewUrl} alt="badge preview" />
-          </div>
-        )
+        ? <BadgePreview label="Preview" url={this.state.previewUrl} />
         : null}
       {this.state.message
-        ? (
-          <div>
-            {this.state.message}
-          </div>
-        )
+        ? <Alert variant="success">{this.state.message}</Alert>
         : null}
-      <button type="submit">Submit</button>
+      <Button type="submit">Submit</Button>
     </form>
   );
 }

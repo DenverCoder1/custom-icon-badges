@@ -1,16 +1,18 @@
 import React, { ChangeEvent } from 'react';
+import Form from 'react-bootstrap/esm/Form';
 
-class TextBox extends React.Component<{ value: string, onInputChange: (slug: string) => void }> {
+class TextBox extends React.Component<{ label: string, value: string, onInputChange: (slug: string) => void }> {
   handleChangeEvent = (event: ChangeEvent<HTMLInputElement>) => {
     this.props.onInputChange(event.target.value);
   }
 
   render = () => (
-    <div>
-      <input type="text"
+    <Form.Group className="mb-3">
+      <Form.Label>{this.props.label}</Form.Label>
+      <Form.Control type="text"
         value={this.props.value}
         onChange={this.handleChangeEvent} />
-    </div>
+    </Form.Group>
   );
 }
 

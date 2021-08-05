@@ -35,6 +35,7 @@
     "heroku-postbuild": "yarn install-client && yarn build",
     "dev": "yarn lint && yarn build && yarn start",
     "start": "NODE_OPTIONS='--experimental-specifier-resolution=node --require dotenv/config' node dist/index.js",
+    "start-client": "cd client && yarn start",
     "test": "yarn test-server && yarn test-client",
     "test-server": "exit 0",
     "test-client": "cd client && yarn test",

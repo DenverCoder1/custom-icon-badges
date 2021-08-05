@@ -1,38 +1,33 @@
 import React, { ChangeEvent } from 'react';
+import Form from 'react-bootstrap/esm/Form';
 
-class FileUpload extends React.Component<{ onFileChange: (fileName: string, dataUrl: string) => void }> {
-
-	state: { file: File | null } = { file: null }
+class FileUpload extends React.Component<{ label: string, onFileChange: (fileName: string, dataUrl: string) => void }> {
 
 	handleChange = (event: ChangeEvent<HTMLInputElement>) => {
 		event.preventDefault();
+		const props = this.props;
 		const target = event.target as HTMLInputElement;
 		if (!target?.files) return;
-		this.setState({ file: target.files[0] });
-	}
-
-	onUploadClicked = async (event: React.MouseEvent) => {
-		event.preventDefault();
-		const that = this;
-		if (this.state.file) {
+		const file = target.files[0];
+		if (file) {
 			const reader = new FileReader();
 			reader.addEventListener("load", function () {
-				if (reader.result && that.state.file) {
-					const fileName = that.state.file.name;
+				if (reader.result) {
+					const fileName = file.name;
 					const dataUrl = reader.result.toString();
-					that.props.onFileChange(fileName, dataUrl);
+					props.onFileChange(fileName, dataUrl);
 				}
 			}, false);
-			reader.readAsDataURL(this.state.file);
+			reader.readAsDataURL(file);
 		}
 	}
 
 	render() {
 		return (
-			<div className="FileUpload">
-				<input type="file" onChange={this.handleChange} />
-				<button onClick={this.onUploadClicked}>Upload</button>
-			</div>
+			<Form.Group controlId="formFile" className="mb-3">
+				<Form.Label>{this.props.label}</Form.Label>
+				<Form.Control type="file" onChange={this.handleChange} />
+			</Form.Group>
 		);
 	}
 }

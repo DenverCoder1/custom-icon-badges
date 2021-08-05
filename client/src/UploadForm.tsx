@@ -1,5 +1,7 @@
 import React, { ChangeEvent } from 'react';
-import { Alert, Button, Form } from 'react-bootstrap';
+import Alert from 'react-bootstrap/esm/Alert';
+import Button from 'react-bootstrap/esm/Button';
+import Form from 'react-bootstrap/esm/Form';
 import BadgePreview from './BadgePreview';
 import FileUpload from "./FileUpload";
 import TextBox from './TextBox';

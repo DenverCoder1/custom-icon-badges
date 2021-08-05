@@ -1,5 +1,5 @@
 import React, { ChangeEvent } from 'react';
-import { Form } from 'react-bootstrap';
+import Form from 'react-bootstrap/esm/Form';
 
 class FileUpload extends React.Component<{ label: string, onFileChange: (fileName: string, dataUrl: string) => void, setMessage: (type: string, text: string) => void }> {
 

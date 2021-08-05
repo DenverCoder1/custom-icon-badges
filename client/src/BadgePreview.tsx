@@ -1,5 +1,6 @@
 import React from 'react';
-import { Card, Form } from 'react-bootstrap';
+import Card from 'react-bootstrap/esm/Card';
+import Form from 'react-bootstrap/esm/Form';
 
 class BadgePreview extends React.Component<{ url: string, label: string }> {
 	render() {

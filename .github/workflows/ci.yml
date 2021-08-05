@@ -18,6 +18,6 @@ jobs:
       env:
         SKIP_PREFLIGHT_CHECK: true
     - name: Run tests
-      run: yarn test --watchAll=false
+      run: yarn test --CI=true
       env:
         SKIP_PREFLIGHT_CHECK: true

@@ -51,6 +51,7 @@ Currently a subset of [Octicons](https://primer.style/octicons/) are supported:
 | `repo`     | ![img](https://custom-icon-badges.herokuapp.com/badge/Repo-blue.svg?logo=repo)           |
 | `pr`       | ![img](https://custom-icon-badges.herokuapp.com/badge/Pull%20Request-purple.svg?logo=pr) |
 | `heart`    | ![img](https://custom-icon-badges.herokuapp.com/badge/Heart-D15E9B.svg?logo=heart)       |
+| `mail`     | ![img](https://custom-icon-badges.herokuapp.com/badge/Mail-E61B23.svg?logo=mail)         |
 
 ### Miscelanious
 

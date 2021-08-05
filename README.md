@@ -39,14 +39,18 @@ The following are examples of existing icons and logos that are already availabl
 
 ### Octicons
 
-| Slug     | Example                                                                                  |
-| -------- | ---------------------------------------------------------------------------------------- |
-| `issue`  | ![img](https://custom-icon-badges.herokuapp.com/badge/Issue-red.svg?logo=issue)          |
-| `fork`   | ![img](https://custom-icon-badges.herokuapp.com/badge/Fork-orange.svg?logo=fork)         |
-| `star`   | ![img](https://custom-icon-badges.herokuapp.com/badge/Star-yellow.svg?logo=star)         |
-| `commit` | ![img](https://custom-icon-badges.herokuapp.com/badge/Commit-green.svg?logo=commit)      |
-| `repo`   | ![img](https://custom-icon-badges.herokuapp.com/badge/Repo-blue.svg?logo=repo)           |
-| `pr`     | ![img](https://custom-icon-badges.herokuapp.com/badge/Pull%20Request-purple.svg?logo=pr) |
+Currently a subset of [Octicons](https://primer.style/octicons/) are supported:
+
+| Slug       | Example                                                                                  |
+| ---------- | ---------------------------------------------------------------------------------------- |
+| `issue`    | ![img](https://custom-icon-badges.herokuapp.com/badge/Issue-red.svg?logo=issue)          |
+| `fork`     | ![img](https://custom-icon-badges.herokuapp.com/badge/Fork-orange.svg?logo=fork)         |
+| `star`     | ![img](https://custom-icon-badges.herokuapp.com/badge/Star-yellow.svg?logo=star)         |
+| `commit`   | ![img](https://custom-icon-badges.herokuapp.com/badge/Commit-green.svg?logo=commit)      |
+| `comments` | ![img](https://custom-icon-badges.herokuapp.com/badge/Comments-teal.svg?logo=comments)   |
+| `repo`     | ![img](https://custom-icon-badges.herokuapp.com/badge/Repo-blue.svg?logo=repo)           |
+| `pr`       | ![img](https://custom-icon-badges.herokuapp.com/badge/Pull%20Request-purple.svg?logo=pr) |
+| `heart`    | ![img](https://custom-icon-badges.herokuapp.com/badge/Heart-D15E9B.svg?logo=heart)       |
 
 ### Miscelanious
 

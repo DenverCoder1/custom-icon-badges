@@ -1,5 +1,5 @@
 import React, { ChangeEvent } from 'react';
-import Form from 'react-bootstrap/esm/Form';
+import { Form } from 'react-bootstrap';
 
 class TextBox extends React.Component<{ label: string, required: boolean | undefined, value: string, onInputChange: (slug: string) => void }> {
   handleChangeEvent = (event: ChangeEvent<HTMLInputElement>) => {

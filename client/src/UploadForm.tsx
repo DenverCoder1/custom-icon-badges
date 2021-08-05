@@ -74,16 +74,15 @@ class UploadForm extends React.Component {
 
   render = () => (
     <Form onSubmit={this.handleSubmit} className="Form">
+      <h3 className="d-flex justify-content-center">Add an icon</h3>
       <FileUpload label="Upload an image file"
         onFileChange={this.updateFileData} />
       <TextBox label="Pick a slug (name of the logo)"
-        value={this.state.slug}
-        onInputChange={this.updateSlug} />
-      {this.state.previewUrl
-        ? <BadgePreview label="Preview" url={this.state.previewUrl} />
-        : null}
+        value={this.state.slug} onInputChange={this.updateSlug} />
+      <BadgePreview label="Preview" url={this.state.previewUrl} />
       {this.state.message.text
         ? (
+          <Alert variant={this.state.message.type || undefined}>
             {this.state.message.text}
           </Alert>
         )

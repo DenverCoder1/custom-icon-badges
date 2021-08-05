@@ -11,6 +11,7 @@ class TextBox extends React.Component<{ label: string, value: string, onInputCha
       <Form.Label>{this.props.label}</Form.Label>
       <Form.Control type="text"
         value={this.props.value}
+        required={true}
         onChange={this.handleChangeEvent} />
     </Form.Group>
   );

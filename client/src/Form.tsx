@@ -17,7 +17,7 @@ class Form extends React.Component {
   }
 
   updateFileData = (fileName: string, dataUrl: string) => {
-    const match = dataUrl.match("data:(.*?);base64,(.*)");
+    const match = dataUrl.match("data:image/(.*?);base64,(.*)");
     if (!match) return;
     this.setState({
       slug: fileName.split(".")[0],

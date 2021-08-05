@@ -1,35 +1,27 @@
 import React, { ChangeEvent } from 'react';
 
-class FileUpload extends React.Component {
-	state: { file: File | null, url: string, data: string } = {
-		file: null,
-		data: "",
-		url: ""
-	}
+class FileUpload extends React.Component<{ onFileChange: (fileName: string, dataUrl: string) => void }> {
+
+	state: { file: File | null } = { file: null }
 
 	handleChange = (event: ChangeEvent<HTMLInputElement>) => {
 		event.preventDefault();
 		const target = event.target as HTMLInputElement;
-		this.setState({
-			file: target?.files ? target.files[0] : null
-		});
-	}
-
-	buildUrl = (dataUrl: string = "", text: string = "Preview", color: string = "%23E61B23"): string => {
-		return `https://img.shields.io/badge/${text}-${color}.svg?logo=${dataUrl}`;
+		if (!target?.files) return;
+		this.setState({ file: target.files[0] });
 	}
 
 	onUploadClicked = async (event: React.MouseEvent) => {
 		event.preventDefault();
 		const that = this;
-		if (this.state.file !== null) {
+		if (this.state.file) {
 			const reader = new FileReader();
 			reader.addEventListener("load", function () {
-				// convert image file to base64 string
-				that.setState({
-					data: reader.result,
-					url: that.buildUrl(reader.result?.toString())
-				});
+				if (reader.result && that.state.file) {
+					const fileName = that.state.file.name;
+					const dataUrl = reader.result.toString();
+					that.props.onFileChange(fileName, dataUrl);
+				}
 			}, false);
 			reader.readAsDataURL(this.state.file);
 		}
@@ -40,10 +32,6 @@ class FileUpload extends React.Component {
 			<div className="FileUpload">
 				<input type="file" onChange={this.handleChange} />
 				<button onClick={this.onUploadClicked}>Upload</button>
-				<br />
-				{this.state.url
-					? <img src={this.state.url} alt="badge preview" />
-					: null}
 			</div>
 		);
 	}

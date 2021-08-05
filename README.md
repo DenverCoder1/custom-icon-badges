@@ -13,9 +13,6 @@ This is still a work in progress. I plan to create a demo site to simplify the p
   - [Octicons](#octicons)
   - [Miscelanious](#miscelanious)
 - [➕ Adding a new logo](#-adding-a-new-logo)
-  - [Parameters](#parameters)
-  - [Example request body](#example-request-body)
-- [📤 Deploying it on your own](#-deploying-it-on-your-own)
 
 ## ⚡ How to use
 
@@ -63,27 +60,13 @@ Currently a subset of [Octicons](https://primer.style/octicons/) are supported:
 
 ## ➕ Adding a new logo
 
-Send a POST request to <https://custom-icon-badges.herokuapp.com/> with a JSON body including `slug`, `type`, and `data`.
+Upload new icons using the demo site!
 
-You can preview how the icon will look by following the [custom logo example](https://github.com/badges/shields/blob/master/doc/logos.md#custom-logos) in the shields.io docs.
+<https://custom-icon-badges.herokuapp.com>
 
-### Parameters
+[![image](https://user-images.githubusercontent.com/20955511/128404656-30af9c39-39a4-4ac8-a4b0-2a077806a94c.png)](https://custom-icon-badges.herokuapp.com)
 
-- `slug`: The unique name for the logo.
-- `type`: The type of the logo, either `svg+xml` or `png`.
-- `data`: The base64 encoded data of the logo.
-
-### Example request body
-
-```json
-{
-    "slug": "controller",
-    "type": "svg+xml",
-    "data": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEiIHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIj48cGF0aCBkPSJNMTI5IDExMWMtNTUgNC05MyA2Ni05MyA3OEwwIDM5OGMtMiA3MCAzNiA5MiA2OSA5MWgxYzc5IDAgODctNTcgMTMwLTEyOGgyMDFjNDMgNzEgNTAgMTI4IDEyOSAxMjhoMWMzMyAxIDcxLTIxIDY5LTkxbC0zNi0yMDljMC0xMi00MC03OC05OC03OGgtMTBjLTYzIDAtOTIgMzUtOTIgNDJIMjM2YzAtNy0yOS00Mi05Mi00MmgtMTV6IiBmaWxsPSIjZmZmIi8+PC9zdmc+"
-}
-```
-
-## 📤 Deploying it on your own
+<!-- ## 📤 Deploying it on your own
 
 If you can, it is preferable to host the files on your own server.
 
@@ -107,4 +90,4 @@ Doing this can lead to better uptime and more control over customization (you ca
   4. Click **"Deploy App"** at the end of the form
   5. Once the app is deployed, you can use `<your-app-name>.herokuapp.com` in place of `custom-icon-badges.herokuapp.com`
 	
-</details>
+</details> -->

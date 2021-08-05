@@ -1,20 +1,15 @@
 import React from 'react';
 import './App.scss';
-import Form from './Form';
+import UploadForm from './UploadForm';
+import GitHubButtons from './GitHubButtons';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <h1>Custom Icon Badges</h1>
-        <Form />
-        <br/>
-        <a className="App-link"
-          href="https://github.com/DenverCoder1/custom-icon-badges"
-          target="_blank"
-          rel="noopener noreferrer">
-          GitHub
-        </a>
+        <GitHubButtons user="DenverCoder1" repo="custom-icon-badges" />
+        <UploadForm />
       </header>
     </div>
   );

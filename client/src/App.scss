@@ -1,8 +1,3 @@
-// change the theme
-$theme-colors: (
-  "primary": #20c997
-);
-
 @import "~bootstrap/scss/bootstrap";
 
 .App {
@@ -29,14 +24,6 @@ $theme-colors: (
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: $teal;
-}
-
-.App-link:hover {
-  color: #98f3d8;
 }
 
 @keyframes App-logo-spin {

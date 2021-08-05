@@ -1,18 +1,23 @@
 import React, { ChangeEvent } from 'react';
 import Alert from 'react-bootstrap/esm/Alert';
 import Button from 'react-bootstrap/esm/Button';
+import Form from 'react-bootstrap/esm/Form';
 import BadgePreview from './BadgePreview';
 import FileUpload from "./FileUpload";
 import TextBox from './TextBox';
+import './UploadForm.scss';
 
-class Form extends React.Component {
+class UploadForm extends React.Component {
 
   state = {
     slug: "",
     fileType: "",
     data: "",
     previewUrl: "",
-    message: ""
+    message: {
+      type: "info",
+      text: ""
+    }
   }
 
   updateSlug = (slug: string) => {
@@ -27,7 +32,7 @@ class Form extends React.Component {
       fileType: match[1],
       data: match[2],
       previewUrl: this.buildShieldUrl(dataUrl),
-      message: ""
+      message: { type: "", text: "" }
     });
   }
 
@@ -45,13 +50,18 @@ class Form extends React.Component {
     })
       .then(response => {
         if (response.status !== 200) {
-          this.setState({ message: `An error occurred: ${response.status} - ${response.statusText}` });
+          this.setState({
+            message: {
+              type: "danger",
+              text: `An error occurred: ${response.status} - ${response.statusText}`
+            }
+          });
           return;
         }
-        this.setState({ message: "Success!" });
+        this.setState({ message: { type: "success", text: "Success!" } });
       })
       .catch(error => {
-        this.setState({ message: `An error occurred: ${error.message}` });
+        this.setState({ message: { type: "danger", text: `An error occurred: ${error.message}` } });
       });
   }
 
@@ -63,7 +73,7 @@ class Form extends React.Component {
   }
 
   render = () => (
-    <form onSubmit={this.handleSubmit} className="Form">
+    <Form onSubmit={this.handleSubmit} className="Form">
       <FileUpload label="Upload an image file"
         onFileChange={this.updateFileData} />
       <TextBox label="Pick a slug (name of the logo)"
@@ -72,12 +82,18 @@ class Form extends React.Component {
       {this.state.previewUrl
         ? <BadgePreview label="Preview" url={this.state.previewUrl} />
         : null}
-      {this.state.message
-        ? <Alert variant="success">{this.state.message}</Alert>
+      {this.state.message.text
+        ? (
+            {this.state.message.text}
+          </Alert>
+        )
         : null}
-      <Button type="submit">Submit</Button>
-    </form>
+      <div className="d-grid gap-2">
+        <Button type="submit" size="lg"
+          disabled={!this.state.previewUrl}>Submit</Button>
+      </div>
+    </Form>
   );
 }
 
-export default Form;
+export default UploadForm;

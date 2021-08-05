@@ -23,7 +23,8 @@ class Form extends React.Component {
       slug: fileName.split(".")[0],
       fileType: match[1],
       data: match[2],
-      previewUrl: this.buildShieldUrl(dataUrl)
+      previewUrl: this.buildShieldUrl(dataUrl),
+      message: ""
     });
   }
 

@@ -71,6 +71,8 @@ Upload new icons using the demo site!
 
 [![image](https://user-images.githubusercontent.com/20955511/128404656-30af9c39-39a4-4ac8-a4b0-2a077806a94c.png)](https://custom-icon-badges.herokuapp.com)
 
+If you think your icon is useful to others, feel free to open a PR to add it to the README!
+
 ## 🤗 Contributing
 
 We welcome contributions!

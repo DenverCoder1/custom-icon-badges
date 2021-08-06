@@ -8,6 +8,7 @@ icons.createIndex({ slug: 1 }, { unique: true });
 
 async function checkSlugExists(slug: string):
   Promise<{ slug: string, type: string, data: string } | null> {
+  // find slug in database, returns null if not found
   return icons.findOne({ slug: slug.toLowerCase() });
 }
 

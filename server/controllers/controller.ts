@@ -3,15 +3,15 @@ import { Request, Response } from 'express';
 import iconDatabase from '../services/iconDatabase';
 
 async function getBadge(req: Request, res: Response): Promise<void> {
-  const slug = req.query.logo;
+  const slug = (req.query.logo || '') as string;
   // check that logo was passed
-  if (!slug || typeof slug !== 'string') {
+  if (!slug) {
     res.status(400).json({
       message: 'Bad Request: logo parameter not found',
     });
   }
   // check if slug exists
-  const item = await iconDatabase.checkSlugExists(slug as string);
+  const item = await iconDatabase.checkSlugExists(slug);
   // not found
   if (item === null) {
     res.status(404).json({ message: 'Not found.', body: { slug } });
@@ -31,7 +31,7 @@ async function getBadge(req: Request, res: Response): Promise<void> {
 }
 
 async function postIcon(req: Request, res: Response): Promise<void> {
-  const { slug, type, data } = req.body;
+  const { slug, type, data }: { slug: string, type: string, data: string } = req.body;
   if (!slug || !type || !data) {
     res.status(400).json({ message: 'Bad request.', body: { slug, type, data } });
     return;

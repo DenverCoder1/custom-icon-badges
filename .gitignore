@@ -92,3 +92,6 @@ typings/
 
 # FuseBox cache
 .fusebox/
+
+# IDE config
+.vscode/

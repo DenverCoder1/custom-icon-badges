@@ -9,6 +9,7 @@ async function getBadge(req: Request, res: Response): Promise<void> {
     res.status(400).json({
       message: 'Bad Request: logo parameter not found',
     });
+    return;
   }
   // check if slug exists
   const item = await iconDatabase.checkSlugExists(slug);

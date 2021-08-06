@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { Request, Response } from 'express';
 import iconDatabase from '../services/iconDatabase';
+import setLogoColor from '../services/logoColor';
 
 async function getBadge(req: Request, res: Response): Promise<void> {
   const slug = (req.query.logo || '') as string;
@@ -18,9 +19,17 @@ async function getBadge(req: Request, res: Response): Promise<void> {
     res.status(404).json({ message: 'Not found.', body: { slug } });
     return;
   }
+  const imageType = item.type;
+  let imageData = item.data;
+  // check for logoColor parameter if it is SVG
+  if (req.query.logoColor && imageType === 'svg+xml') {
+    // set logo color
+    const color = req.query.logoColor as string;
+    imageData = setLogoColor(imageData, color);
+  }
   // replace logo slug parameter with data url
   const newQuery = req.query;
-  newQuery.logo = `data:image/${item.type};base64,${item.data}`;
+  newQuery.logo = `data:image/${imageType};base64,${imageData}`;
   // build url using request params and query
   const params = Object.values(req.params).join('/');
   const query = Object.keys(newQuery).map((key) => `${key}=${encodeURIComponent(req.query[key] as string)}`).join('&');

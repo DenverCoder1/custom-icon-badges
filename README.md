@@ -7,18 +7,6 @@
 
 Allows users to more easily use their own icons and logos to [shields.io badges](https://github.com/badges/shields).
 
-This is still a work in progress. I plan to create a demo site to simplify the process.
-
-- [⚡ How to use](#-how-to-use)
-- [🖼️ Existing logos](#️-existing-logos)
-  - [Octicons](#octicons)
-  - [Miscelanious](#miscelanious)
-- [➕ Adding a new logo](#-adding-a-new-logo)
-- [🤗 Contributing](#-contributing)
-- [📤 Deploying it on your own](#-deploying-it-on-your-own)
-- [💬 Questions?](#-questions)
-- [🤩 Support](#-support)
-
 ## ⚡ How to use
 
 1. Get a badge URL from [shields.io](https://shields.io/).

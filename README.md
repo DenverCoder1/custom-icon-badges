@@ -50,16 +50,17 @@ Currently a subset of [Octicons](https://primer.style/octicons/) are supported:
 | `controller` | ![img](https://custom-icon-badges.herokuapp.com/badge/Controller-blue.svg?logo=controller) |
 | `swi-prolog` | ![img](https://custom-icon-badges.herokuapp.com/badge/Prolog-E61B23.svg?logo=swi-prolog)   |
 
-
 ## ➕ Adding a new logo
 
 Upload new icons using the demo site!
 
-<https://custom-icon-badges.herokuapp.com>
+The file type can be SVG, PNG, etc. but only SVG format supports the `logoColor` parameter for overriding the color of the logo.
+
+If you think your icon is useful to others, feel free to open a PR to add it to the README above!
+
+Demo site: <https://custom-icon-badges.herokuapp.com>
 
 [![image](https://user-images.githubusercontent.com/20955511/128404656-30af9c39-39a4-4ac8-a4b0-2a077806a94c.png)](https://custom-icon-badges.herokuapp.com)
-
-If you think your icon is useful to others, feel free to open a PR to add it to the README!
 
 ## 🤗 Contributing
 

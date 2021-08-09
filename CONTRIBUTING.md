@@ -70,4 +70,18 @@ yarn lint
 
 ### Commit style guide
 
-We use conventional commits based on [Angular's commit message format](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines). Please follow it when contributing.
+We use [Conventional Commits](https://conventionalcommits.org/) for commit messages.
+
+This allows for a more readable commit history and helps to automate the process of generating release notes.
+
+Please prefix your commit messages with one of the following:
+
+  * `fix`: A bug fix.
+  * `feat`: A new feature.
+  * `docs`: Documentation only changes.
+  * `style`: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc).
+  * `refactor`: A code change that neither fixes a bug or adds a feature.
+  * `test`: Adding missing tests.
+  * `chore`: Changes to the build process or auxiliary tools and libraries such as documentation generation.
+
+Please see [Conventional Commits](https://conventionalcommits.org/) for the full specifications.

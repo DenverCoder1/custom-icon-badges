@@ -67,3 +67,7 @@ yarn start-client
 ```bash
 yarn lint
 ```
+
+### Commit style guide
+
+We use conventional commits based on [Angular's commit message format](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines). Please follow it when contributing.

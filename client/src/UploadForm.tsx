@@ -14,10 +14,7 @@ class UploadForm extends React.Component {
     fileType: "",
     data: "",
     previewUrl: "",
-    message: {
-      type: "info",
-      text: ""
-    }
+    message: { type: "", content: <div></div> }
   }
 
   updateSlug = (slug: string) => {
@@ -32,12 +29,23 @@ class UploadForm extends React.Component {
       fileType: match[1],
       data: match[2],
       previewUrl: this.buildShieldUrl(dataUrl),
-      message: { type: "", text: "" }
+      message: { type: "", content: <div></div> }
     });
   }
 
-  setMessage = (type: string, text: string) => {
-    this.setState({ message: { type: type, text: text } });
+  setMessage = (type: string, heading: string, content: string, slug: string = "") => {
+    this.setState({
+      message: {
+        type: type,
+        content: (
+          <div>
+            <Alert.Heading>{heading}</Alert.Heading>
+            <span>{content}</span>
+            {slug && <div><hr /><span>Now you can use <code>?logo={slug}</code> in your Custom Icon Badges URL!</span></div>}
+          </div>
+        )
+      }
+    });
   }
 
   handleSubmit = async (event: ChangeEvent<HTMLFormElement>) => {
@@ -52,21 +60,22 @@ class UploadForm extends React.Component {
         data: this.state.data
       }),
     })
-      .then(response => {
-        if (response.status !== 200) {
-          this.setState({
-            message: {
-              type: "danger",
-              text: `An error occurred: ${response.status} - ${response.statusText}`
-            }
-          });
+      .then(response => response.json())
+      .then(json => {
+        // success message
+        if ("type" in json && "message" in json && json.type === "success") {
+          this.setMessage("success", "Success!", json.message, json.body?.slug || "");
           return;
         }
-        this.setState({ message: { type: "success", text: "Success!" } });
+        // error message
+        if ("type" in json && "message" in json && json.type === "error") {
+          this.setMessage("danger", "An error ocurred!", json.message);
+          return;
+        }
+        // default error
+        this.setMessage("danger", "An error occurred!", "Unknown error occurred!");
       })
-      .catch(error => {
-        this.setState({ message: { type: "danger", text: `An error occurred: ${error.message}` } });
-      });
+      .catch(error => this.setMessage("danger", "An error occurred", `${error.message}`));
   }
 
   buildShieldUrl = (dataUrl: string = "", text: string = "Preview", color: string = "#E61B23"): string => {
@@ -86,10 +95,10 @@ class UploadForm extends React.Component {
         value={this.state.slug} required={true}
         onInputChange={this.updateSlug} />
       <BadgePreview label="Preview" url={this.state.previewUrl} />
-      {this.state.message.text
+      {this.state.message.type
         ? (
           <Alert variant={this.state.message.type || undefined}>
-            {this.state.message.text}
+            {this.state.message.content}
           </Alert>
         )
         : null}

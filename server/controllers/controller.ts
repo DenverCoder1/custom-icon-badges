@@ -25,7 +25,11 @@ async function getBadge(req: Request, res: Response): Promise<void> {
 async function postIcon(req: Request, res: Response): Promise<void> {
   const { slug, type, data }: { slug: string, type: string, data: string } = req.body;
   if (!slug || !type || !data) {
-    res.status(400).json({ message: 'Bad request.', body: { slug, type, data } });
+    res.status(400).json({
+      type: 'error',
+      message: 'Bad request.',
+      body: { slug, type, data },
+    });
     return;
   }
   console.log(`Received icon for ${slug}`);
@@ -38,7 +42,8 @@ async function postIcon(req: Request, res: Response): Promise<void> {
     const body = await iconDatabase.insertIcon(slug, type, data);
     // return success response
     res.status(200).json({
-      message: 'Your icon has been added successfully!',
+      type: 'success',
+      message: 'Your icon has been added successfully.',
       body,
     });
     return;
@@ -46,6 +51,7 @@ async function postIcon(req: Request, res: Response): Promise<void> {
   console.log('Slug is already in use');
   // slug already exists
   res.status(409).json({
+    type: 'error',
     message: 'This slug is already in use.',
     body: { slug, type, data },
   });

@@ -32,7 +32,10 @@ class FileUpload extends React.Component<{ label: string, onFileChange: (fileNam
 		return (
 			<Form.Group controlId="formFile" className="mb-3">
 				<Form.Label>{this.props.label}</Form.Label>
-				<Form.Control type="file" onChange={this.handleChange} />
+				<Form.Control
+					type="file"
+					onChange={this.handleChange}
+					accept=".png,.jpg,.jpeg,.svg" />
 			</Form.Group>
 		);
 	}

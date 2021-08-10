@@ -16,12 +16,12 @@ Allows users to more easily use their own icons and logos to [shields.io badges]
 3. Use any available slug as the logo query parameter.
 
 ```md
-https://custom-icon-badges.herokuapp.com/badge/play-station-blue.svg?logo=controller
+https://custom-icon-badges.herokuapp.com/badge/custom-badge-blue.svg?logo=paintbrush&logoColor=white
 ```
 
 Preview:
 
-![img](https://user-images.githubusercontent.com/20955511/126047615-7f47d37f-30af-4feb-b29c-9498422d9c93.png)
+![img](https://custom-icon-badges.herokuapp.com/badge/custom-badge-blue.svg?logo=paintbrush&logoColor=white)
 
 ## 🖼️ Existing logos
 
@@ -29,26 +29,28 @@ The following are examples of existing icons and logos that are already availabl
 
 ### Octicons
 
-Currently a subset of [Octicons](https://primer.style/octicons/) are supported:
+Currently all [Octicons](https://primer.style/octicons/) are supported.
 
-| Slug       | Example                                                                                  |
-| ---------- | ---------------------------------------------------------------------------------------- |
-| `issue`    | ![img](https://custom-icon-badges.herokuapp.com/badge/Issue-red.svg?logo=issue)          |
-| `fork`     | ![img](https://custom-icon-badges.herokuapp.com/badge/Fork-orange.svg?logo=fork)         |
-| `star`     | ![img](https://custom-icon-badges.herokuapp.com/badge/Star-yellow.svg?logo=star)         |
-| `commit`   | ![img](https://custom-icon-badges.herokuapp.com/badge/Commit-green.svg?logo=commit)      |
-| `comments` | ![img](https://custom-icon-badges.herokuapp.com/badge/Comments-teal.svg?logo=comments)   |
-| `repo`     | ![img](https://custom-icon-badges.herokuapp.com/badge/Repo-blue.svg?logo=repo)           |
-| `pr`       | ![img](https://custom-icon-badges.herokuapp.com/badge/Pull%20Request-purple.svg?logo=pr) |
-| `heart`    | ![img](https://custom-icon-badges.herokuapp.com/badge/Heart-D15E9B.svg?logo=heart)       |
-| `mail`     | ![img](https://custom-icon-badges.herokuapp.com/badge/Mail-E61B23.svg?logo=mail)         |
+| Slug          | Example                                                                                  |
+| ------------- | ---------------------------------------------------------------------------------------- |
+| `issue`       | ![img](https://custom-icon-badges.herokuapp.com/badge/Issue-red.svg?logo=issue)          |
+| `fork`        | ![img](https://custom-icon-badges.herokuapp.com/badge/Fork-orange.svg?logo=fork)         |
+| `star`        | ![img](https://custom-icon-badges.herokuapp.com/badge/Star-yellow.svg?logo=star)         |
+| `commit`      | ![img](https://custom-icon-badges.herokuapp.com/badge/Commit-green.svg?logo=commit)      |
+| `repo`        | ![img](https://custom-icon-badges.herokuapp.com/badge/Repo-blue.svg?logo=repo)           |
+| `pr`          | ![img](https://custom-icon-badges.herokuapp.com/badge/Pull%20Request-purple.svg?logo=pr) |
+| `heart`       | ![img](https://custom-icon-badges.herokuapp.com/badge/Heart-D15E9B.svg?logo=heart)       |
+| `mail`        | ![img](https://custom-icon-badges.herokuapp.com/badge/Mail-E61B23.svg?logo=mail)         |
+| More Octicons | [View all ⇨](https://primer.style/octicons)                                              |
 
 ### Miscelanious
 
-| Slug         | Example                                                                                    |
-| ------------ | ------------------------------------------------------------------------------------------ |
-| `controller` | ![img](https://custom-icon-badges.herokuapp.com/badge/Controller-blue.svg?logo=controller) |
-| `swi-prolog` | ![img](https://custom-icon-badges.herokuapp.com/badge/Prolog-E61B23.svg?logo=swi-prolog)   |
+| Slug         | Example                                                                                            |
+| ------------ | -------------------------------------------------------------------------------------------------- |
+| `ceylon`     | ![img](https://custom-icon-badges.herokuapp.com/badge/Ceylon-E39842.svg?logo=ceylon)               |
+| `controller` | ![img](https://custom-icon-badges.herokuapp.com/badge/Controller-blue.svg?logo=controller)         |
+| `phone`      | ![img](https://custom-icon-badges.herokuapp.com/badge/Phone-green.svg?logo=phone&logoColor=white) |
+| `swi-prolog` | ![img](https://custom-icon-badges.herokuapp.com/badge/Prolog-E61B23.svg?logo=swi-prolog)           |
 
 ## ➕ Adding a new logo
 

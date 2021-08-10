@@ -95,3 +95,6 @@ typings/
 
 # IDE config
 .vscode/
+
+# scripts
+scripts/

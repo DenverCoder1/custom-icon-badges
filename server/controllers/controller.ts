@@ -3,6 +3,12 @@ import { Request, Response } from 'express';
 import getBadgeUrl from '../services/badgeUrl';
 import iconDatabase from '../services/iconDatabase';
 
+async function listIconsJSON(req: Request, res: Response): Promise<void> {
+  res.status(200).json({
+    icons: await iconDatabase.getIcons(),
+  });
+}
+
 async function getBadge(req: Request, res: Response): Promise<void> {
   const slug = (req.query.logo || '') as string;
   // check that logo was passed
@@ -58,6 +64,7 @@ async function postIcon(req: Request, res: Response): Promise<void> {
 }
 
 const defaultExport = {
+  listIconsJSON,
   getBadge,
   postIcon,
 };

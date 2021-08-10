@@ -43,7 +43,7 @@ Currently all [Octicons](https://primer.style/octicons/) are supported.
 | `mail`        | ![img](https://custom-icon-badges.herokuapp.com/badge/Mail-E61B23.svg?logo=mail)         |
 | More Octicons | [View all ⇨](https://primer.style/octicons)                                              |
 
-### Miscelanious
+### Miscellaneous
 
 | Slug         | Example                                                                                            |
 | ------------ | -------------------------------------------------------------------------------------------------- |

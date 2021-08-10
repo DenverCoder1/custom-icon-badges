@@ -1,4 +1,4 @@
-import monk from 'monk';
+import monk, { FindResult } from 'monk';
 
 const DB_NAME = 'custom-icon-badges';
 const DB_URL = process.env.DB_URL || `mongodb://localhost:27017/${DB_NAME}`;
@@ -22,9 +22,15 @@ async function insertIcon(slug: string, type: string, data: string):
   return item;
 }
 
+async function getIcons(): Promise<FindResult<{ slug: string, type: string, data: string }>> {
+  // return all items
+  return icons.find({}, { sort: { slug: 1 } });
+}
+
 const defaultExport = {
   checkSlugExists,
   insertIcon,
+  getIcons,
 };
 
 export default defaultExport;

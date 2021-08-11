@@ -98,6 +98,12 @@ Click to get the URL!
 [![email][18]][18]
 [![location][19]][19]
 
+[![open issue][20]][20]
+[![discuss][21]][21]
+[![install package][22]][22]
+[![use template][23]][23]
+[![github action][24]][24]
+
 [1]: https://custom-icon-badges.herokuapp.com/github/stars/DenverCoder1/custom-icon-badges?logo=star
 [2]: https://custom-icon-badges.herokuapp.com/github/issues-raw/DenverCoder1/custom-icon-badges?logo=issue
 [3]: https://custom-icon-badges.herokuapp.com/github/license/denvercoder1/custom-icon-badges?logo=repo
@@ -117,6 +123,11 @@ Click to get the URL!
 [17]: https://custom-icon-badges.herokuapp.com/badge/-123--456--7890-orange?style=for-the-badge&logo=phone&logoColor=white
 [18]: https://custom-icon-badges.herokuapp.com/badge/-hermione@spew.co.uk-red?style=for-the-badge&logo=mention&logoColor=white
 [19]: https://custom-icon-badges.herokuapp.com/badge/Colorado-USA-purple?style=for-the-badge&logo=location&logoColor=white
+[20]: https://custom-icon-badges.herokuapp.com/badge/-Open%20Issue-palegreen?style=for-the-badge&logoColor=black&logo=issue-opened
+[21]: https://custom-icon-badges.herokuapp.com/badge/-Discuss-plum?style=for-the-badge&logo=comment-discussion&logoColor=black
+[22]: https://custom-icon-badges.herokuapp.com/badge/-Install%20Package-gold?style=for-the-badge&logo=package&logoColor=black
+[23]: https://custom-icon-badges.herokuapp.com/badge/-Use%20Template-teal?style=for-the-badge&logo=repo-template&logoColor=white
+[24]: https://custom-icon-badges.herokuapp.com/badge/-Use%20GitHub%20Action-blue?style=for-the-badge&logo=workflow&logoColor=white
 
 
 ## 🤗 Contributing

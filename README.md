@@ -65,6 +65,54 @@ Demo site: <https://custom-icon-badges.herokuapp.com>
 
 [![image](https://user-images.githubusercontent.com/20955511/128404656-30af9c39-39a4-4ac8-a4b0-2a077806a94c.png)](https://custom-icon-badges.herokuapp.com)
 
+## 🚀 Example Usage
+
+Click to get the URL!
+
+[![stars][1]][1]
+[![open issues][2]][2]
+[![license][3]][3]
+[![build][4]][4]
+[![last commit][5]][5]
+
+[![code size][6]][6]
+[![pr closed][7]][7]
+[![tag][8]][8]
+[![rating][9]][9]
+
+[![followers][10]][10]
+[![stars][11]][11]
+[![fork][12]][12]
+[![watch][13]][13]
+[![downloads social][14]][14]
+
+[![my repos][15]][15]
+[![downloads][16]][16]
+[![phone][17]][17]
+[![email][18]][18]
+[![location][19]][19]
+
+[1]: https://custom-icon-badges.herokuapp.com/github/stars/DenverCoder1/custom-icon-badges?logo=star
+[2]: https://custom-icon-badges.herokuapp.com/github/issues-raw/DenverCoder1/custom-icon-badges?logo=issue
+[3]: https://custom-icon-badges.herokuapp.com/github/license/denvercoder1/custom-icon-badges?logo=repo
+[4]: https://custom-icon-badges.herokuapp.com/github/workflow/status/DenverCoder1/custom-icon-badges/Node.js%20CI?logo=check-circle-fill&logoColor=white
+[5]: https://custom-icon-badges.herokuapp.com/github/last-commit/DenverCoder1/custom-icon-badges?logo=history&logoColor=white
+[6]: https://custom-icon-badges.herokuapp.com/github/languages/code-size/DenverCoder1/custom-icon-badges?logo=file-code&logoColor=white
+[7]: https://custom-icon-badges.herokuapp.com/github/issues-pr-closed/DenverCoder1/custom-icon-badges?color=purple&logo=git-pull-request&logoColor=white
+[8]: https://custom-icon-badges.herokuapp.com/github/v/tag/DenverCoder1/custom-icon-badges?logo=tag&logoColor=white
+[9]: https://custom-icon-badges.herokuapp.com/chrome-web-store/rating/ogffaloegjglncjfehdfplabnoondfjo?logo=thumbsup&logoColor=white
+[10]: https://custom-icon-badges.herokuapp.com/github/followers/DenverCoder1?logo=person-add&style=social
+[11]: https://custom-icon-badges.herokuapp.com/github/stars/DenverCoder1/custom-icon-badges?logo=star&style=social&logoColor=black
+[12]: https://custom-icon-badges.herokuapp.com/github/forks/DenverCoder1/custom-icon-badges?logo=fork&style=social&logoColor=black
+[13]: https://custom-icon-badges.herokuapp.com/github/watchers/DenverCoder1/custom-icon-badges?logo=eye&style=social
+[14]: https://custom-icon-badges.herokuapp.com/npm/dw/react-bootstrap?logo=download&style=social&label=Download
+[15]: https://custom-icon-badges.herokuapp.com/badge/-My%20Repos-blue?style=for-the-badge&logoColor=white&logo=repo
+[16]: https://custom-icon-badges.herokuapp.com/badge/-Download-F25278?style=for-the-badge&logo=download&logoColor=white
+[17]: https://custom-icon-badges.herokuapp.com/badge/-1--800--867--5309-orange?style=for-the-badge&logo=phone&logoColor=white
+[18]: https://custom-icon-badges.herokuapp.com/badge/-hermione@spew.co.uk-red?style=for-the-badge&logo=mention&logoColor=white
+[19]: https://custom-icon-badges.herokuapp.com/badge/Colorado-USA-purple?style=for-the-badge&logo=location&logoColor=white
+
+
 ## 🤗 Contributing
 
 We welcome contributions!

@@ -11,21 +11,14 @@ async function listIconsJSON(req: Request, res: Response): Promise<void> {
 
 async function getBadge(req: Request, res: Response): Promise<void> {
   const slug = (req.query.logo || '') as string;
-  // check that logo was passed
-  if (!slug) {
-    res.status(400).json({
-      message: 'Bad Request: logo parameter not found',
-    });
-    return;
-  }
   // check if slug exists
-  const item = await iconDatabase.checkSlugExists(slug);
+  const item = slug ? await iconDatabase.checkSlugExists(slug) : null;
   // get shields url
   const url = getBadgeUrl(req, item);
-  // get svg from url with axios
-  const svg = await axios.get(url);
-  // send svg with 200 response
-  res.status(200).contentType('image/svg+xml').send(svg.data);
+  // get badge from url
+  const response = await axios.get(url, { validateStatus: () => true });
+  // send response
+  res.status(response.status).type(response.headers['content-type']).send(response.data);
 }
 
 async function postIcon(req: Request, res: Response): Promise<void> {

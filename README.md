@@ -114,7 +114,7 @@ Click to get the URL!
 [14]: https://custom-icon-badges.herokuapp.com/npm/dw/react-bootstrap?logo=download&style=social&label=Download
 [15]: https://custom-icon-badges.herokuapp.com/badge/-My%20Repos-blue?style=for-the-badge&logoColor=white&logo=repo
 [16]: https://custom-icon-badges.herokuapp.com/badge/-Download-F25278?style=for-the-badge&logo=download&logoColor=white
-[17]: https://custom-icon-badges.herokuapp.com/badge/-1--800--867--5309-orange?style=for-the-badge&logo=phone&logoColor=white
+[17]: https://custom-icon-badges.herokuapp.com/badge/-123--456--7890-orange?style=for-the-badge&logo=phone&logoColor=white
 [18]: https://custom-icon-badges.herokuapp.com/badge/-hermione@spew.co.uk-red?style=for-the-badge&logo=mention&logoColor=white
 [19]: https://custom-icon-badges.herokuapp.com/badge/Colorado-USA-purple?style=for-the-badge&logo=location&logoColor=white
 
@@ -158,8 +158,8 @@ Feel free to [open an issue](http://github.com/DenverCoder1/custom-icon-badges/i
 💙 If you like this project, give it a ⭐ and share it with friends!
 
 <p align="left">
-  <a href="https://www.youtube.com/channel/UCipSxT7a3rn81vGLw9lqRkg?sub_confirmation=1"><img alt="Youtube" title="Youtube" src="https://img.shields.io/badge/-Subscribe-red?style=for-the-badge&logo=youtube&logoColor=white"/></a>
-  <a href="https://github.com/sponsors/DenverCoder1"><img alt="Sponsor with Github" title="Sponsor with Github" src="https://img.shields.io/badge/-Sponsor-ea4aaa?style=for-the-badge&logo=github&logoColor=white"/></a>
+  <a href="https://www.youtube.com/channel/UCipSxT7a3rn81vGLw9lqRkg?sub_confirmation=1"><img alt="Youtube" title="Youtube" src="https://custom-icon-badges.herokuapp.com/badge/-Subscribe-red?style=for-the-badge&logo=video&logoColor=white"/></a>
+  <a href="https://github.com/sponsors/DenverCoder1"><img alt="Sponsor with Github" title="Sponsor with Github" src="https://custom-icon-badges.herokuapp.com/badge/-Sponsor-ea4aaa?style=for-the-badge&logo=heart&logoColor=white"/></a>
 </p>
 
 [☕ Buy me a coffee](https://ko-fi.com/jlawrence)

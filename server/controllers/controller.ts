@@ -11,15 +11,8 @@ async function listIconsJSON(req: Request, res: Response): Promise<void> {
 
 async function getBadge(req: Request, res: Response): Promise<void> {
   const slug = (req.query.logo || '') as string;
-  // check that logo was passed
-  if (!slug) {
-    res.status(400).json({
-      message: 'Bad Request: logo parameter not found',
-    });
-    return;
-  }
   // check if slug exists
-  const item = await iconDatabase.checkSlugExists(slug);
+  const item = slug ? await iconDatabase.checkSlugExists(slug) : null;
   // get shields url
   const url = getBadgeUrl(req, item);
   // get svg from url with axios

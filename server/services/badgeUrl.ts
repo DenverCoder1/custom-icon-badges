@@ -58,7 +58,7 @@ function getBadgeUrl(
   req: Request, item: { slug: string, type: string, data: string } | null,
 ): string {
   // build url using request params and query
-  const params = Object.values(req.params).join('/');
+  const params = Object.values(req.params).map((p) => encodeURIComponent(p)).join('/');
   const queryString = buildQueryStringFromItem(req, item);
   return `https://img.shields.io/${params}?${queryString}`;
 }

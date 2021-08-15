@@ -80,11 +80,13 @@ Click to get the URL!
 [![license][3]][3]
 [![build][4]][4]
 [![last commit][5]][5]
+[![total contributions][26]][26]
 
 [![code size][6]][6]
 [![pr closed][7]][7]
 [![tag][8]][8]
 [![rating][9]][9]
+[![github streak][25]][25]
 
 [![followers][10]][10]
 [![stars][11]][11]
@@ -128,7 +130,8 @@ Click to get the URL!
 [22]: https://custom-icon-badges.herokuapp.com/badge/-Install%20Package-gold?style=for-the-badge&logo=package&logoColor=black
 [23]: https://custom-icon-badges.herokuapp.com/badge/-Use%20Template-teal?style=for-the-badge&logo=repo-template&logoColor=white
 [24]: https://custom-icon-badges.herokuapp.com/badge/-Use%20GitHub%20Action-blue?style=for-the-badge&logo=workflow&logoColor=white
-
+[25]: https://custom-icon-badges.herokuapp.com/badge/dynamic/json?logo=fire&logoColor=fff&color=orange&label=github%20streak&query=%24.currentStreak.length&suffix=%20days&url=https%3A%2F%2Fgithub-readme-streak-stats.herokuapp.com%2F%3Fuser%3DDenverCoder1%26type%3Djson
+[26]: https://custom-icon-badges.herokuapp.com/badge/dynamic/json?logo=graph&logoColor=fff&color=blue&label=total%20contributions&query=%24.totalContributions&url=https%3A%2F%2Fgithub-readme-streak-stats.herokuapp.com%2F%3Fuser%3DDenverCoder1%26type%3Djson
 
 ## 🤗 Contributing
 

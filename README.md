@@ -47,7 +47,7 @@ Currently all [Octicons](https://primer.style/octicons/) are supported.
 
 | Slug            | Example                                                                                                            |
 | --------------- | ------------------------------------------------------------------------------------------------------------------ |
-| `ceylon`        | ![img](https://custom-icon-badges.herokuapp.com/badge/ceylon-E39842.svg?logo=ceylon)                               |
+| `ceylon`        | ![img](https://custom-icon-badges.herokuapp.com/badge/ceylon-E39842.svg?logo=ceylon&logoColor=fff)                 |
 | `color-swatch`  | ![img](https://custom-icon-badges.herokuapp.com/badge/color--swatch-blue.svg?logo=color-swatch&logoColor=fff)      |
 | `controller`    | ![img](https://custom-icon-badges.herokuapp.com/badge/controller-blue.svg?logo=controller)                         |
 | `fire`          | ![img](https://custom-icon-badges.herokuapp.com/badge/fire-red.svg?logo=fire&logoColor=fff)                        |
@@ -56,7 +56,7 @@ Currently all [Octicons](https://primer.style/octicons/) are supported.
 | `trending-up`   | ![img](https://custom-icon-badges.herokuapp.com/badge/trending--up-brightgreen.svg?logoColor=fff&logo=trending-up) |
 | `trending-down` | ![img](https://custom-icon-badges.herokuapp.com/badge/trending--down-red.svg?logoColor=fff&logo=trending-down)     |
 | `phone`         | ![img](https://custom-icon-badges.herokuapp.com/badge/phone-green.svg?logo=phone&logoColor=white)                  |
-| `swi-prolog`    | ![img](https://custom-icon-badges.herokuapp.com/badge/swi--prolog-E61B23.svg?logo=swi-prolog)                      |
+| `swi-prolog`    | ![img](https://custom-icon-badges.herokuapp.com/badge/swi--prolog-E61B23.svg?logo=swi-prolog&logoColor=fff)        |
 | Add your own    | [Upload icon ⇨](https://custom-icon-badges.herokuapp.com)                                                          |
 
 ## ➕ Adding a new logo

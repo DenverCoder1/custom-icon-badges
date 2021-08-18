@@ -1,6 +1,5 @@
-import axios from 'axios';
 import { Request, Response } from 'express';
-import getBadgeUrl from '../services/badgeUrl';
+import fetchBadge from '../services/fetchBadges';
 import iconDatabase from '../services/iconDatabase';
 
 async function listIconsJSON(req: Request, res: Response): Promise<void> {
@@ -13,11 +12,9 @@ async function getBadge(req: Request, res: Response): Promise<void> {
   const slug = (req.query.logo || '') as string;
   // check if slug exists
   const item = slug ? await iconDatabase.checkSlugExists(slug) : null;
-  // get shields url
-  const url = getBadgeUrl(req, item);
-  // get badge from url
-  const response = await axios.get(url, { validateStatus: () => true });
-  // get type
+  // get badge for item
+  const response = await fetchBadge(req, item);
+  // get content type
   const contentType = response.headers['content-type'] || 'image/svg+xml';
   // send response
   res.status(response.status).type(contentType).send(response.data);
@@ -36,6 +33,17 @@ async function postIcon(req: Request, res: Response): Promise<void> {
   console.log(`Received icon for ${slug}`);
   // check for slug in the database
   const item = await iconDatabase.checkSlugExists(slug);
+  // get badge for item
+  const response = await fetchBadge(req, item);
+  // if the response is 414, the icon is too big
+  if (response.status === 414) {
+    res.status(response.status).json({
+      type: 'error',
+      message: 'The icon you uploaded is too big.',
+      body: { slug, type, data },
+    });
+    return;
+  }
   // if slug does not yet exist, create it
   if (item === null) {
     console.log(`Creating new icon for ${slug}`);

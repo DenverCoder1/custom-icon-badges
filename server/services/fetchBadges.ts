@@ -1,3 +1,4 @@
+import axios, { AxiosResponse } from 'axios';
 import { Request } from 'express';
 import setLogoColor from './logoColor';
 
@@ -63,4 +64,16 @@ function getBadgeUrl(
   return `https://img.shields.io/${params}?${queryString}`;
 }
 
-export default getBadgeUrl;
+/**
+ * Fetch badge from shields.io
+ */
+async function fetchBadge(
+  req: Request, item: { slug: string, type: string, data: string } | null,
+): Promise<AxiosResponse<any>> {
+  // get shields url
+  const url = getBadgeUrl(req, item);
+  // get badge from url
+  return axios.get(url, { validateStatus: () => true });
+}
+
+export default fetchBadge;

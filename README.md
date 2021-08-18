@@ -31,17 +31,17 @@ The following are examples of existing icons and logos that are already availabl
 
 Currently all [Octicons](https://primer.style/octicons/) are supported.
 
-| Slug          | Example                                                                                  |
-| ------------- | ---------------------------------------------------------------------------------------- |
-| `issue`       | ![img](https://custom-icon-badges.herokuapp.com/badge/Issue-red.svg?logo=issue)          |
-| `fork`        | ![img](https://custom-icon-badges.herokuapp.com/badge/Fork-orange.svg?logo=fork)         |
-| `star`        | ![img](https://custom-icon-badges.herokuapp.com/badge/Star-yellow.svg?logo=star)         |
-| `commit`      | ![img](https://custom-icon-badges.herokuapp.com/badge/Commit-green.svg?logo=commit)      |
-| `repo`        | ![img](https://custom-icon-badges.herokuapp.com/badge/Repo-blue.svg?logo=repo)           |
-| `pr`          | ![img](https://custom-icon-badges.herokuapp.com/badge/Pull%20Request-purple.svg?logo=pr) |
-| `heart`       | ![img](https://custom-icon-badges.herokuapp.com/badge/Heart-D15E9B.svg?logo=heart)       |
-| `mail`        | ![img](https://custom-icon-badges.herokuapp.com/badge/Mail-E61B23.svg?logo=mail)         |
-| More Octicons | [View all ⇨](https://primer.style/octicons)                                              |
+| Slug               | Example                                                                                                |
+| ------------------ | ------------------------------------------------------------------------------------------------------ |
+| `issue-opened`     | ![img](https://custom-icon-badges.herokuapp.com/badge/Issue-red.svg?logo=issue-opened&logoColor=fff)   |
+| `repo-forked`      | ![img](https://custom-icon-badges.herokuapp.com/badge/Fork-orange.svg?logo=fork)                       |
+| `star`             | ![img](https://custom-icon-badges.herokuapp.com/badge/Star-yellow.svg?logo=star)                       |
+| `git-commit`       | ![img](https://custom-icon-badges.herokuapp.com/badge/Commit-green.svg?logo=git-commit&logoColor=fff)  |
+| `repo`             | ![img](https://custom-icon-badges.herokuapp.com/badge/Repo-blue.svg?logo=repo)                         |
+| `git-pull-request` | ![img](https://custom-icon-badges.herokuapp.com/badge/Pull%20Request-purple.svg?logo=pr)               |
+| `heart`            | ![img](https://custom-icon-badges.herokuapp.com/badge/Heart-D15E9B.svg?logo=heart)                     |
+| `mail`             | ![img](https://custom-icon-badges.herokuapp.com/badge/Mail-E61B23.svg?logo=mail)                       |
+| More Octicons      | [View all ⇨](https://primer.style/octicons)                                                           |
 
 ### Miscellaneous
 
@@ -50,6 +50,7 @@ Currently all [Octicons](https://primer.style/octicons/) are supported.
 | `ceylon`        | ![img](https://custom-icon-badges.herokuapp.com/badge/ceylon-E39842.svg?logo=ceylon&logoColor=fff)                 |
 | `color-swatch`  | ![img](https://custom-icon-badges.herokuapp.com/badge/color--swatch-blue.svg?logo=color-swatch&logoColor=fff)      |
 | `controller`    | ![img](https://custom-icon-badges.herokuapp.com/badge/controller-blue.svg?logo=controller)                         |
+| `issue`         | ![img](https://custom-icon-badges.herokuapp.com/badge/issue-orange.svg?logo=issue&logoColor=fff)                   |
 | `fire`          | ![img](https://custom-icon-badges.herokuapp.com/badge/fire-red.svg?logo=fire&logoColor=fff)                        |
 | `flag`          | ![img](https://custom-icon-badges.herokuapp.com/badge/flag-green.svg?logo=flag&logoColor=fff)                      |
 | `translate`     | ![img](https://custom-icon-badges.herokuapp.com/badge/translate-blue.svg?logo=translate&logoColor=white)           |
@@ -57,7 +58,7 @@ Currently all [Octicons](https://primer.style/octicons/) are supported.
 | `trending-down` | ![img](https://custom-icon-badges.herokuapp.com/badge/trending--down-red.svg?logoColor=fff&logo=trending-down)     |
 | `phone`         | ![img](https://custom-icon-badges.herokuapp.com/badge/phone-green.svg?logo=phone&logoColor=white)                  |
 | `swi-prolog`    | ![img](https://custom-icon-badges.herokuapp.com/badge/swi--prolog-E61B23.svg?logo=swi-prolog&logoColor=fff)        |
-| Add your own    | [Upload icon ⇨](https://custom-icon-badges.herokuapp.com)                                                          |
+| Add your own    | [Upload icon ⇨](https://custom-icon-badges.herokuapp.com)                                                         |
 
 ## ➕ Adding a new logo
 

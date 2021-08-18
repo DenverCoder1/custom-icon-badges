@@ -65,9 +65,9 @@ function getBadgeUrl(
 }
 
 /**
- * Fetch badge from shields.io
+ * Fetch badge from shields.io for item with same params as request
  */
-async function fetchBadge(
+async function fetchBadgeFromRequest(
   req: Request, item: { slug: string, type: string, data: string } | null,
 ): Promise<AxiosResponse<any>> {
   // get shields url
@@ -76,4 +76,19 @@ async function fetchBadge(
   return axios.get(url, { validateStatus: () => true });
 }
 
-export default fetchBadge;
+/**
+ * Fetch badge from shields.io given just a slug
+ */
+async function fetchDefaultBadge(slug: string): Promise<AxiosResponse<any>> {
+  // get shields url
+  const url = `https://img.shields.io/badge/-test-blue?logo=${slug}`;
+  // get badge from url
+  return axios.get(url, { validateStatus: () => true });
+}
+
+const defaultExport = {
+  fetchBadgeFromRequest,
+  fetchDefaultBadge,
+};
+
+export default defaultExport;

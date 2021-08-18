@@ -17,8 +17,10 @@ async function getBadge(req: Request, res: Response): Promise<void> {
   const url = getBadgeUrl(req, item);
   // get badge from url
   const response = await axios.get(url, { validateStatus: () => true });
+  // get type
+  const contentType = response.headers['content-type'] || 'image/svg+xml';
   // send response
-  res.status(response.status).type(response.headers['content-type']).send(response.data);
+  res.status(response.status).type(contentType).send(response.data);
 }
 
 async function postIcon(req: Request, res: Response): Promise<void> {

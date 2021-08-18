@@ -24,7 +24,7 @@ async function insertIcon(slug: string, type: string, data: string):
 
 async function getIcons(): Promise<FindResult<{ slug: string, type: string, data: string }>> {
   // return all items
-  return icons.find({}, { sort: { slug: 1 } });
+  return icons.find({}, { sort: { _id: -1 } });
 }
 
 const defaultExport = {

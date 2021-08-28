@@ -46,6 +46,15 @@ async function postIcon(req: Request, res: Response): Promise<void> {
     });
     return;
   }
+  // check for other errors
+  if (logoBadgeResponse.status >= 400) {
+    res.status(logoBadgeResponse.status).json({
+      type: 'error',
+      message: `There was an error with your request. Status: ${logoBadgeResponse.status} - ${logoBadgeResponse.statusText}.`,
+      body: { slug, type, data },
+    });
+    return;
+  }
 
   // check for slug in the database
   const item = await iconDatabase.checkSlugExists(slug);

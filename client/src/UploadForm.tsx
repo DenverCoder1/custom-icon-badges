@@ -89,7 +89,6 @@ class UploadForm extends React.Component {
     <Form onSubmit={this.handleSubmit} className="Form">
       <h3 className="d-flex justify-content-center">Add an icon</h3>
       <FileUpload label="Upload an image file"
-        setMessage={this.setMessage}
         onFileChange={this.updateFileData} />
       <TextBox label="Pick a slug (name of the logo)"
         value={this.state.slug} required={true}

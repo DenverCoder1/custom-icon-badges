@@ -6,3 +6,35 @@ form.Form {
   width: 92%;
   max-width: 500px;
 }
+
+.submit-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.loading-icon {
+  padding-right: 10px;
+}
+
+.loading-icon::before {
+  border-radius: 50%;
+  border: 0.2em solid white;
+  border-left-color: transparent;
+  content: " ";
+  display: inline-flex;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+  animation: loading-cycle 1s infinite linear;
+}
+
+@keyframes loading-cycle {
+  0% {
+    animation-timing-function: cubic-bezier(0.3333, 0.3333, 0.6667, 0.6667);
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

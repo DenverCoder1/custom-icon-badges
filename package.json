@@ -5,7 +5,7 @@
   "author": "Jonah Lawrence",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.26.0",
+    "axios": "^0.26.1",
     "body-parser": "^1.19.2",
     "concurrently": "^7.0.0",
     "cors": "^2.8.5",

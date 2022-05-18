@@ -2,7 +2,7 @@
   "name": "custom-icon-badges-client",
   "version": "0.6.0",
   "engines": {
-    "node": "16.x"
+    "node": "17.x"
   },
   "private": true,
   "dependencies": {

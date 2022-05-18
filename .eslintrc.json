@@ -25,6 +25,10 @@
         ],
         "import/no-unresolved": "off",
         "import/extensions": "off",
-        "no-underscore-dangle": "off"
+        "no-underscore-dangle": "off",
+        "function-paren-newline": [
+            "error",
+            "consistent"
+        ]
     }
 }

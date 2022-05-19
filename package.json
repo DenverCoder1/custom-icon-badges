@@ -5,7 +5,7 @@
   "author": "Jonah Lawrence",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.26.1",
+    "axios": "^0.27.2",
     "body-parser": "^1.20.0",
     "concurrently": "^7.1.0",
     "cors": "^2.8.5",
@@ -25,15 +25,14 @@
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-react": "^7.29.4",
-    "eslint-plugin-react-hooks": "^4.4.0"
+    "eslint-plugin-jsx-a11y": "^6.5.1"
   },
   "type": "module",
   "scripts": {
     "install-client": "cd client && yarn",
     "build": "tsc && cd client && yarn build",
-    "heroku-postbuild": "yarn install-client && yarn build",
+    "heroku-postbuild": "yarn install-client && yarn heroku-postbuild-client && yarn build",
+    "heroku-postbuild-client": "cd client && npm rebuild node-sass",
     "dev": "yarn lint && yarn build && yarn start",
     "start": "NODE_OPTIONS='--experimental-specifier-resolution=node --require dotenv/config' node dist/index.js",
     "start-client": "cd client && yarn start",

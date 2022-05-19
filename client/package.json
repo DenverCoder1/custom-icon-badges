@@ -30,7 +30,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "heroku-postbuild": "npm rebuild node-sass",
     "test": "react-scripts test --transformIgnorePatterns 'node_modules/(?!(react-github-btn|react-bootstrap))'",
     "eject": "react-scripts eject",
     "lint": "yarn eslint . --ext .ts,.tsx",

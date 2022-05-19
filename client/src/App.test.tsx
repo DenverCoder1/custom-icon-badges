@@ -1,6 +1,6 @@
 import React from 'react';
 // @ts-ignore
-import { test, render, screen } from '@testing-library/react';
+import { test, render, screen, expect } from '@testing-library/react';
 import App from './App';
 
 test('renders learn react link', () => {

@@ -33,7 +33,7 @@
   "scripts": {
     "install-client": "cd client && yarn",
     "build": "tsc && cd client && yarn build",
-    "heroku-postbuild": "yarn install-client && yarn build && npm rebuild node-sass",
+    "heroku-postbuild": "yarn install-client && yarn build && yarn heroku-postbuild",
     "dev": "yarn lint && yarn build && yarn start",
     "start": "NODE_OPTIONS='--experimental-specifier-resolution=node --require dotenv/config' node dist/index.js",
     "start-client": "cd client && yarn start",

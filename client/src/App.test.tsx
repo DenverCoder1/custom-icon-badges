@@ -1,4 +1,5 @@
 import React from 'react';
+// @ts-ignore  
 import { render, screen } from '@testing-library/react';
 import App from './App';
 

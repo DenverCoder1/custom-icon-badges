@@ -4,9 +4,6 @@
   "description": "Allows users to more easily use their own icons and logos in shields.io badges",
   "author": "Jonah Lawrence",
   "license": "MIT",
-  "engines": {
-    "node": "17.x"
-  },
   "dependencies": {
     "axios": "^0.26.1",
     "body-parser": "^1.20.0",

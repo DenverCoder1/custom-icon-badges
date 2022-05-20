@@ -41,9 +41,8 @@ function buildQueryStringFromItem(
   }
   let { data } = item;
   // check for logoColor parameter if it is SVG
-  if (req.query.logoColor && item.type === 'svg+xml') {
-    // get the logo color as a string, use first if multiple
-    const color = `${req.query.logoColor}`.split(',').shift() || '';
+  if (typeof req.query.logoColor === 'string' && item.type === 'svg+xml') {
+    const color = req.query.logoColor;
     data = setLogoColor(data, color);
   }
   // replace logo with data url in query

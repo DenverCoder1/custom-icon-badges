@@ -9,8 +9,8 @@ async function listIconsJSON(req: Request, res: Response): Promise<void> {
 }
 
 async function getBadge(req: Request, res: Response): Promise<void> {
-  // get logo from query as a string, use first if multiple
-  const slug = `${req.query.logo}`.split(',').shift() || '';
+  // get logo from query as a string, use nothing if multiple or empty
+  const slug = typeof req.query.logo === 'string' ? req.query.logo : '';
   // check if slug exists
   const item = slug ? await iconDatabase.checkSlugExists(slug) : null;
   // get badge for item

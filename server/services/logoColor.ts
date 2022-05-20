@@ -13,6 +13,7 @@ const namedColors: { [key: string]: string } = {
   grey: '#555',
   lightgrey: '#9f9f9f',
 };
+
 const aliases: { [key: string]: string } = {
   gray: 'grey',
   lightgray: 'lightgrey',
@@ -38,17 +39,17 @@ function isHexColor(color: string): boolean {
  * @returns {string} normalized color
  */
 function normalizeColor(color: string): string {
-  // if hex with no `#`, add `#` at beginning
-  if (isHexColor(color)) {
-    return `#${color}`;
-  }
   // if color is in the list of named colors, return the hex color
   if (color in namedColors) {
     return namedColors[color];
   }
   // if color is in the list of aliases, return the hex color
   if (color in aliases) {
-    return aliases[color];
+    return namedColors[aliases[color]];
+  }
+  // if hex with no `#`, add `#` at beginning
+  if (isHexColor(color)) {
+    return `#${color}`;
   }
   // remove invalid characters
   return color.replace(/[^\w (),#%]/gi, '');
@@ -56,8 +57,8 @@ function normalizeColor(color: string): string {
 
 /**
  * Takes in the base64 encoded svg and adds fill color to all objects and paths
- * @param base64 base64 encoded svg
- * @param color color to fill with
+ * @param data base64 encoded svg
+ * @param logoColor color to fill with
  * @returns {string} base64 encoded svg with fill color
 */
 function setLogoColor(data: string, logoColor: string): string {

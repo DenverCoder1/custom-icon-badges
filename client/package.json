@@ -1,6 +1,6 @@
 {
   "name": "custom-icon-badges-client",
-  "version": "0.6.4",
+  "version": "0.7.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",

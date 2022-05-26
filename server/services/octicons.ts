@@ -12,8 +12,8 @@ async function getIcon(slug: string):
     return null;
   }
   const icon = octicons[normalized as IconName];
-  // add 'xmlns' attribute to the svg
-  const svg = icon.toSVG().replace('<svg', '<svg xmlns="http://www.w3.org/2000/svg"');
+  // add 'xmlns' and 'fill' attribute to the svg
+  const svg = icon.toSVG().replace('<svg', '<svg xmlns="http://www.w3.org/2000/svg" fill="whitesmoke"');
   return {
     slug: icon.symbol,
     type: 'svg+xml',

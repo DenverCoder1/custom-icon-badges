@@ -1,10 +1,9 @@
 import axios, { AxiosResponse } from 'axios';
 import { Request } from 'express';
-import setLogoColor from './logoColor';
+import setLogoColor from './setLogoColor';
 
 /**
  * Build query string from ParsedQs
- * TODO: replace parsedQs with new query object
  * @param {QueryString.ParsedQs} parsedQs query string possibly with replacements
  * @returns {string} query string
  */
@@ -52,7 +51,10 @@ function buildQueryStringFromItem(
 }
 
 /**
- * Build a badge query given the slug
+ * Build a badge URL given the slug
+ * @param {Request} req request object
+ * @param {Object} item data about the icon or null if not found
+ * @returns {string} url to badge
  */
 function getBadgeUrl(
   req: Request, item: { slug: string, type: string, data: string } | null,
@@ -65,6 +67,9 @@ function getBadgeUrl(
 
 /**
  * Fetch badge from shields.io for item with same params as request
+ * @param {Request} req request object
+ * @param {Object} item data about the icon or null if not found
+ * @returns {AxiosResponse} response from shields.io
  */
 async function fetchBadgeFromRequest(
   req: Request, item: { slug: string, type: string, data: string } | null,
@@ -77,6 +82,8 @@ async function fetchBadgeFromRequest(
 
 /**
  * Fetch badge from shields.io given just a slug
+ * @param {string} slug slug of the icon
+ * @returns {AxiosResponse} response from shields.io
  */
 async function fetchDefaultBadge(slug: string): Promise<AxiosResponse<any>> {
   // get shields url

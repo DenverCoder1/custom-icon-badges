@@ -306,6 +306,13 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@primer/octicons@^17.2.0":
+  version "17.2.0"
+  resolved "https://registry.yarnpkg.com/@primer/octicons/-/octicons-17.2.0.tgz#6e9be44484100e069006958f28dc75eaba55b1ed"
+  integrity sha512-A3YetVbJX5J4JGa2AfVrEl1lE3FtT+7HdSzphFRs1QF5OgsUpkNbyjvVxeCxVZaG6zXYbbbPWsPF06PtsIyUWQ==
+  dependencies:
+    object-assign "^4.1.1"
+
 "@types/body-parser@*":
   version "1.19.2"
   resolved "https://registry.yarnpkg.com/@types/body-parser/-/body-parser-1.19.2.tgz#aea2059e28b7658639081347ac4fab3de166e6f0"
@@ -374,6 +381,11 @@
   version "17.0.34"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.34.tgz#3b0b6a50ff797280b8d000c6281d229f9c538cef"
   integrity sha512-XImEz7XwTvDBtzlTnm8YvMqGW/ErMWBsKZ+hMTvnDIjGCKxwK5Xpc+c/oQjOauwq8M4OS11hEkpjX8rrI/eEgA==
+
+"@types/primer__octicons@^17.0.0":
+  version "17.0.0"
+  resolved "https://registry.yarnpkg.com/@types/primer__octicons/-/primer__octicons-17.0.0.tgz#b065b6dfb36ad8f1ab27a9f7f59d1ceb448221d5"
+  integrity sha512-o7EF2Zvih38CT02oH+HxawZ/Wr6TS3lngcc0cq/WDVlfuPi08Nk3o3Rv78BUhhZefwMpiln81L9X1S4JEKi3jg==
 
 "@types/qs@*":
   version "6.9.7"
@@ -2527,10 +2539,10 @@ type-is@~1.6.18:
     media-typer "0.3.0"
     mime-types "~2.1.24"
 
-typescript@^4.6.4:
-  version "4.6.4"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.6.4.tgz#caa78bbc3a59e6a5c510d35703f6a09877ce45e9"
-  integrity sha512-9ia/jWHIEbo49HfjrLGfKbZSuWo9iTMwXO+Ca3pRsSpbsMbc7/IU8NKdCZVRRBafVPGnoJeFL76ZOAA84I9fEg==
+typescript@^4.7.2:
+  version "4.7.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.7.2.tgz#1f9aa2ceb9af87cca227813b4310fff0b51593c4"
+  integrity sha512-Mamb1iX2FDUpcTRzltPxgWMKy3fhg0TN378ylbktPGPK/99KbDtMQ4W1hwgsbPAsG3a0xKa1vmw4VKZQbkvz5A==
 
 unbox-primitive@^1.0.2:
   version "1.0.2"

@@ -1,18 +1,29 @@
 import { Request, Response } from 'express';
 import fetchBadge from '../services/fetchBadges';
 import iconDatabase from '../services/iconDatabase';
+import octicons from '../services/octicons';
 
-async function listIconsJSON(req: Request, res: Response): Promise<void> {
+/**
+ * List all icons in the database
+ * @param {Request} _req The request object
+ * @param {Response} res The response object
+ */
+async function listIconsJSON(_req: Request, res: Response): Promise<void> {
   res.status(200).json({
     icons: await iconDatabase.getIcons(),
   });
 }
 
+/**
+ * Display a badge for the given parameters
+ * @param {Request} req The request object
+ * @param {Response} res The response object
+ */
 async function getBadge(req: Request, res: Response): Promise<void> {
   // get logo from query as a string, use nothing if multiple or empty
   const slug = typeof req.query.logo === 'string' ? req.query.logo : '';
   // check if slug exists
-  const item = slug ? await iconDatabase.checkSlugExists(slug) : null;
+  const item = slug ? await octicons.getIcon(slug) || await iconDatabase.getIcon(slug) : null;
   // get badge for item
   const response = await fetchBadge.fetchBadgeFromRequest(req, item);
   // get content type
@@ -21,6 +32,11 @@ async function getBadge(req: Request, res: Response): Promise<void> {
   res.status(response.status).type(contentType).send(response.data);
 }
 
+/**
+ * Add a new icon to the database
+ * @param {Request} req The request object
+ * @param {Response} res The response object
+ */
 async function postIcon(req: Request, res: Response): Promise<void> {
   const { slug, type, data }: { slug: string, type: string, data: string } = req.body;
 
@@ -34,7 +50,7 @@ async function postIcon(req: Request, res: Response): Promise<void> {
     return;
   }
 
-  console.log(`Received icon for ${slug}`);
+  console.info(`Received icon for ${slug}`);
 
   // get the badge for item data
   const logoBadgeResponse = await fetchBadge.fetchBadgeFromRequest(req, { slug, type, data });
@@ -58,7 +74,7 @@ async function postIcon(req: Request, res: Response): Promise<void> {
   }
 
   // check for slug in the database
-  const item = await iconDatabase.checkSlugExists(slug);
+  const item = await octicons.getIcon(slug) || await iconDatabase.getIcon(slug);
 
   // Get default badge with the logo set to the slug
   const defaultBadgeResponse = await fetchBadge.fetchDefaultBadge(slug);
@@ -66,7 +82,7 @@ async function postIcon(req: Request, res: Response): Promise<void> {
   // Check if the slug is reserved
   // Slug is reserved if it is in the database or shields.io has an icon for it
   if (item !== null || defaultBadgeResponse.data.match(/<image[^>]*>/) !== null) {
-    console.log('Slug is already in use');
+    console.info(`The slug ${slug} is already in use`);
     // slug already exists
     res.status(409).json({
       type: 'error',
@@ -77,7 +93,7 @@ async function postIcon(req: Request, res: Response): Promise<void> {
   }
 
   // All checks passed, add the icon to the database
-  console.log(`Creating new icon for ${slug}`);
+  console.info(`Creating new icon for ${slug}`);
   // create item
   const body = await iconDatabase.insertIcon(slug, type, data);
   // return success response

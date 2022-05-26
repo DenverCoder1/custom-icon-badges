@@ -27,6 +27,10 @@ Preview:
 
 The following are examples of existing icons and logos that are already available.
 
+### Simple Icons
+
+Over 2,000 brand icons from [Simple Icons](https://github.com/simple-icons/simple-icons) are already supported by shields.io. You can find a list of slugs for each brand [here](https://github.com/simple-icons/simple-icons/blob/develop/slugs.md).
+
 ### Octicons
 
 Currently all [Octicons](https://primer.style/octicons/) are supported.
@@ -41,7 +45,7 @@ Currently all [Octicons](https://primer.style/octicons/) are supported.
 | `git-pull-request` | ![img](https://custom-icon-badges.herokuapp.com/badge/Pull%20Request-purple.svg?logo=pr)               |
 | `heart`            | ![img](https://custom-icon-badges.herokuapp.com/badge/Heart-D15E9B.svg?logo=heart)                     |
 | `mail`             | ![img](https://custom-icon-badges.herokuapp.com/badge/Mail-E61B23.svg?logo=mail)                       |
-| More Octicons      | [View all ⇨](https://primer.style/octicons)                                                           |
+| More Octicons      | [View all ⇨](https://primer.style/octicons)                                                            |
 
 ### Miscellaneous
 

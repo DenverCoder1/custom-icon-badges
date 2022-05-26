@@ -2,10 +2,10 @@
 
 [![stars](https://custom-icon-badges.herokuapp.com/github/stars/DenverCoder1/custom-icon-badges?logo=star)](https://github.com/DenverCoder1/custom-icon-badges/stargazers "stars")
 [![issues](https://custom-icon-badges.herokuapp.com/github/issues-raw/DenverCoder1/custom-icon-badges?logo=issue)](https://github.com/DenverCoder1/custom-icon-badges/issues "issues")
-[![license](https://custom-icon-badges.herokuapp.com/github/license/denvercoder1/custom-icon-badges?logo=repo)](https://github.com/DenverCoder1/custom-icon-badges/blob/main/LICENSE?rgh-link-date=2021-08-09T18%3A10%3A26Z "license MIT")
+[![license](https://custom-icon-badges.herokuapp.com/github/license/denvercoder1/custom-icon-badges?logo=law&logoColor=white)](https://github.com/DenverCoder1/custom-icon-badges/blob/main/LICENSE?rgh-link-date=2021-08-09T18%3A10%3A26Z "license MIT")
 [![discord](https://custom-icon-badges.herokuapp.com/discord/819650821314052106?color=7289DA&logo=comments&label=discord&logoColor=white)](https://discord.gg/fPrdqh3Zfu "Dev Pro Tips Discussion & Support Server")
 
-Allows users to more easily use their own icons and logos to [shields.io badges](https://github.com/badges/shields).
+Allows users to more easily use Octicons and their own icons and logos on [shields.io badges](https://github.com/badges/shields).
 
 ## ⚡ How to use
 
@@ -29,11 +29,13 @@ The following are examples of existing icons and logos that are already availabl
 
 ### Simple Icons
 
-Over 2,000 brand icons from [Simple Icons](https://github.com/simple-icons/simple-icons) are already supported by shields.io. You can find a list of slugs for each brand [here](https://github.com/simple-icons/simple-icons/blob/develop/slugs.md).
+Over 2,000 brand icons from [Simple Icons](https://github.com/simple-icons/simple-icons) are already supported by shields.io.
+
+You can find a list of slugs for each brand [here](https://github.com/simple-icons/simple-icons/blob/develop/slugs.md).
 
 ### Octicons
 
-Currently all [Octicons](https://primer.style/octicons/) are supported.
+All [Octicons](https://primer.style/octicons/) from GitHub are supported by Custom Icon Badges.
 
 | Slug               | Example                                                                                                |
 | ------------------ | ------------------------------------------------------------------------------------------------------ |

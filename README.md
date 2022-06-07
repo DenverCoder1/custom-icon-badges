@@ -115,18 +115,18 @@ Click to get the URL!
 
 [1]: https://custom-icon-badges.herokuapp.com/github/stars/DenverCoder1/custom-icon-badges?logo=star
 [2]: https://custom-icon-badges.herokuapp.com/github/issues-raw/DenverCoder1/custom-icon-badges?logo=issue
-[3]: https://custom-icon-badges.herokuapp.com/github/license/denvercoder1/custom-icon-badges?logo=repo
+[3]: https://custom-icon-badges.herokuapp.com/github/license/denvercoder1/custom-icon-badges?logo=law
 [4]: https://custom-icon-badges.herokuapp.com/github/workflow/status/DenverCoder1/custom-icon-badges/Node.js%20CI?logo=check-circle-fill&logoColor=white
 [5]: https://custom-icon-badges.herokuapp.com/github/last-commit/DenverCoder1/custom-icon-badges?logo=history&logoColor=white
 [6]: https://custom-icon-badges.herokuapp.com/github/languages/code-size/DenverCoder1/custom-icon-badges?logo=file-code&logoColor=white
 [7]: https://custom-icon-badges.herokuapp.com/github/issues-pr-closed/DenverCoder1/custom-icon-badges?color=purple&logo=git-pull-request&logoColor=white
 [8]: https://custom-icon-badges.herokuapp.com/github/v/tag/DenverCoder1/custom-icon-badges?logo=tag&logoColor=white
 [9]: https://custom-icon-badges.herokuapp.com/chrome-web-store/rating/ogffaloegjglncjfehdfplabnoondfjo?logo=thumbsup&logoColor=white
-[10]: https://custom-icon-badges.herokuapp.com/github/followers/DenverCoder1?logo=person-add&style=social
+[10]: https://custom-icon-badges.herokuapp.com/github/followers/DenverCoder1?logo=person-add&style=social&logoColor=black
 [11]: https://custom-icon-badges.herokuapp.com/github/stars/DenverCoder1/custom-icon-badges?logo=star&style=social&logoColor=black
 [12]: https://custom-icon-badges.herokuapp.com/github/forks/DenverCoder1/custom-icon-badges?logo=fork&style=social&logoColor=black
-[13]: https://custom-icon-badges.herokuapp.com/github/watchers/DenverCoder1/custom-icon-badges?logo=eye&style=social
-[14]: https://custom-icon-badges.herokuapp.com/npm/dw/react-bootstrap?logo=download&style=social&label=Download
+[13]: https://custom-icon-badges.herokuapp.com/github/watchers/DenverCoder1/custom-icon-badges?logo=eye&style=social&logoColor=black
+[14]: https://custom-icon-badges.herokuapp.com/npm/dw/react-bootstrap?logo=download&style=social&label=Download&logoColor=black
 [15]: https://custom-icon-badges.herokuapp.com/badge/-My%20Repos-blue?style=for-the-badge&logoColor=white&logo=repo
 [16]: https://custom-icon-badges.herokuapp.com/badge/-Download-F25278?style=for-the-badge&logo=download&logoColor=white
 [17]: https://custom-icon-badges.herokuapp.com/badge/-123--456--7890-orange?style=for-the-badge&logo=phone&logoColor=white

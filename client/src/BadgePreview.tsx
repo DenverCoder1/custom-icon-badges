@@ -2,8 +2,11 @@ import React from 'react';
 import Card from 'react-bootstrap/esm/Card';
 import Form from 'react-bootstrap/esm/Form';
 
+/**
+ * Image for previewing a badge with a custom icon, or placeholder text if no image is uploaded
+ */
 class BadgePreview extends React.Component<{ url: string, label: string }> {
-	render() {
+	render = () => {
 		const { url, label } = this.props;
 		return (
 			<Form.Group controlId="formFile" className="mb-3 d-flex align-items-center flex-column">

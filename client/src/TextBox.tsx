@@ -1,6 +1,9 @@
 import React, { ChangeEvent } from 'react';
 import Form from 'react-bootstrap/esm/Form';
 
+/**
+ * Text box for handling the slug input
+ */
 class TextBox extends React.Component<{ label: string, required: boolean | undefined, value: string, onInputChange: (slug: string) => void }> {
   handleChangeEvent = (event: ChangeEvent<HTMLInputElement>) => {
     const { onInputChange } = this.props;

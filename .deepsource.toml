@@ -1,0 +1,26 @@
+version = 1
+
+exclude_patterns = [
+    "public/**",
+    "dist/**"
+]
+
+[[analyzers]]
+name = "javascript"
+enabled = true
+
+  [analyzers.meta]
+  plugins = ["react"]
+  dependency_file_paths = [
+    "/",
+    "client/"
+  ]
+  module_system = "es-modules"
+  environment = [
+    "nodejs",
+    "browser",
+    "jest",
+    "mongo"
+  ]
+  dialect = "typescript"
+  style_guide = "airbnb"

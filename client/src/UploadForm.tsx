@@ -7,12 +7,12 @@ import FileUpload from "./FileUpload";
 import TextBox from "./TextBox";
 import "./UploadForm.scss";
 
-class UploadForm extends React.Component<{}, { slug: string, fileType: string, data: string, previewUrl: string, message: { type: string, content: JSX.Element }, isLoading: boolean }> {
+class UploadForm extends React.Component<{}, { slug: string, type: string, data: string, previewUrl: string, message: { type: string, content: JSX.Element }, isLoading: boolean }> {
   constructor(props = {}) {
     super(props);
     this.state = {
       slug: "",
-      fileType: "",
+      type: "",
       data: "",
       previewUrl: "",
       message: { type: "", content: <div /> },
@@ -21,7 +21,7 @@ class UploadForm extends React.Component<{}, { slug: string, fileType: string, d
   }
 
   updateSlug = (slug: string) => {
-    this.setState({ slug: slug });
+    this.setState({ slug });
   };
 
   updateFileData = (fileName: string, dataUrl: string) => {
@@ -29,7 +29,7 @@ class UploadForm extends React.Component<{}, { slug: string, fileType: string, d
     if (!match) return;
     this.setState({
       slug: fileName.split(".")[0],
-      fileType: match[1],
+      type: match[1],
       data: match[2],
       previewUrl: this.buildShieldUrl(dataUrl),
       message: { type: "", content: <div /> },
@@ -50,7 +50,7 @@ class UploadForm extends React.Component<{}, { slug: string, fileType: string, d
   ) => {
     this.setState({
       message: {
-        type: type,
+        type,
         content: (
           <div>
             <Alert.Heading>{heading}</Alert.Heading>
@@ -71,18 +71,14 @@ class UploadForm extends React.Component<{}, { slug: string, fileType: string, d
   };
 
   handleSubmit = async (event: ChangeEvent<HTMLFormElement>) => {
-    const { slug, fileType, data } = this.state;
+    const { slug, type, data } = this.state;
     event.preventDefault();
     this.setIsLoading(true);
     // send post request to server
     await fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        slug: slug,
-        type: fileType,
-        data: data,
-      }),
+      body: JSON.stringify({ slug, type, data }),
     })
       .then((response) => response.json())
       .then((json) => {

@@ -23,3 +23,4 @@ enabled = true
     "mongo"
   ]
   style_guide = "airbnb"
+  skip_doc_coverage = ["class-expression"]

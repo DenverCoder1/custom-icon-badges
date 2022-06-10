@@ -7,8 +7,8 @@ import FileUpload from "./FileUpload";
 import TextBox from "./TextBox";
 import "./UploadForm.scss";
 
-class UploadForm extends React.Component<{}, { slug: string, type: string, data: string, previewUrl: string, message: { type: string, content: JSX.Element }, isLoading: boolean }> {
-  constructor(props = {}) {
+class UploadForm extends React.Component<null, { slug: string, type: string, data: string, previewUrl: string, message: { type: string, content: JSX.Element }, isLoading: boolean }> {
+  constructor(props = null) {
     super(props);
     this.state = {
       slug: "",

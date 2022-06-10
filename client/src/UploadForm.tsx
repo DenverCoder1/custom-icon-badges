@@ -7,29 +7,33 @@ import FileUpload from "./FileUpload";
 import TextBox from "./TextBox";
 import "./UploadForm.scss";
 
-class UploadForm extends React.Component {
-  state = {
-    slug: "",
-    fileType: "",
-    data: "",
-    previewUrl: "",
-    message: { type: "", content: <div></div> },
-    isLoading: false,
-  };
+// skipcq: JS-0296
+class UploadForm extends React.Component<{}, { slug: string, type: string, data: string, previewUrl: string, message: { type: string, content: JSX.Element }, isLoading: boolean }> {
+  constructor(props = {}) {
+    super(props);
+    this.state = {
+      slug: "",
+      type: "",
+      data: "",
+      previewUrl: "",
+      message: { type: "", content: <div /> },
+      isLoading: false,
+    };
+  }
 
   updateSlug = (slug: string) => {
-    this.setState({ slug: slug });
+    this.setState({ slug });
   };
 
   updateFileData = (fileName: string, dataUrl: string) => {
-    const match = dataUrl.match("data:image/(.*?);base64,(.*)");
+    const match = /data:image\/(.*?);base64,(.*)/.exec(dataUrl);
     if (!match) return;
     this.setState({
       slug: fileName.split(".")[0],
-      fileType: match[1],
+      type: match[1],
       data: match[2],
       previewUrl: this.buildShieldUrl(dataUrl),
-      message: { type: "", content: <div></div> },
+      message: { type: "", content: <div /> },
     });
   };
 
@@ -47,7 +51,7 @@ class UploadForm extends React.Component {
   ) => {
     this.setState({
       message: {
-        type: type,
+        type,
         content: (
           <div>
             <Alert.Heading>{heading}</Alert.Heading>
@@ -68,17 +72,14 @@ class UploadForm extends React.Component {
   };
 
   handleSubmit = async (event: ChangeEvent<HTMLFormElement>) => {
+    const { slug, type, data } = this.state;
     event.preventDefault();
     this.setIsLoading(true);
     // send post request to server
     await fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        slug: this.state.slug,
-        type: this.state.fileType,
-        data: this.state.data,
-      }),
+      body: JSON.stringify({ slug, type, data }),
     })
       .then((response) => response.json())
       .then((json) => {
@@ -119,14 +120,15 @@ class UploadForm extends React.Component {
     text: string = "Preview",
     color: string = "#E61B23"
   ): string => {
-    dataUrl = encodeURIComponent(dataUrl);
-    text = encodeURIComponent(text);
-    color = encodeURIComponent(color);
-    return `https://img.shields.io/badge/${text}-${color}.svg?logo=${dataUrl}`;
+    const encodedDataUrl = encodeURIComponent(dataUrl);
+    const encodedText = encodeURIComponent(text);
+    const encodedColor = encodeURIComponent(color);
+    return `https://img.shields.io/badge/${encodedText}-${encodedColor}.svg?logo=${encodedDataUrl}`;
   };
 
-  render = () => (
-    <Form onSubmit={this.handleSubmit} className="Form">
+  render = () => {
+    const { slug, previewUrl, message, isLoading } = this.state;
+    return <Form onSubmit={this.handleSubmit} className="Form">
       <h3 className="d-flex justify-content-center">Add an icon</h3>
       <FileUpload
         label="Upload an image file"
@@ -134,14 +136,14 @@ class UploadForm extends React.Component {
       />
       <TextBox
         label="Pick a slug (name of the logo)"
-        value={this.state.slug}
-        required={true}
+        value={slug}
         onInputChange={this.updateSlug}
+        required
       />
-      <BadgePreview label="Preview" url={this.state.previewUrl} />
-      {this.state.message.type ? (
-        <Alert variant={this.state.message.type || undefined}>
-          {this.state.message.content}
+      <BadgePreview label="Preview" url={previewUrl} />
+      {message.type ? (
+        <Alert variant={message.type || undefined}>
+          {message.content}
         </Alert>
       ) : null}
       <div className="d-grid gap-2">
@@ -149,14 +151,14 @@ class UploadForm extends React.Component {
           type="submit"
           size="lg"
           className="submit-btn"
-          disabled={!this.state.previewUrl || this.state.isLoading}
+          disabled={!previewUrl || isLoading}
         >
-          <div className={this.state.isLoading ? "loading-icon" : ""} />
+          <div className={isLoading ? "loading-icon" : ""} />
           Submit
         </Button>
       </div>
     </Form>
-  );
+  };
 }
 
 export default UploadForm;

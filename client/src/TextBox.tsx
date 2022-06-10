@@ -3,18 +3,20 @@ import Form from 'react-bootstrap/esm/Form';
 
 class TextBox extends React.Component<{ label: string, required: boolean | undefined, value: string, onInputChange: (slug: string) => void }> {
   handleChangeEvent = (event: ChangeEvent<HTMLInputElement>) => {
-    this.props.onInputChange(event.target.value);
+    const { onInputChange } = this.props;
+    onInputChange(event.target.value);
   }
 
-  render = () => (
-    <Form.Group className="mb-3">
-      <Form.Label>{this.props.label}</Form.Label>
+  render = () => {
+    const { label, required, value } = this.props;
+    return <Form.Group className="mb-3">
+      <Form.Label>{label}</Form.Label>
       <Form.Control type="text"
-        value={this.props.value}
-        required={this.props.required}
+        value={value}
+        required={required}
         onChange={this.handleChangeEvent} />
     </Form.Group>
-  );
+  };
 }
 
 export default TextBox;

@@ -23,7 +23,7 @@ async function getBadge(req: Request, res: Response): Promise<void> {
   // get logo from query as a string, use nothing if multiple or empty
   const slug = typeof req.query.logo === 'string' ? req.query.logo : '';
   // check if slug exists
-  const item = slug ? await octicons.getIcon(slug) || await iconDatabase.getIcon(slug) : null;
+  const item = slug ? octicons.getIcon(slug) || await iconDatabase.getIcon(slug) : null;
   // get badge for item
   const response = await fetchBadge.fetchBadgeFromRequest(req, item);
   // get content type
@@ -74,7 +74,7 @@ async function postIcon(req: Request, res: Response): Promise<void> {
   }
 
   // check for slug in the database
-  const item = await octicons.getIcon(slug) || await iconDatabase.getIcon(slug);
+  const item = octicons.getIcon(slug) || await iconDatabase.getIcon(slug);
 
   // Get default badge with the logo set to the slug
   const defaultBadgeResponse = await fetchBadge.fetchDefaultBadge(slug);

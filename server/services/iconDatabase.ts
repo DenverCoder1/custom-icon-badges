@@ -11,8 +11,7 @@ icons.createIndex({ slug: 1 }, { unique: true });
  * @param {string} slug The slug to look for
  * @returns {Object} The icon data if it exists, null otherwise
  */
-async function getIcon(slug: string):
-  Promise<{ slug: string, type: string, data: string } | null> {
+function getIcon(slug: string): Promise<{ slug: string, type: string, data: string } | null> {
   // find slug in database, returns null if not found
   return icons.findOne({ slug: slug.toLowerCase() });
 }
@@ -38,7 +37,7 @@ async function insertIcon(slug: string, type: string, data: string):
  * Get all icons from the database
  * @returns {FindResult} The icons in the database
  */
-async function getIcons(): Promise<FindResult<{ slug: string, type: string, data: string }>> {
+function getIcons(): Promise<FindResult<{ slug: string, type: string, data: string }>> {
   // return all items
   return icons.find({}, { sort: { _id: -1 } });
 }

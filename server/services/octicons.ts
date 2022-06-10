@@ -5,8 +5,7 @@ import octicons, { IconName } from '@primer/octicons';
  * @param {string} slug The slug to look for
  * @returns {Object} The icon data if it exists, null otherwise
  */
-async function getIcon(slug: string):
-  Promise<{ slug: string, type: string, data: string } | null> {
+function getIcon(slug: string): { slug: string, type: string, data: string } | null {
   const normalized = slug.toLowerCase();
   if (!(normalized in octicons)) {
     return null;

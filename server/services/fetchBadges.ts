@@ -1,13 +1,14 @@
 import axios, { AxiosResponse } from 'axios';
 import { Request } from 'express';
+import { ParsedQs } from 'qs';
 import setLogoColor from './setLogoColor';
 
 /**
  * Build query string from ParsedQs
- * @param {QueryString.ParsedQs} parsedQs query string possibly with replacements
+ * @param {ParsedQs} parsedQs query string possibly with replacements
  * @returns {string} query string
  */
-function buildQueryString(parsedQs: any): string {
+function buildQueryString(parsedQs: ParsedQs): string {
   return Object.keys(parsedQs).map((key) => `${key}=${encodeURIComponent(parsedQs[key] as string)}`).join('&');
 }
 
@@ -16,9 +17,9 @@ function buildQueryString(parsedQs: any): string {
  * @param {Request} req request object
  * @param {string} type type of the logo
  * @param {string} data data of the logo
- * @returns {QueryString.ParsedQs} parsed query string with replaced logo
+ * @returns {ParsedQs} parsed query string with replaced logo
  */
-function replacedLogoQuery(req: Request, type: string, data: string): any {
+function replacedLogoQuery(req: Request, type: string, data: string): ParsedQs {
   // replace logo slug parameter with data url
   const { query } = req;
   query.logo = `data:image/${type};base64,${data}`;
@@ -35,7 +36,7 @@ function buildQueryStringFromItem(
   req: Request, item: { slug: string, type: string, data: string } | null,
 ): string {
   // if item not found build query string from request params
-  if (item == null) {
+  if (item === null) {
     return buildQueryString(req.query);
   }
   let { data } = item;
@@ -71,9 +72,9 @@ function getBadgeUrl(
  * @param {Object} item data about the icon or null if not found
  * @returns {AxiosResponse} response from shields.io
  */
-async function fetchBadgeFromRequest(
+function fetchBadgeFromRequest(
   req: Request, item: { slug: string, type: string, data: string } | null,
-): Promise<AxiosResponse<any>> {
+): Promise<AxiosResponse<string>> {
   // get shields url
   const url = getBadgeUrl(req, item);
   // get badge from url
@@ -85,7 +86,7 @@ async function fetchBadgeFromRequest(
  * @param {string} slug slug of the icon
  * @returns {AxiosResponse} response from shields.io
  */
-async function fetchDefaultBadge(slug: string): Promise<AxiosResponse<any>> {
+function fetchDefaultBadge(slug: string): Promise<AxiosResponse<string>> {
   // get shields url
   const url = `https://img.shields.io/badge/-test-blue?logo=${slug}`;
   // get badge from url

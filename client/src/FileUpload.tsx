@@ -11,7 +11,7 @@ class FileUpload extends React.Component<{ label: string, onFileChange: (fileNam
 		const file = target.files[0];
 		if (file) {
 			const reader = new FileReader();
-			reader.addEventListener("load", function () {
+			reader.addEventListener("load", () => {
 				if (!reader.result) return;
 				// tell form that file is uploaded
 				const fileName = file.name;
@@ -24,9 +24,10 @@ class FileUpload extends React.Component<{ label: string, onFileChange: (fileNam
 	}
 
 	render() {
+		const { label } = this.props;
 		return (
 			<Form.Group controlId="formFile" className="mb-3">
-				<Form.Label>{this.props.label}</Form.Label>
+				<Form.Label>{label}</Form.Label>
 				<Form.Control
 					type="file"
 					onChange={this.handleChange}

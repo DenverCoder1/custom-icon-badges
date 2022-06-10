@@ -22,5 +22,4 @@ enabled = true
     "jest",
     "mongo"
   ]
-  dialect = "typescript"
   style_guide = "airbnb"

@@ -3,6 +3,9 @@ import './App.scss';
 import UploadForm from './UploadForm';
 import GitHubButtons from './GitHubButtons';
 
+/**
+ * The root component of the application
+ */
 function App() {
   return (
     <div className="App">

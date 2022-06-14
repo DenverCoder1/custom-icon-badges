@@ -82,13 +82,13 @@ Demo site: <https://custom-icon-badges.herokuapp.com>
 
 By default, fetching a badge from Custom Icon Badges will use [`img.shields.io`](https://img.shields.io) as the badge host.
 
-If you would like to use a different badge host, you can add the `host` parameter to the badge URL and set it to one of the following:
+If you would like to use a different badge host, you can add the `host` parameter to one of the following:
 
 -   [`img.shields.io`](https://img.shields.io)
 -   [`staging.shields.io`](https://staging.shields.io)
 -   [`formatted-dynamic-badges.herokuapp.com`](https://formatted-dynamic-badges.herokuapp.com)
 
-If you would like to use a different badge host, fork and modify this repository, and create a PR if it may be useful to others.
+If you would like to use a different badge host, fork and modify this repository. Create a PR if it may be useful to others.
 
 ## 🚀 Example Usage
 

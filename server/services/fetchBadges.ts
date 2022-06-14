@@ -69,7 +69,7 @@ function buildQueryStringFromItem(
  * @param {string|null} host hostname to validate
  * @returns {boolean} True if host is valid, otherwise false
  */
-function validHost(host: string): boolean {
+function isValidHost(host: string): boolean {
   const validHosts = [
     'img.shields.io',
     'staging.shields.io',
@@ -91,7 +91,7 @@ function getBadgeUrl(
   const params = Object.values(req.params).map((p) => encodeURIComponent(p)).join('/');
   const queryString = buildQueryStringFromItem(req, item);
   const host = typeof req.query.host === 'string' ? req.query.host : 'img.shields.io';
-  if (!validHost(host)) {
+  if (!isValidHost(host)) {
     throw new BadgeError('invalid host');
   }
   return `https://${host}/${params}?${queryString}`;

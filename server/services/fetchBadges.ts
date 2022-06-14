@@ -59,7 +59,7 @@ function buildQueryStringFromItem(
   // replace logo with data url in query
   const newQuery = replacedLogoQuery(req, item.type, data);
   // remove "host" parameter from query string
-  const { host, ...rest } = newQuery;
+  delete newQuery.host;
   // build url using request params and query
   return buildQueryString(rest);
 }
@@ -138,8 +138,8 @@ function fetchErrorBadge(message: string): Promise<AxiosResponse<string>> {
 }
 
 export {
+  BadgeError,
   fetchBadgeFromRequest,
   fetchDefaultBadge,
   fetchErrorBadge,
-  BadgeError,
 };

@@ -61,7 +61,7 @@ function buildQueryStringFromItem(
   // remove "host" parameter from query string
   delete newQuery.host;
   // build url using request params and query
-  return buildQueryString(rest);
+  return buildQueryString(newQuery);
 }
 
 /**

@@ -89,11 +89,11 @@ function getBadgeUrl(
 ): string {
   // build url using request params and query
   const params = Object.values(req.params).map((p) => encodeURIComponent(p)).join('/');
-  const queryString = buildQueryStringFromItem(req, item);
   const host = typeof req.query.host === 'string' ? req.query.host : 'img.shields.io';
   if (!isValidHost(host)) {
     throw new BadgeError('invalid host');
   }
+  const queryString = buildQueryStringFromItem(req, item);
   return `https://${host}/${params}?${queryString}`;
 }
 

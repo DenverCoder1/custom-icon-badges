@@ -1,5 +1,10 @@
 import { Request, Response } from 'express';
-import fetchBadge from '../services/fetchBadges';
+import {
+  BadgeError,
+  fetchBadgeFromRequest,
+  fetchDefaultBadge,
+  fetchErrorBadge,
+} from '../services/fetchBadges';
 import iconDatabase from '../services/iconDatabase';
 import octicons from '../services/octicons';
 
@@ -20,12 +25,23 @@ async function listIconsJSON(_req: Request, res: Response): Promise<void> {
  * @param {Response} res The response object
  */
 async function getBadge(req: Request, res: Response): Promise<void> {
-  // get logo from query as a string, use nothing if multiple or empty
-  const slug = typeof req.query.logo === 'string' ? req.query.logo : '';
-  // check if slug exists
-  const item = slug ? octicons.getIcon(slug) || await iconDatabase.getIcon(slug) : null;
-  // get badge for item
-  const response = await fetchBadge.fetchBadgeFromRequest(req, item);
+  let response = null;
+  try {
+    // get logo from query as a string, use nothing if multiple or empty
+    const slug = typeof req.query.logo === 'string' ? req.query.logo : '';
+    // check if slug exists
+    const item = slug ? octicons.getIcon(slug) || await iconDatabase.getIcon(slug) : null;
+    // get badge for item
+    response = await fetchBadgeFromRequest(req, item);
+  } catch (error) {
+    // set response to error badge
+    if (error instanceof BadgeError) {
+      response = await fetchErrorBadge(error.message);
+    } else {
+      console.error(error);
+      response = await fetchErrorBadge('something went wrong');
+    }
+  }
   // get content type
   const contentType = response.headers['content-type'] || 'image/svg+xml';
   // send response
@@ -53,7 +69,7 @@ async function postIcon(req: Request, res: Response): Promise<void> {
   console.info(`Received icon for ${slug}`);
 
   // get the badge for item data
-  const logoBadgeResponse = await fetchBadge.fetchBadgeFromRequest(req, { slug, type, data });
+  const logoBadgeResponse = await fetchBadgeFromRequest(req, { slug, type, data });
   // if the response is 414, the icon is too big
   if (logoBadgeResponse.status === 414) {
     res.status(logoBadgeResponse.status).json({
@@ -77,7 +93,7 @@ async function postIcon(req: Request, res: Response): Promise<void> {
   const item = octicons.getIcon(slug) || await iconDatabase.getIcon(slug);
 
   // Get default badge with the logo set to the slug
-  const defaultBadgeResponse = await fetchBadge.fetchDefaultBadge(slug);
+  const defaultBadgeResponse = await fetchDefaultBadge(slug);
 
   // Check if the slug is reserved
   // Slug is reserved if it is in the database or shields.io has an icon for it

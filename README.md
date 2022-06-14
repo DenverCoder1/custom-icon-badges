@@ -37,17 +37,17 @@ You can find a list of slugs for each brand [here](https://github.com/simple-ico
 
 All [Octicons](https://primer.style/octicons/) from GitHub are supported by Custom Icon Badges.
 
-| Slug               | Example                                                                                                |
-| ------------------ | ------------------------------------------------------------------------------------------------------ |
-| `issue-opened`     | ![img](https://custom-icon-badges.herokuapp.com/badge/Issue-red.svg?logo=issue-opened&logoColor=fff)   |
-| `repo-forked`      | ![img](https://custom-icon-badges.herokuapp.com/badge/Fork-orange.svg?logo=fork)                       |
-| `star`             | ![img](https://custom-icon-badges.herokuapp.com/badge/Star-yellow.svg?logo=star)                       |
-| `git-commit`       | ![img](https://custom-icon-badges.herokuapp.com/badge/Commit-green.svg?logo=git-commit&logoColor=fff)  |
-| `repo`             | ![img](https://custom-icon-badges.herokuapp.com/badge/Repo-blue.svg?logo=repo)                         |
-| `git-pull-request` | ![img](https://custom-icon-badges.herokuapp.com/badge/Pull%20Request-purple.svg?logo=pr)               |
-| `heart`            | ![img](https://custom-icon-badges.herokuapp.com/badge/Heart-D15E9B.svg?logo=heart)                     |
-| `mail`             | ![img](https://custom-icon-badges.herokuapp.com/badge/Mail-E61B23.svg?logo=mail)                       |
-| More Octicons      | [View all ⇨](https://primer.style/octicons)                                                            |
+| Slug               | Example                                                                                               |
+| ------------------ | ----------------------------------------------------------------------------------------------------- |
+| `issue-opened`     | ![img](https://custom-icon-badges.herokuapp.com/badge/Issue-red.svg?logo=issue-opened&logoColor=fff)  |
+| `repo-forked`      | ![img](https://custom-icon-badges.herokuapp.com/badge/Fork-orange.svg?logo=fork)                      |
+| `star`             | ![img](https://custom-icon-badges.herokuapp.com/badge/Star-yellow.svg?logo=star)                      |
+| `git-commit`       | ![img](https://custom-icon-badges.herokuapp.com/badge/Commit-green.svg?logo=git-commit&logoColor=fff) |
+| `repo`             | ![img](https://custom-icon-badges.herokuapp.com/badge/Repo-blue.svg?logo=repo)                        |
+| `git-pull-request` | ![img](https://custom-icon-badges.herokuapp.com/badge/Pull%20Request-purple.svg?logo=pr)              |
+| `heart`            | ![img](https://custom-icon-badges.herokuapp.com/badge/Heart-D15E9B.svg?logo=heart)                    |
+| `mail`             | ![img](https://custom-icon-badges.herokuapp.com/badge/Mail-E61B23.svg?logo=mail)                      |
+| More Octicons      | [View all ⇨](https://primer.style/octicons)                                                           |
 
 ### Miscellaneous
 
@@ -64,7 +64,7 @@ All [Octicons](https://primer.style/octicons/) from GitHub are supported by Cust
 | `trending-down` | ![img](https://custom-icon-badges.herokuapp.com/badge/trending--down-red.svg?logoColor=fff&logo=trending-down)     |
 | `phone`         | ![img](https://custom-icon-badges.herokuapp.com/badge/phone-green.svg?logo=phone&logoColor=white)                  |
 | `swi-prolog`    | ![img](https://custom-icon-badges.herokuapp.com/badge/swi--prolog-E61B23.svg?logo=swi-prolog&logoColor=fff)        |
-| Add your own    | [Upload icon ⇨](https://custom-icon-badges.herokuapp.com)                                                         |
+| Add your own    | [Upload icon ⇨](https://custom-icon-badges.herokuapp.com)                                                          |
 
 ## ➕ Adding a new logo
 
@@ -77,6 +77,18 @@ If you think your icon is useful to others, feel free to open a PR to add it to 
 Demo site: <https://custom-icon-badges.herokuapp.com>
 
 [![image](https://user-images.githubusercontent.com/20955511/128404656-30af9c39-39a4-4ac8-a4b0-2a077806a94c.png)](https://custom-icon-badges.herokuapp.com)
+
+## 🖥️ Using a Different Badge Host
+
+By default, fetching a badge from Custom Icon Badges will use [`img.shields.io`](https://img.shields.io) as the badge host.
+
+If you would like to use a different badge host, you can add the `host` parameter to the badge URL and set it to one of the following:
+
+-   [`img.shields.io`](https://img.shields.io)
+-   [`staging.shields.io`](https://staging.shields.io)
+-   [`formatted-dynamic-badges.herokuapp.com`](https://formatted-dynamic-badges.herokuapp.com)
+
+If you would like to use a different badge host, fork and modify this repository, and create a PR if it may be useful to others.
 
 ## 🚀 Example Usage
 

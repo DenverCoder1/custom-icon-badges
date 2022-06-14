@@ -144,7 +144,7 @@ Click to get the URL!
 
 By default, fetching a badge from Custom Icon Badges will use [`img.shields.io`](https://img.shields.io) as the badge host.
 
-If you would like to use a different badge host, you can add the `host` parameter to one of the following:
+You can set the `host` parameter to one of the following to override the hostname of the badge URL:
 
 -   [`img.shields.io`](https://img.shields.io)
 -   [`staging.shields.io`](https://staging.shields.io)

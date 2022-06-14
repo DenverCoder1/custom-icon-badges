@@ -4,6 +4,17 @@ import { ParsedQs } from 'qs';
 import setLogoColor from './setLogoColor';
 
 /**
+ * Error class for exceptions caused during building and fetching of badges
+ */
+class BadgeError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = 'BadgeError';
+    Object.setPrototypeOf(this, BadgeError.prototype);
+  }
+}
+
+/**
  * Build query string from ParsedQs
  * @param {ParsedQs} parsedQs query string possibly with replacements
  * @returns {string} query string
@@ -47,8 +58,24 @@ function buildQueryStringFromItem(
   }
   // replace logo with data url in query
   const newQuery = replacedLogoQuery(req, item.type, data);
+  // remove "host" parameter from query string
+  delete newQuery.host;
   // build url using request params and query
   return buildQueryString(newQuery);
+}
+
+/**
+ * Validate hostname is allowed
+ * @param {string|null} host hostname to validate
+ * @returns {boolean} True if host is valid, otherwise false
+ */
+function isValidHost(host: string): boolean {
+  const validHosts = [
+    'img.shields.io',
+    'staging.shields.io',
+    'formatted-dynamic-badges.herokuapp.com',
+  ];
+  return validHosts.includes(host);
 }
 
 /**
@@ -63,7 +90,11 @@ function getBadgeUrl(
   // build url using request params and query
   const params = Object.values(req.params).map((p) => encodeURIComponent(p)).join('/');
   const queryString = buildQueryStringFromItem(req, item);
-  return `https://img.shields.io/${params}?${queryString}`;
+  const host = typeof req.query.host === 'string' ? req.query.host : 'img.shields.io';
+  if (!isValidHost(host)) {
+    throw new BadgeError('invalid host');
+  }
+  return `https://${host}/${params}?${queryString}`;
 }
 
 /**
@@ -93,9 +124,22 @@ function fetchDefaultBadge(slug: string): Promise<AxiosResponse<string>> {
   return axios.get(url, { validateStatus: () => true });
 }
 
-const defaultExport = {
+/**
+ * Fetch badge from shields.io that displays an error message
+ * @param {string} message message to display
+ * @returns {AxiosResponse} response from shields.io
+ */
+function fetchErrorBadge(message: string): Promise<AxiosResponse<string>> {
+  const encodedMessage = encodeURIComponent(message);
+  // get shields url
+  const url = `https://img.shields.io/static/v1?label=custom-icon-badges&message=${encodedMessage}&color=red`;
+  // get badge from url
+  return axios.get(url, { validateStatus: () => true });
+}
+
+export {
+  BadgeError,
   fetchBadgeFromRequest,
   fetchDefaultBadge,
+  fetchErrorBadge,
 };
-
-export default defaultExport;

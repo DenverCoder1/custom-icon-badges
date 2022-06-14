@@ -78,18 +78,6 @@ Demo site: <https://custom-icon-badges.herokuapp.com>
 
 [![image](https://user-images.githubusercontent.com/20955511/128404656-30af9c39-39a4-4ac8-a4b0-2a077806a94c.png)](https://custom-icon-badges.herokuapp.com)
 
-## 🖥️ Using a Different Badge Host
-
-By default, fetching a badge from Custom Icon Badges will use [`img.shields.io`](https://img.shields.io) as the badge host.
-
-If you would like to use a different badge host, you can add the `host` parameter to one of the following:
-
--   [`img.shields.io`](https://img.shields.io)
--   [`staging.shields.io`](https://staging.shields.io)
--   [`formatted-dynamic-badges.herokuapp.com`](https://formatted-dynamic-badges.herokuapp.com)
-
-If you would like to use a different badge host, fork and modify this repository. Create a PR if it may be useful to others.
-
 ## 🚀 Example Usage
 
 Click to get the URL!
@@ -151,6 +139,18 @@ Click to get the URL!
 [24]: https://custom-icon-badges.herokuapp.com/badge/-Use%20GitHub%20Action-blue?style=for-the-badge&logo=workflow&logoColor=white
 [25]: https://custom-icon-badges.herokuapp.com/badge/dynamic/json?logo=fire&logoColor=fff&color=orange&label=github%20streak&query=%24.currentStreak.length&suffix=%20days&url=https%3A%2F%2Fgithub-readme-streak-stats.herokuapp.com%2F%3Fuser%3DDenverCoder1%26type%3Djson
 [26]: https://custom-icon-badges.herokuapp.com/badge/dynamic/json?logo=graph&logoColor=fff&color=blue&label=total%20contributions&query=%24.totalContributions&url=https%3A%2F%2Fgithub-readme-streak-stats.herokuapp.com%2F%3Fuser%3DDenverCoder1%26type%3Djson
+
+## 🖥️ Using a Different Badge Host
+
+By default, fetching a badge from Custom Icon Badges will use [`img.shields.io`](https://img.shields.io) as the badge host.
+
+If you would like to use a different badge host, you can add the `host` parameter to one of the following:
+
+-   [`img.shields.io`](https://img.shields.io)
+-   [`staging.shields.io`](https://staging.shields.io)
+-   [`formatted-dynamic-badges.herokuapp.com`](https://formatted-dynamic-badges.herokuapp.com)
+
+If you would like to use a different badge host, fork and modify this repository. Create a PR if it may be useful to others.
 
 ## 🤗 Contributing
 

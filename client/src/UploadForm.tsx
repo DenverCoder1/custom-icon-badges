@@ -117,13 +117,15 @@ class UploadForm extends React.Component<{}, { slug: string, type: string, data:
 
   buildShieldUrl = (
     dataUrl: string = "",
-    text: string = "Preview",
-    color: string = "#E61B23"
+    label: string = "Preview",
+    message: string = "success",
+    color: string = "success"
   ): string => {
     const encodedDataUrl = encodeURIComponent(dataUrl);
-    const encodedText = encodeURIComponent(text);
+    const encodedLabel = encodeURIComponent(label);
+    const encodedMessage = encodeURIComponent(message);
     const encodedColor = encodeURIComponent(color);
-    return `https://img.shields.io/badge/${encodedText}-${encodedColor}.svg?logo=${encodedDataUrl}`;
+    return `https://img.shields.io/badge/${encodedLabel}-${encodedMessage}-${encodedColor}.svg?logo=${encodedDataUrl}`;
   };
 
   render = () => {

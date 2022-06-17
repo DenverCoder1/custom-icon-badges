@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import {
   BadgeError,
+  HTTPError,
   fetchBadgeFromRequest,
   fetchDefaultBadge,
   fetchErrorBadge,
@@ -33,9 +34,14 @@ async function getBadge(req: Request, res: Response): Promise<void> {
     const item = slug ? octicons.getIcon(slug) || await iconDatabase.getIcon(slug) : null;
     // get badge for item
     response = await fetchBadgeFromRequest(req, item);
+    // raise HTTPError if the response is >= 400
+    if (response.status >= 400) {
+      throw new HTTPError(response.status, response.statusText);
+    }
   } catch (error) {
     // set response to error badge
-    if (error instanceof BadgeError) {
+    if (error instanceof BadgeError || error instanceof HTTPError) {
+      console.error(error);
       response = await fetchErrorBadge(error.message);
     } else {
       console.error(error);

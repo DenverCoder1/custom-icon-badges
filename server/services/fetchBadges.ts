@@ -1,16 +1,31 @@
+/* eslint-disable max-classes-per-file */
 import axios, { AxiosResponse } from 'axios';
 import { Request } from 'express';
 import { ParsedQs } from 'qs';
 import setLogoColor from './setLogoColor';
 
 /**
- * Error class for exceptions caused during building and fetching of badges
+ * Error class for exceptions caused during building of badges
  */
 class BadgeError extends Error {
   constructor(message: string) {
     super(message);
     this.name = 'BadgeError';
     Object.setPrototypeOf(this, BadgeError.prototype);
+  }
+}
+
+/**
+ * Error class for exceptions caused during fetching of badges
+ */
+class HTTPError extends Error {
+  code = 0;
+
+  constructor(code: number, message: string) {
+    super(message);
+    this.code = code;
+    this.name = 'HTTPError';
+    Object.setPrototypeOf(this, HTTPError.prototype);
   }
 }
 
@@ -139,6 +154,7 @@ function fetchErrorBadge(message: string): Promise<AxiosResponse<string>> {
 
 export {
   BadgeError,
+  HTTPError,
   fetchBadgeFromRequest,
   fetchDefaultBadge,
   fetchErrorBadge,

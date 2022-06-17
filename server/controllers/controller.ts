@@ -41,7 +41,7 @@ async function getBadge(req: Request, res: Response): Promise<void> {
   } catch (error) {
     // set response to error badge
     if (error instanceof BadgeError || error instanceof HTTPError) {
-      console.error(error);
+      console.error(error.name, error.message, error.toString());
       response = await fetchErrorBadge(error.message);
     } else {
       console.error(error);

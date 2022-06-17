@@ -34,7 +34,7 @@ class UploadForm extends React.Component<{}, { slug: string, type: string, data:
       slug: fileName.split(".")[0],
       type: match[1],
       data: match[2],
-      previewUrl: this.buildShieldUrl(dataUrl),
+      previewUrl: UploadForm.buildShieldUrl(dataUrl),
       message: { type: "", content: <div /> },
     });
   };
@@ -115,10 +115,10 @@ class UploadForm extends React.Component<{}, { slug: string, type: string, data:
       });
   };
 
-  buildShieldUrl = (
+  static buildShieldUrl = (
     dataUrl: string = "",
-    label: string = "Preview",
-    message: string = "success",
+    label: string = "badge",
+    message: string = "preview",
     color: string = "success"
   ): string => {
     const encodedDataUrl = encodeURIComponent(dataUrl);

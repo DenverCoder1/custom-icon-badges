@@ -5,7 +5,7 @@
   "author": "Jonah Lawrence",
   "license": "MIT",
   "dependencies": {
-    "@primer/octicons": "^17.4.0",
+    "@primer/octicons": "^17.4.1",
     "axios": "^0.27.2",
     "body-parser": "^1.20.0",
     "concurrently": "^7.3.0",

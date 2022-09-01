@@ -2622,10 +2622,10 @@ vary@^1, vary@~1.1.2:
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
 
-web-vitals@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/web-vitals/-/web-vitals-3.0.0.tgz#db8a32fd62738a439343309336720ee5685ac71e"
-  integrity sha512-3Gh6rH5aetFYqfkl9V59KCvjj9vp9U2Tkaep9MO+xpAVg+JULmQfi5zEkcPLkE6iU8pNYVwdjHvIU8RFAchYyQ==
+web-vitals@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/web-vitals/-/web-vitals-3.0.1.tgz#7129668af2d1598ff4a574535a46b1432af337c8"
+  integrity sha512-n8LgBynM5BU4C8ZMiTWPu6zbv31AfPnuNXEjWClvPWD5g8h2WkcecR0EtAiQaiMcj1iG0LADyHndR+MKYu5Zog==
 
 which-boxed-primitive@^1.0.2:
   version "1.0.2"

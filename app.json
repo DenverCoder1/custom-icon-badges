@@ -3,8 +3,8 @@
   "description": "Allows users to more easily use their own icons and logos in shields.io badges",
   "repository": "https://github.com/DenverCoder1/custom-icon-badges",
   "keywords": ["badge", "github", "svg", "status", "custom", "badge-maker"],
-  "website": "https://custom-icon-badges.herokuapp.com",
-  "logo": "https://custom-icon-badges.herokuapp.com/favicon.png",
+  "website": "https://custom-icon-badges.demolab.com",
+  "logo": "https://custom-icon-badges.demolab.com/favicon.png",
   "env": {
     "DB_URL": {
       "description": "Mongo DB in the form 'mongodb+srv://<username>:<password>@<cluster>.mongodb.net/<dbname>?retryWrites=true&w=majority&tls=true'",

@@ -9,7 +9,7 @@ class BadgePreview extends React.Component<{ url: string, label: string }> {
 	static handleError = (event: React.SyntheticEvent<HTMLImageElement>) => {
 		const target = event.target as HTMLImageElement;
 		if (!target.src.includes("critical")) {
-			target.src = "https://custom-icon-badges.herokuapp.com/badge/failed%20to%20load-try%20compressing%20the%20image%20to%20make%20it%20smaller-critical?logo=x-circle-fill";
+			target.src = "https://custom-icon-badges.demolab.com/badge/failed%20to%20load-try%20compressing%20the%20image%20to%20make%20it%20smaller-critical?logo=x-circle-fill";
 		}
 	}
 

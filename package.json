@@ -15,7 +15,7 @@
     "express-rate-limit": "^6.6.0",
     "monk": "^7.3.4",
     "qs": "^6.11.0",
-    "typescript": "^4.8.2",
+    "typescript": "^4.8.3",
     "web-vitals": "^3.0.1"
   },
   "devDependencies": {

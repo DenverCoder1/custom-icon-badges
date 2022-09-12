@@ -405,10 +405,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.34.tgz#3b0b6a50ff797280b8d000c6281d229f9c538cef"
   integrity sha512-XImEz7XwTvDBtzlTnm8YvMqGW/ErMWBsKZ+hMTvnDIjGCKxwK5Xpc+c/oQjOauwq8M4OS11hEkpjX8rrI/eEgA==
 
-"@types/primer__octicons@^17.3.0":
-  version "17.3.0"
-  resolved "https://registry.yarnpkg.com/@types/primer__octicons/-/primer__octicons-17.3.0.tgz#b0e9ecf94eb7bfe8e5ac744422c8bd11557c60f8"
-  integrity sha512-tkW8SAMXW8rinGLUGUqJeqp/1+BHdqKKRhcO8xgQ5qnWlvleRJce/Y4PJzbPevHHtTfnhsh0E1FVmpkCEiK5lw==
+"@types/primer__octicons@^17.5.0":
+  version "17.5.0"
+  resolved "https://registry.yarnpkg.com/@types/primer__octicons/-/primer__octicons-17.5.0.tgz#6020cf901da6e7c7db7103e815fcf0de586e94ca"
+  integrity sha512-L1R2HtxiGMx6aRU+Ti+J+qY/NrealYY4V4SRartlSebJLqzMsWRGbajgBEQIi7jRycRPFCiH2jV3FCsW/nIxbw==
 
 "@types/qs@*":
   version "6.9.7"

@@ -64,6 +64,8 @@ All [Octicons](https://primer.style/octicons/) from GitHub are supported by Cust
 | `trending-down` | ![img](https://custom-icon-badges.demolab.com/badge/trending--down-red.svg?logoColor=fff&logo=trending-down)     |
 | `phone`         | ![img](https://custom-icon-badges.demolab.com/badge/phone-green.svg?logo=phone&logoColor=white)                  |
 | `swi-prolog`    | ![img](https://custom-icon-badges.demolab.com/badge/swi--prolog-E61B23.svg?logo=swi-prolog&logoColor=fff)        |
+| `pygame`        | ![img](https://custom-icon-badges.demolab.com/badge/pygame-013243.svg?logo=pygame)        |
+| `grey-pygame`   | ![img](https://custom-icon-badges.demolab.com/badge/pygame-150458.svg?logo=grey-pygame)        |
 | Add your own    | [Upload icon ⇨](https://custom-icon-badges.demolab.com)                                                          |
 
 ## ➕ Adding a new logo

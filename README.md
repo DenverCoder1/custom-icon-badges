@@ -23,6 +23,8 @@ Preview:
 
 ![img](https://custom-icon-badges.demolab.com/badge/custom-badge-blue.svg?logo=paintbrush&logoColor=white)
 
+4. You're done! Use the image URL in your HTML or markdown! Star this repo if you find it useful! ⭐
+
 ## 🖼️ Existing logos
 
 The following are examples of existing icons and logos that are already available.
@@ -35,38 +37,51 @@ You can find a list of slugs for each brand [here](https://github.com/simple-ico
 
 ### Octicons
 
-All [Octicons](https://primer.style/octicons/) from GitHub are supported by Custom Icon Badges.
+All [250+ Octicons](https://primer.style/octicons/) from GitHub are supported by Custom Icon Badges.
 
-| Slug               | Example                                                                                               |
-| ------------------ | ----------------------------------------------------------------------------------------------------- |
-| `issue-opened`     | ![img](https://custom-icon-badges.demolab.com/badge/Issue-red.svg?logo=issue-opened&logoColor=fff)  |
-| `repo-forked`      | ![img](https://custom-icon-badges.demolab.com/badge/Fork-orange.svg?logo=fork)                      |
-| `star`             | ![img](https://custom-icon-badges.demolab.com/badge/Star-yellow.svg?logo=star)                      |
-| `git-commit`       | ![img](https://custom-icon-badges.demolab.com/badge/Commit-green.svg?logo=git-commit&logoColor=fff) |
-| `repo`             | ![img](https://custom-icon-badges.demolab.com/badge/Repo-blue.svg?logo=repo)                        |
-| `git-pull-request` | ![img](https://custom-icon-badges.demolab.com/badge/Pull%20Request-purple.svg?logo=pr)              |
-| `heart`            | ![img](https://custom-icon-badges.demolab.com/badge/Heart-D15E9B.svg?logo=heart)                    |
-| `mail`             | ![img](https://custom-icon-badges.demolab.com/badge/Mail-E61B23.svg?logo=mail)                      |
-| More Octicons      | [View all ⇨](https://primer.style/octicons)                                                           |
+| Slug               | Example                                                   |
+| ------------------ | --------------------------------------------------------- |
+| `issue-opened`     | [![issue-opened][issue-opened]][issue-opened]             |
+| `repo-forked`      | [![repo-forked][repo-forked]][repo-forked]                |
+| `star`             | [![star][star]][star]                                     |
+| `git-commit`       | [![git-commit][git-commit]][git-commit]                   |
+| `repo`             | [![repo][repo]][repo]                                     |
+| `git-pull-request` | [![git-pull-request][git-pull-request]][git-pull-request] |
+| `heart`            | [![heart][heart]][heart]                                  |
+| `mail`             | [![mail][mail]][mail]                                     |
+| More Octicons      | [View all ⇨](https://primer.style/octicons)               |
+
+[issue-opened]: https://custom-icon-badges.demolab.com/badge/Issue-red.svg?logo=issue-opened&logoColor=fff
+[repo-forked]: https://custom-icon-badges.demolab.com/badge/Fork-orange.svg?logo=fork
+[star]: https://custom-icon-badges.demolab.com/badge/Star-yellow.svg?logo=star
+[git-commit]: https://custom-icon-badges.demolab.com/badge/Commit-green.svg?logo=git-commit&logoColor=fff
+[repo]: https://custom-icon-badges.demolab.com/badge/Repo-blue.svg?logo=repo
+[git-pull-request]: https://custom-icon-badges.demolab.com/badge/Pull%20Request-purple.svg?logo=pr
+[heart]: https://custom-icon-badges.demolab.com/badge/Heart-D15E9B.svg?logo=heart
+[mail]: https://custom-icon-badges.demolab.com/badge/Mail-E61B23.svg?logo=mail
 
 ### Miscellaneous
 
-| Slug            | Example                                                                                                            |
-| --------------- | ------------------------------------------------------------------------------------------------------------------ |
-| `ceylon`        | ![img](https://custom-icon-badges.demolab.com/badge/ceylon-E39842.svg?logo=ceylon&logoColor=fff)                 |
-| `color-swatch`  | ![img](https://custom-icon-badges.demolab.com/badge/color--swatch-blue.svg?logo=color-swatch&logoColor=fff)      |
-| `controller`    | ![img](https://custom-icon-badges.demolab.com/badge/controller-blue.svg?logo=controller)                         |
-| `issue`         | ![img](https://custom-icon-badges.demolab.com/badge/issue-orange.svg?logo=issue&logoColor=fff)                   |
-| `fire`          | ![img](https://custom-icon-badges.demolab.com/badge/fire-red.svg?logo=fire&logoColor=fff)                        |
-| `flag`          | ![img](https://custom-icon-badges.demolab.com/badge/flag-green.svg?logo=flag&logoColor=fff)                      |
-| `translate`     | ![img](https://custom-icon-badges.demolab.com/badge/translate-blue.svg?logo=translate&logoColor=white)           |
-| `trending-up`   | ![img](https://custom-icon-badges.demolab.com/badge/trending--up-brightgreen.svg?logoColor=fff&logo=trending-up) |
-| `trending-down` | ![img](https://custom-icon-badges.demolab.com/badge/trending--down-red.svg?logoColor=fff&logo=trending-down)     |
-| `phone`         | ![img](https://custom-icon-badges.demolab.com/badge/phone-green.svg?logo=phone&logoColor=white)                  |
-| `swi-prolog`    | ![img](https://custom-icon-badges.demolab.com/badge/swi--prolog-E61B23.svg?logo=swi-prolog&logoColor=fff)        |
-| `pygame`        | ![img](https://custom-icon-badges.demolab.com/badge/pygame-013243.svg?logo=pygame)        |
-| `grey-pygame`   | ![img](https://custom-icon-badges.demolab.com/badge/pygame-150458.svg?logo=grey-pygame)        |
-| Add your own    | [Upload icon ⇨](https://custom-icon-badges.demolab.com)                                                          |
+|                                                  |                                               |                                         |                                            |
+| ------------------------------------------------ | --------------------------------------------- | --------------------------------------- | ------------------------------------------ |
+| [![ceylon][ceylon]][ceylon]                      | [![color-swatch][color-swatch]][color-swatch] | [![controller][controller]][controller] | [![issue][issue]][issue]                   |
+| [![fire][fire]][fire]                            | [![flag][flag]][flag]                         | [![translate][translate]][translate]    | [![trending-up][trending-up]][trending-up] |
+| [![trending-down][trending-down]][trending-down] | [![phone][phone]][phone]                      | [![pygame][pygame]][pygame]             | [![grey-pygame][grey-pygame]][grey-pygame] |
+| Add your own!                                    | [![Upload Icon][uploadicon]][uploadicon]      |                                         |                                            |
+
+[ceylon]: https://custom-icon-badges.demolab.com/badge/ceylon-E39842.svg?logo=ceylon&logoColor=fff
+[color-swatch]: https://custom-icon-badges.demolab.com/badge/color--swatch-green.svg?logo=color-swatch&logoColor=fff
+[controller]: https://custom-icon-badges.demolab.com/badge/controller-purple.svg?logo=controller
+[issue]: https://custom-icon-badges.demolab.com/badge/issue-orange.svg?logo=issue&logoColor=fff
+[fire]: https://custom-icon-badges.demolab.com/badge/fire-red.svg?logo=fire&logoColor=fff
+[flag]: https://custom-icon-badges.demolab.com/badge/flag-green.svg?logo=flag&logoColor=fff
+[translate]: https://custom-icon-badges.demolab.com/badge/translate-blue.svg?logo=translate&logoColor=white
+[trending-up]: https://custom-icon-badges.demolab.com/badge/trending--up-brightgreen.svg?logoColor=fff&logo=trending-up
+[trending-down]: https://custom-icon-badges.demolab.com/badge/trending--down-red.svg?logoColor=fff&logo=trending-down
+[phone]: https://custom-icon-badges.demolab.com/badge/phone-green.svg?logo=phone&logoColor=white
+[pygame]: https://custom-icon-badges.demolab.com/badge/pygame-013243.svg?logo=pygame
+[grey-pygame]: https://custom-icon-badges.demolab.com/badge/pygame-150458.svg?logo=grey-pygame
+[uploadicon]: https://custom-icon-badges.demolab.com/badge/Upload%20Icon-blue.svg?logo=upload&logoColor=white
 
 ## ➕ Adding a new logo
 
@@ -167,21 +182,21 @@ Deploying on your own is optional. See the steps below.
 <details>
   <summary>Deploy to Heroku</summary>
 
-  1. Sign in to **Heroku** or create a new account at <https://heroku.com>
-  2. Click the Deploy button below
+1. Sign in to **Heroku** or create a new account at <https://heroku.com>
+2. Click the Deploy button below
 
   <p align="center">
     <a href="https://heroku.com/deploy?template=https://github.com/DenverCoder1/custom-icon-badges/tree/main">
       <img src="https://www.herokucdn.com/deploy/button.svg" title="Deploy to Heroku" alt="Deploy"/></a>
   </p>
 
-  3. Add the url of a Mongo database as the `DB_URL` config var. The database should have a collection called `icons`. See [getting started](https://docs.atlas.mongodb.com/getting-started/) for more info on setting up a free Mongo Atlas database.
+3. Add the url of a Mongo database as the `DB_URL` config var. The database should have a collection called `icons`. See [getting started](https://docs.atlas.mongodb.com/getting-started/) for more info on setting up a free Mongo Atlas database.
 
 ![image](https://user-images.githubusercontent.com/20955511/126066250-108fc119-4bc3-4ba0-9b07-0c7402c5790e.png)
 
-  4. Click **"Deploy App"** at the end of the form
-  5. Once the app is deployed, you can use `<your-app-name>.herokuapp.com` in place of `custom-icon-badges.demolab.com`
-	
+4. Click **"Deploy App"** at the end of the form
+5. Once the app is deployed, you can use `<your-app-name>.herokuapp.com` in place of `custom-icon-badges.demolab.com`
+
 </details>
 
 ## 💬 Questions?

@@ -10,7 +10,7 @@ import "./UploadForm.scss";
 /**
  * Class for handling the upload form
  */
-class UploadForm extends React.Component<{}, { slug: string, type: string, data: string, previewUrl: string, message: { type: string, content: JSX.Element }, isLoading: boolean }> {  // skipcq: JS-0296
+class UploadForm extends React.Component<{}, { slug: string, type: string, data: string, previewUrl: string, previewSuccessful: boolean, message: { type: string, content: JSX.Element }, isLoading: boolean }> {  // skipcq: JS-0296
   constructor(props = {}) {
     super(props);
     this.state = {
@@ -20,6 +20,7 @@ class UploadForm extends React.Component<{}, { slug: string, type: string, data:
       previewUrl: "",
       message: { type: "", content: <div /> },
       isLoading: false,
+      previewSuccessful: false,
     };
   }
 
@@ -114,6 +115,10 @@ class UploadForm extends React.Component<{}, { slug: string, type: string, data:
         this.setIsLoading(false);
       });
   };
+  
+  handlePreviewSuccessChange = (isSuccessful: boolean) => {
+    this.setState({previewSuccessful: isSuccessful});
+  };
 
   static buildShieldUrl = (
     dataUrl: string = "",
@@ -129,20 +134,22 @@ class UploadForm extends React.Component<{}, { slug: string, type: string, data:
   };
 
   render = () => {
-    const { slug, previewUrl, message, isLoading } = this.state;
+    const { slug, previewUrl, previewSuccessful, message, isLoading } = this.state;
     return <Form onSubmit={this.handleSubmit} className="Form">
       <h3 className="d-flex justify-content-center">Add an icon</h3>
       <FileUpload
         label="Upload an image file"
+        secondaryLabel="(Maximum size: ≈9kB)"
         onFileChange={this.updateFileData}
       />
       <TextBox
-        label="Pick a slug (name of the logo)"
+        label="Pick a slug"
+        secondaryLabel="(Name of the logo)"
         value={slug}
         onInputChange={this.updateSlug}
         required
       />
-      <BadgePreview label="Preview" url={previewUrl} />
+      <BadgePreview label="Preview" url={previewUrl} onPreviewSuccessfulChange={this.handlePreviewSuccessChange} />
       {message.type ? (
         <Alert variant={message.type || undefined}>
           {message.content}
@@ -153,7 +160,7 @@ class UploadForm extends React.Component<{}, { slug: string, type: string, data:
           type="submit"
           size="lg"
           className="submit-btn"
-          disabled={!previewUrl || isLoading}
+          disabled={!previewUrl || isLoading || !previewSuccessful}
         >
           <div className={isLoading ? "loading-icon" : ""} />
           Submit

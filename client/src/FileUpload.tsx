@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/esm/Form';
 /**
  * Class for handling the file upload form group
  */
-class FileUpload extends React.Component<{ label: string, onFileChange: (fileName: string, dataUrl: string) => void }> {
+class FileUpload extends React.Component<{ label: string, secondaryLabel: string, onFileChange: (fileName: string, dataUrl: string) => void }> {
 	handleChange = (event: ChangeEvent<HTMLInputElement>) => {
 		event.preventDefault();
 		const target = event.target as HTMLInputElement;
@@ -26,10 +26,10 @@ class FileUpload extends React.Component<{ label: string, onFileChange: (fileNam
 	}
 
 	render = () => {
-		const { label } = this.props;
+		const { label, secondaryLabel } = this.props;
 		return (
 			<Form.Group controlId="formFile" className="mb-3">
-				<Form.Label>{label}</Form.Label>
+				<Form.Label>{label} <span className="text-muted">{secondaryLabel}</span></Form.Label>
 				<Form.Control
 					type="file"
 					onChange={this.handleChange}

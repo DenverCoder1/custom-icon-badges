@@ -77,43 +77,46 @@ class UploadForm extends React.Component<{}, { slug: string, type: string, data:
     event.preventDefault();
     this.setIsLoading(true);
     // send post request to server
-    await fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ slug, type, data }),
-    })
-      .then((response) => response.json())
-      .then((json) => {
-        // success message
-        if ("type" in json && "message" in json && json.type === "success") {
-          this.setMessage(
-            "success",
-            "Success!",
-            json.message,
-            json.body?.slug || ""
-          );
-          this.setIsLoading(false);
-          return;
-        }
-        // error message
-        if ("type" in json && "message" in json && json.type === "error") {
-          this.setMessage("danger", "An error ocurred!", json.message);
-          this.setIsLoading(false);
-          return;
-        }
-
-        // default error
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ slug, type, data }),
+      });
+      const json = await response.json();
+      // success message
+      if ("type" in json && "message" in json && json.type === "success") {
         this.setMessage(
-          "danger",
-          "An error occurred!",
-          "Unknown error occurred!"
+          "success",
+          "Success!",
+          json.message,
+          json.body?.slug || ""
         );
         this.setIsLoading(false);
-      })
-      .catch((error) => {
-        this.setMessage("danger", "An error occurred", `${error.message}`);
+        return;
+      }
+      // error message
+      if ("type" in json && "message" in json && json.type === "error") {
+        this.setMessage("danger", "An error ocurred!", json.message);
         this.setIsLoading(false);
-      });
+        return;
+      }
+
+      // default error
+      this.setMessage(
+        "danger",
+        "An error occurred!",
+        "Unknown error occurred!"
+      );
+      this.setIsLoading(false);
+    } catch (error: unknown) {
+      if (typeof error === "string") {
+        this.setMessage("danger", "An error occurred!", error);
+      } else if (error instanceof Error) {
+        this.setMessage("danger", "An error occurred!", `${error.message}`);
+      }
+      this.setIsLoading(false);
+    }
   };
   
   handlePreviewSuccessChange = (isSuccessful: boolean) => {

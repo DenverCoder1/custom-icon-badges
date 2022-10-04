@@ -108,8 +108,12 @@ class UploadForm extends React.Component<{}, { slug: string, type: string, data:
         "Unknown error occurred!"
       );
       this.setIsLoading(false);
-    } catch (error: any) {
-      this.setMessage("danger", "An error occurred", `${error.message}`);
+    } catch (error: unknown) {
+      if (typeof error === "string") {
+        this.setMessage("danger", "An error occurred!", error);
+      } else if (error instanceof Error) {
+        this.setMessage("danger", "An error occurred!", `${error.message}`);
+      }
       this.setIsLoading(false);
     }
   };

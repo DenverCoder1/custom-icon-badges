@@ -138,11 +138,13 @@ class UploadForm extends React.Component<{}, { slug: string, type: string, data:
     return <Form onSubmit={this.handleSubmit} className="Form">
       <h3 className="d-flex justify-content-center">Add an icon</h3>
       <FileUpload
-        label="Upload an image file (Recommended no larger than 64x64px)"
+        label="Upload an image file"
+        secondaryLabel="(Maximum size: ≈9kB)"
         onFileChange={this.updateFileData}
       />
       <TextBox
-        label="Pick a slug (name of the logo)"
+        label="Pick a slug"
+        secondaryLabel="(Name of the logo)"
         value={slug}
         onInputChange={this.updateSlug}
         required

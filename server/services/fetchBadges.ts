@@ -88,7 +88,7 @@ function getBadgeUrl(
   req: Request, item: { slug: string, type: string, data: string } | null,
 ): string {
   // build url using request params and query
-  const params = Object.values(req.params).map((p) => encodeURIComponent(p)).join('/');
+  const params = Object.values(req.params).map((p) => encodeURIComponent(p)).join('/') || 'badge/-test-blue';
   const host = typeof req.query.host === 'string' ? req.query.host : 'img.shields.io';
   if (!isValidHost(host)) {
     throw new BadgeError('invalid host');

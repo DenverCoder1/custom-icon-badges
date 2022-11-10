@@ -27,7 +27,7 @@
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-react": "^7.31.10",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "node-sass": "^7.0.3",
+    "node-sass": "^8.0.0",
     "react-test-renderer": "^18.2.0"
   },
   "scripts": {

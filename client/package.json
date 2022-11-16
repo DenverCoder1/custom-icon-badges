@@ -16,7 +16,7 @@
     "react-dom": "^18.2.0",
     "react-github-btn": "^1.4.0",
     "react-scripts": "^5.0.1",
-    "typescript": "^4.8.4"
+    "typescript": "^4.9.3"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.19.1",

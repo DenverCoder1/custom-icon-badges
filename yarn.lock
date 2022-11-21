@@ -689,9 +689,9 @@ concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz"
 
-concurrently@^7.5.0:
-  version "7.5.0"
-  resolved "https://registry.npmjs.org/concurrently/-/concurrently-7.5.0.tgz"
+concurrently@^7.6.0:
+  version "7.6.0"
+  resolved "https://registry.yarnpkg.com/concurrently/-/concurrently-7.6.0.tgz#531a6f5f30cf616f355a4afb8f8fcb2bba65a49a"
   dependencies:
     chalk "^4.1.0"
     date-fns "^2.29.1"

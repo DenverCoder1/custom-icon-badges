@@ -165,7 +165,6 @@ You can set the `host` parameter to one of the following to override the hostnam
 
 -   [`img.shields.io`](https://img.shields.io)
 -   [`staging.shields.io`](https://staging.shields.io)
--   [`formatted-dynamic-badges.herokuapp.com`](https://formatted-dynamic-badges.herokuapp.com)
 
 If you would like to use a different badge host, fork and modify this repository. Create a PR if it may be useful to others.
 

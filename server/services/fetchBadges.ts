@@ -66,14 +66,13 @@ function buildQueryStringFromItem(
 
 /**
  * Validate hostname is allowed
- * @param {string|null} host hostname to validate
+ * @param {string} host hostname to validate
  * @returns {boolean} True if host is valid, otherwise false
  */
 function isValidHost(host: string): boolean {
   const validHosts = [
     'img.shields.io',
     'staging.shields.io',
-    'formatted-dynamic-badges.herokuapp.com',
   ];
   return validHosts.includes(host);
 }
@@ -89,10 +88,8 @@ function getBadgeUrl(
 ): string {
   // build url using request params and query
   const params = Object.values(req.params).map((p) => encodeURIComponent(p)).join('/');
-  const host = typeof req.query.host === 'string' ? req.query.host : 'img.shields.io';
-  if (!isValidHost(host)) {
-    throw new BadgeError('invalid host');
-  }
+  const userHost = req.query.host;
+  const host = typeof userHost === 'string' && isValidHost(userHost) ? userHost : 'img.shields.io';
   const queryString = buildQueryStringFromItem(req, item);
   return `https://${host}/${params}?${queryString}`;
 }

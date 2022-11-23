@@ -2502,9 +2502,9 @@ boolbase@^1.0.0, boolbase@~1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/boolbase/-/boolbase-1.0.0.tgz"
 
-bootstrap@^5.2.2:
-  version "5.2.2"
-  resolved "https://registry.npmjs.org/bootstrap/-/bootstrap-5.2.2.tgz"
+bootstrap@^5.2.3:
+  version "5.2.3"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-5.2.3.tgz#54739f4414de121b9785c5da3c87b37ff008322b"
 
 brace-expansion@^1.1.7:
   version "1.1.11"

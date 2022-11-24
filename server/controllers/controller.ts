@@ -43,9 +43,9 @@ async function getBadge(req: Request, res: Response): Promise<void> {
     }
   }
   // get content type
-  const contentType = response.headers['content-type'] || 'image/svg+xml';
+  const contentType = response.headers.get('content-type') || 'image/svg+xml';
   // send response
-  res.status(response.status).type(contentType).send(response.data);
+  res.status(response.status).type(contentType).send(await response.text());
 }
 
 /**
@@ -94,10 +94,11 @@ async function postIcon(req: Request, res: Response): Promise<void> {
 
   // Get default badge with the logo set to the slug
   const defaultBadgeResponse = await fetchDefaultBadge(slug);
+  const defaultBadgeResponseText = await defaultBadgeResponse.text();
 
   // Check if the slug is reserved
   // Slug is reserved if it is in the database or shields.io has an icon for it
-  if (item !== null || defaultBadgeResponse.data.match(/<image[^>]*>/) !== null) {
+  if (item !== null || defaultBadgeResponseText.match(/<image[^>]*>/) !== null) {
     console.info(`The slug ${slug} is already in use`);
     // slug already exists
     res.status(409).json({

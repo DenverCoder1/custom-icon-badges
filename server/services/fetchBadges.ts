@@ -1,4 +1,4 @@
-import axios, { AxiosResponse } from 'axios';
+import fetch, { Response } from 'node-fetch';
 import { Request } from 'express';
 import { ParsedQs } from 'qs';
 import setLogoColor from './setLogoColor';
@@ -11,6 +11,20 @@ class BadgeError extends Error {
     super(message);
     this.name = 'BadgeError';
     Object.setPrototypeOf(this, BadgeError.prototype);
+  }
+}
+
+/**
+ * Fetch a badge from a given url and return the response
+ * @param {string} url url to fetch
+ * @returns {Promise<Response>} response from fetch
+ * @throws {BadgeError} if fetch fails
+ */
+async function fetchUrl(url: string): Promise<Response> {
+  try {
+    return await fetch(url);
+  } catch (error) {
+    throw new BadgeError('Failed to fetch badge');
   }
 }
 
@@ -98,40 +112,43 @@ function getBadgeUrl(
  * Fetch badge from shields.io for item with same params as request
  * @param {Request} req request object
  * @param {Object} item data about the icon or null if not found
- * @returns {AxiosResponse} response from shields.io
+ * @returns {Promise<Response>} response from shields.io
+ * @throws {BadgeError} if fetch fails
  */
 function fetchBadgeFromRequest(
   req: Request, item: { slug: string, type: string, data: string } | null,
-): Promise<AxiosResponse<string>> {
+): Promise<Response> {
   // get shields url
   const url = getBadgeUrl(req, item);
   // get badge from url
-  return axios.get(url, { validateStatus: () => true });
+  return fetchUrl(url);
 }
 
 /**
  * Fetch badge from shields.io given just a slug
  * @param {string} slug slug of the icon
- * @returns {AxiosResponse} response from shields.io
+ * @returns {Promise<Response>} response from shields.io
+ * @throws {BadgeError} if fetch fails
  */
-function fetchDefaultBadge(slug: string): Promise<AxiosResponse<string>> {
+function fetchDefaultBadge(slug: string): Promise<Response> {
   // get shields url
   const url = `https://img.shields.io/badge/-test-blue?logo=${slug}`;
   // get badge from url
-  return axios.get(url, { validateStatus: () => true });
+  return fetchUrl(url);
 }
 
 /**
  * Fetch badge from shields.io that displays an error message
  * @param {string} message message to display
- * @returns {AxiosResponse} response from shields.io
+ * @returns {Promise<Response>} response from shields.io
+ * @throws {BadgeError} if fetch fails
  */
-function fetchErrorBadge(message: string): Promise<AxiosResponse<string>> {
+function fetchErrorBadge(message: string): Promise<Response> {
   const encodedMessage = encodeURIComponent(message);
   // get shields url
   const url = `https://img.shields.io/static/v1?label=custom-icon-badges&message=${encodedMessage}&color=red`;
   // get badge from url
-  return axios.get(url, { validateStatus: () => true });
+  return fetchUrl(url);
 }
 
 export {

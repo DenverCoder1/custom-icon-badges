@@ -2,22 +2,26 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main, develop ]
+    branches: [main, develop]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Install modules
-      run: yarn && yarn install-client
-    - name: Run build
-      run: yarn build
-      env:
-        SKIP_PREFLIGHT_CHECK: true
-    - name: Run tests
-      run: yarn test --watchAll=false
-      env:
-        SKIP_PREFLIGHT_CHECK: true
+      - uses: actions/checkout@v3
+
+      - name: Install modules
+        run: yarn && yarn install-client
+
+      - name: Run build
+        run: yarn build
+        env:
+          SKIP_PREFLIGHT_CHECK: true
+
+      - name: Run server tests
+        run: yarn test-server
+
+      - name: Run client tests
+        run: yarn test-client --watchAll=false

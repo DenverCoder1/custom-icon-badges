@@ -1,0 +1,15 @@
+name: 📚 Documentation
+description: Report an issue related to the documentation
+title: "📚 Docs: "
+labels: ["documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for taking the time to make our documentation better 🙏
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Description of the documentation issue
+    validations:
+      required: true

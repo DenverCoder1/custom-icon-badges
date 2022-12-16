@@ -67,7 +67,7 @@ All [250+ Octicons](https://primer.style/octicons/) from GitHub are supported by
 | [![ceylon][ceylon]][ceylon]                      | [![color-swatch][color-swatch]][color-swatch] | [![controller][controller]][controller] | [![issue][issue]][issue]                   |
 | [![fire][fire]][fire]                            | [![flag][flag]][flag]                         | [![translate][translate]][translate]    | [![trending-up][trending-up]][trending-up] |
 | [![trending-down][trending-down]][trending-down] | [![phone][phone]][phone]                      | [![pygame][pygame]][pygame]             | [![grey-pygame][grey-pygame]][grey-pygame] |
-| Add your own!                                    | [![Upload Icon][uploadicon]][uploadicon]      |                                         |                                            |
+| Add your own!                                    | [![Upload Icon][uploadicon]][demo]            |                                         |                                            |
 
 [ceylon]: https://custom-icon-badges.demolab.com/badge/ceylon-E39842.svg?logo=ceylon&logoColor=fff
 [color-swatch]: https://custom-icon-badges.demolab.com/badge/color--swatch-green.svg?logo=color-swatch&logoColor=fff
@@ -82,6 +82,7 @@ All [250+ Octicons](https://primer.style/octicons/) from GitHub are supported by
 [pygame]: https://custom-icon-badges.demolab.com/badge/pygame-013243.svg?logo=pygame
 [grey-pygame]: https://custom-icon-badges.demolab.com/badge/pygame-150458.svg?logo=grey-pygame
 [uploadicon]: https://custom-icon-badges.demolab.com/badge/Upload%20Icon-blue.svg?logo=upload&logoColor=white
+[demo]: https://custom-icon-badges.demolab.com
 
 ## ➕ Adding a new logo
 

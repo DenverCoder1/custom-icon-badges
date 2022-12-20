@@ -28,7 +28,7 @@
     "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-react-hooks": "^4.6.0",
     "react-test-renderer": "^18.2.0",
-    "sass": "^1.57.0"
+    "sass": "^1.57.1"
   },
   "scripts": {
     "start": "react-scripts start",

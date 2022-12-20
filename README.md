@@ -13,7 +13,7 @@ Allows users to more easily use Octicons and their own icons and logos on [shiel
 
 2. Replace `img.shields.io` with `custom-icon-badges.demolab.com`
 
-3. Use any available slug as the logo query parameter.
+3. Use any [available slug](#%EF%B8%8F-existing-logos) as the logo query parameter or [upload your own](https://custom-icon-badges.demolab.com).
 
 ```md
 https://custom-icon-badges.demolab.com/badge/custom-badge-blue.svg?logo=paintbrush&logoColor=white

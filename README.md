@@ -134,7 +134,7 @@ Click to get the URL!
 [1]: https://custom-icon-badges.demolab.com/github/stars/DenverCoder1/custom-icon-badges?logo=star
 [2]: https://custom-icon-badges.demolab.com/github/issues-raw/DenverCoder1/custom-icon-badges?logo=issue
 [3]: https://custom-icon-badges.demolab.com/github/license/denvercoder1/custom-icon-badges?logo=law
-[4]: https://custom-icon-badges.demolab.com/github/workflow/status/DenverCoder1/custom-icon-badges/Node.js%20CI?logo=check-circle-fill&logoColor=white
+[4]: https://custom-icon-badges.demolab.com/github/actions/workflow/status/DenverCoder1/custom-icon-badges/ci.yml?branch=main&logo=check-circle-fill&logoColor=white
 [5]: https://custom-icon-badges.demolab.com/github/last-commit/DenverCoder1/custom-icon-badges?logo=history&logoColor=white
 [6]: https://custom-icon-badges.demolab.com/github/languages/code-size/DenverCoder1/custom-icon-badges?logo=file-code&logoColor=white
 [7]: https://custom-icon-badges.demolab.com/github/issues-pr-closed/DenverCoder1/custom-icon-badges?color=purple&logo=git-pull-request&logoColor=white

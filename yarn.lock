@@ -351,9 +351,10 @@
   version "17.0.34"
   resolved "https://registry.npmjs.org/@types/node/-/node-17.0.34.tgz"
 
-"@types/primer__octicons@^17.5.0":
-  version "17.5.0"
-  resolved "https://registry.npmjs.org/@types/primer__octicons/-/primer__octicons-17.5.0.tgz"
+"@types/primer__octicons@^17.11.0":
+  version "17.11.0"
+  resolved "https://registry.yarnpkg.com/@types/primer__octicons/-/primer__octicons-17.11.0.tgz#0b4bfb0869bdd6f4dde7042014b41ec43702f1db"
+  integrity sha512-PYI55F8Uh/IzswkMJ2nSqTOBs1FxfuAZ34o9wichrnh/D4HKq5iIgRPlrcwNQt5HlL5bm06ch0HslLeHD/04Og==
 
 "@types/qs@*":
   version "6.9.7"

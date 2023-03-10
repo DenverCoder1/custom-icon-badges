@@ -304,10 +304,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@primer/octicons@^18.1.0":
-  version "18.1.0"
-  resolved "https://registry.yarnpkg.com/@primer/octicons/-/octicons-18.1.0.tgz#27c7334c433516fa94821bc86a0e8b98ea5c0e03"
-  integrity sha512-kG+J+cPLL9lV8K5i8Dh1E0qs7NgHAX6kTOD4YaUbBKpeHqpZfFxk2ce8mVsIe5Yc0uN+FUkb2o3W90E3u5F35g==
+"@primer/octicons@^18.2.0":
+  version "18.2.0"
+  resolved "https://registry.yarnpkg.com/@primer/octicons/-/octicons-18.2.0.tgz#14efe3304536f8e3ef0c5202f9f2fece81708781"
+  integrity sha512-Bx7PkGZUgbo/xbZSdufxKefg5JzvGPkIu/x93TAiWit+FoPBmLammqfHQe1Y5gmT2AWAuxJUksYN05hi7w6VnA==
   dependencies:
     object-assign "^4.1.1"
 

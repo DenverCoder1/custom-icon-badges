@@ -6912,9 +6912,9 @@ sass-loader@^12.3.0:
     klona "^2.0.4"
     neo-async "^2.6.2"
 
-sass@^1.58.3:
-  version "1.58.3"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.58.3.tgz#2348cc052061ba4f00243a208b09c40e031f270d"
+sass@^1.59.2:
+  version "1.59.2"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.59.2.tgz#537f6d11614d4f20f97696f23ad358ee398b1937"
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
     immutable "^4.0.0"

@@ -19,7 +19,7 @@
     "web-vitals": "^3.3.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.21.0",
+    "@babel/core": "^7.21.3",
     "@babel/eslint-parser": "^7.19.1",
     "@types/express": "^4.17.17",
     "@types/primer__octicons": "^17.11.0",

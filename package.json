@@ -15,7 +15,7 @@
     "monk": "^7.3.4",
     "node-fetch": "^3.3.1",
     "qs": "^6.11.1",
-    "typescript": "^5.0.3",
+    "typescript": "^5.0.4",
     "web-vitals": "^3.3.1"
   },
   "devDependencies": {

@@ -9,7 +9,7 @@
     "body-parser": "^1.20.2",
     "concurrently": "^8.0.1",
     "cors": "^2.8.5",
-    "dotenv": "^16.0.3",
+    "dotenv": "^16.1.1",
     "express": "^4.18.2",
     "express-rate-limit": "^6.7.0",
     "monk": "^7.3.4",

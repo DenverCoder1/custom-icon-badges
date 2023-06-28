@@ -13,7 +13,7 @@ class TextBox extends React.Component<{ label: string, secondaryLabel: string, r
   render = () => {
     const { label, secondaryLabel, required, value } = this.props;
     return <Form.Group className="mb-3">
-      <Form.Label>{label} <span className="text-muted">{secondaryLabel}</span></Form.Label>
+      <Form.Label>{label} <span className="text-white-50">{secondaryLabel}</span></Form.Label>
       <Form.Control type="text"
         value={value}
         required={required}

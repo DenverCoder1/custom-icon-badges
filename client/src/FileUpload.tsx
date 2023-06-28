@@ -29,7 +29,7 @@ class FileUpload extends React.Component<{ label: string, secondaryLabel: string
 		const { label, secondaryLabel } = this.props;
 		return (
 			<Form.Group controlId="formFile" className="mb-3">
-				<Form.Label>{label} <span className="text-muted">{secondaryLabel}</span></Form.Label>
+				<Form.Label>{label} <span className="text-white-50">{secondaryLabel}</span></Form.Label>
 				<Form.Control
 					type="file"
 					onChange={this.handleChange}

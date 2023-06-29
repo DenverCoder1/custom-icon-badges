@@ -26,7 +26,7 @@ class BadgePreview extends React.Component<{ url: string, label: string, onPrevi
 		return (
 			<Form.Group controlId="formFile" className="mb-3 d-flex align-items-center flex-column">
 				<h3>{label}</h3>
-				{url ? <img className="m-2" src={url} alt="badge preview" onLoad={this.handleSuccess} onError={this.handleError} /> : <Card.Text className="text-muted m-2">Upload a file to see a preview</Card.Text>}
+				{url ? <img className="m-2" src={url} alt="badge preview" onLoad={this.handleSuccess} onError={this.handleError} /> : <Card.Text className="text-white-50 m-2">Upload a file to see a preview</Card.Text>}
 			</Form.Group>
 		);
 	}

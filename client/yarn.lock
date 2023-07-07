@@ -51,13 +51,13 @@
     json5 "^2.2.1"
     semver "^6.3.0"
 
-"@babel/eslint-parser@^7.16.3", "@babel/eslint-parser@^7.22.5":
-  version "7.22.5"
-  resolved "https://registry.yarnpkg.com/@babel/eslint-parser/-/eslint-parser-7.22.5.tgz#fa032503b9e2d188e25b1b95d29e8b8431042d78"
+"@babel/eslint-parser@^7.16.3", "@babel/eslint-parser@^7.22.7":
+  version "7.22.7"
+  resolved "https://registry.yarnpkg.com/@babel/eslint-parser/-/eslint-parser-7.22.7.tgz#d2807fbd1fa4376162716da63dfd3c69a2249fed"
   dependencies:
     "@nicolo-ribaudo/eslint-scope-5-internals" "5.1.1-v1"
+    "@nicolo-ribaudo/semver-v6" "^6.3.3"
     eslint-visitor-keys "^2.1.0"
-    semver "^6.3.0"
 
 "@babel/generator@^7.17.12", "@babel/generator@^7.7.2":
   version "7.17.12"
@@ -1335,6 +1335,10 @@
   resolved "https://registry.npmjs.org/@nicolo-ribaudo/eslint-scope-5-internals/-/eslint-scope-5-internals-5.1.1-v1.tgz"
   dependencies:
     eslint-scope "5.1.1"
+
+"@nicolo-ribaudo/semver-v6@^6.3.3":
+  version "6.3.3"
+  resolved "https://registry.yarnpkg.com/@nicolo-ribaudo/semver-v6/-/semver-v6-6.3.3.tgz#ea6d23ade78a325f7a52750aab1526b02b628c29"
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"

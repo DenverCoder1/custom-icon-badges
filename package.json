@@ -16,7 +16,7 @@
     "node-fetch": "^3.3.2",
     "qs": "^6.11.2",
     "typescript": "^5.1.6",
-    "web-vitals": "^3.3.2"
+    "web-vitals": "^3.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.22.9",

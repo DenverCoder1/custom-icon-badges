@@ -1,6 +1,6 @@
+import path from 'path';
 import express from 'express';
 import rateLimit from 'express-rate-limit';
-import path from 'path';
 import router from './routes/routes';
 
 const __dirname = path.dirname(new URL(import.meta.url).pathname);

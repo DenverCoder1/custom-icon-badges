@@ -19,7 +19,7 @@
     "typescript": "^5.1.6"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.22.10",
+    "@babel/eslint-parser": "^7.22.11",
     "eslint": "^8.47.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-react-app": "^7.0.1",

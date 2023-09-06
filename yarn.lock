@@ -1354,10 +1354,10 @@ etag@~1.8.1:
   version "1.8.1"
   resolved "https://registry.npmjs.org/etag/-/etag-1.8.1.tgz"
 
-express-rate-limit@^6.10.0:
-  version "6.10.0"
-  resolved "https://registry.yarnpkg.com/express-rate-limit/-/express-rate-limit-6.10.0.tgz#e881fcfb1d2a5b364e4850bacb333d537b05e414"
-  integrity sha512-CtGn2IyklQnIWpA4pcRaovXkNR8psDQ9Fa0y5u7Yhz5TL74dNsm7oXpfm1HPKUYiNe5w0TPEyNbIrvNVU/xUIg==
+express-rate-limit@^6.11.0:
+  version "6.11.0"
+  resolved "https://registry.yarnpkg.com/express-rate-limit/-/express-rate-limit-6.11.0.tgz#bbb474c9765e5027ac92683a494e06162ea7c542"
+  integrity sha512-H9afltGTaEZcvenAB5LFgb/ysTMHUzMxoB3TJM6UHP5FtAP1p2+heMj1xwTei54Zm4I9I/2qsS5m+XrdKQp/Hw==
 
 express@^4.18.2:
   version "4.18.2"

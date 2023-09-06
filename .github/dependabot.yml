@@ -5,11 +5,23 @@
 
 version: 2
 updates:
-  - package-ecosystem: "npm" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "npm"
+    directory: "/"
     schedule:
       interval: "daily"
-  - package-ecosystem: "npm" # See documentation for possible values
-    directory: "/client" # Location of package manifests
+  - package-ecosystem: "npm"
+    directory: "/client"
     schedule:
       interval: "daily"
+
+groups:
+  production-dependencies:
+    dependency-type: "production"
+    update-types:
+    - "minor"
+    - "patch"
+  dev-dependencies:
+    dependency-type: "development"
+    update-types:
+    - "minor"
+    - "patch"  

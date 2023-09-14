@@ -69,33 +69,33 @@ All [250+ Feather Icons](https://feathericons.com/) are supported by Custom Icon
 | Slug               | Example                                       |
 | ------------------ | --------------------------------------------- |
 | `activity`         | [![activity][activity]][activity]             |
-| `airplay`          | [![airplay][airplay]][airplay]                |
-| `bell`             | [![bell][bell]][bell]                         |
-| `bluetooth`        | [![bluetooth][bluetooth]][bluetooth]          |
+| `airplay`          | [![airplay][alert-triangle]][alert-triangle]                |
+| `award`             | [![award][award]][award]                         |
+| `bar-chart`        | [![bar-chart][bar-chart]][bar-chart]          |
 | `box`              | [![box][box]][box]                            |
-| `calendar`         | [![calendar][calendar]][calendar]             |
+| `camera`         | [![camera][camera]][camera]             |
 | `cast`             | [![cast][cast]][cast]                         |
 | `command`          | [![command][command]][command]                |
-| `lock`             | [![lock][lock]][lock]                         |
-| `unlock`           | [![unlock][unlock]][unlock]                   |
+| `dollar-sign`             | [![dollar-sign][dollar-sign]][dollar-sign]                         |
+| `download-cloud`           | [![download-cloud][download-cloud]][download-cloud]                   |
 | `upload-cloud`     | [![upload-cloud][upload-cloud]][upload-cloud] |
 | `tv`               | [![tv][tv]][tv]                               |
 | `youtube`          | [![youtube][youtube]][youtube]                |
 | More Feather Icons | [View all ⇨](https://feathericons.com/)       |
 
-[activity]: https://custom-icon-badges.demolab.com/badge/Activity-red.svg?logo=activity&logoSource=feather&logoColor=white
-[airplay]: https://custom-icon-badges.demolab.com/badge/Airplay-orange.svg?logo=airplay&logoSource=feather&logoColor=white
-[bell]: https://custom-icon-badges.demolab.com/badge/Bell-yellow.svg?logo=bell&logoSource=feather&logoColor=white
-[bluetooth]: https://custom-icon-badges.demolab.com/badge/Bluetooth-green.svg?logo=bluetooth&logoSource=feather&logoColor=white
-[box]: https://custom-icon-badges.demolab.com/badge/Box-blue.svg?logo=box&logoSource=feather&logoColor=white
-[calendar]: https://custom-icon-badges.demolab.com/badge/Calendar-purple.svg?logo=calendar&logoSource=feather&logoColor=white
-[cast]: https://custom-icon-badges.demolab.com/badge/Cast-pink.svg?logo=cast&logoSource=feather&logoColor=white
-[command]: https://custom-icon-badges.demolab.com/badge/Command-brown.svg?logo=command&logoSource=feather&logoColor=white
-[lock]: https://custom-icon-badges.demolab.com/badge/Lock-grey.svg?logo=lock&logoSource=feather&logoColor=white
-[unlock]: https://custom-icon-badges.demolab.com/badge/Unlock-black.svg?logo=unlock&logoSource=feather&logoColor=white
-[upload-cloud]: https://custom-icon-badges.demolab.com/badge/Upload%20Cloud-purple.svg?logo=upload-cloud&logoSource=feather&logoColor=white
-[tv]: https://custom-icon-badges.demolab.com/badge/TV-blue.svg?logo=tv&logoSource=feather&logoColor=white
-[youtube]: https://custom-icon-badges.demolab.com/badge/YouTube-red.svg?logo=youtube&logoSource=feather&logoColor=white
+[activity]: https://custom-icon-badges.demolab.com/badge/activity-red.svg?logo=activity&logoSource=feather
+[alert-triangle]: https://custom-icon-badges.demolab.com/badge/alert--triangle-orange.svg?logo=alert-triangle&logoSource=feather
+[award]: https://custom-icon-badges.demolab.com/badge/award-yellow.svg?logo=award&logoSource=feather
+[bar-chart]: https://custom-icon-badges.demolab.com/badge/bar--chart-green.svg?logo=bar-chart&logoSource=feather
+[box]: https://custom-icon-badges.demolab.com/badge/box-blue.svg?logo=box&logoSource=feather
+[camera]: https://custom-icon-badges.demolab.com/badge/camera-purple.svg?logo=camera&logoSource=feather
+[cast]: https://custom-icon-badges.demolab.com/badge/cast-pink.svg?logo=cast&logoSource=feather&logoColor=black
+[command]: https://custom-icon-badges.demolab.com/badge/command-brown.svg?logo=command&logoSource=feather
+[dollar-sign]: https://custom-icon-badges.demolab.com/badge/dollar--sign-grey.svg?logo=dollar-sign&logoSource=feather
+[download-cloud]: https://custom-icon-badges.demolab.com/badge/download--cloud-black.svg?logo=download-cloud&logoSource=feather
+[upload-cloud]: https://custom-icon-badges.demolab.com/badge/upload--cloud-purple.svg?logo=upload-cloud&logoSource=feather
+[tv]: https://custom-icon-badges.demolab.com/badge/tv-blue.svg?logo=tv&logoSource=feather
+[youtube]: https://custom-icon-badges.demolab.com/badge/youtube-red.svg?logo=youtube&logoSource=feather
 
 ### Miscellaneous
 

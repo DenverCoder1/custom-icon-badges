@@ -29,6 +29,12 @@
         "function-paren-newline": [
             "error",
             "consistent"
+        ],
+        "max-len": [
+            "warn",
+            {
+                "code": 180
+            }
         ]
     }
 }

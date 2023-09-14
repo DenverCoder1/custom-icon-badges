@@ -9,7 +9,7 @@ class FeatherIconsService extends IconsService {
     if (!(normalized in feather.icons)) {
       return null;
     }
-    // @ts-ignore
+    // @ts-ignore - icon is checked above
     const icon: FeatherIcon = feather.icons[normalized];
     const normalizedColor = normalizeColor(color ?? 'whitesmoke');
     const svg = icon.toSvg({ color: normalizedColor });

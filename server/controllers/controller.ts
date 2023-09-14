@@ -5,9 +5,9 @@ import {
   fetchDefaultBadge,
   fetchErrorBadge,
 } from '../services/fetchBadges';
-import iconDatabase from '../services/iconDatabase';
-import octicons from '../services/octicons';
-import featherIcons from '../services/featherIcons';
+import IconDatabaseService from '../services/icons/iconDatabase';
+import OcticonsService from '../services/icons/OcticonsService';
+import FeatherIconsService from '../services/icons/FeatherIconsService';
 
 /**
  * List all icons in the database
@@ -16,7 +16,7 @@ import featherIcons from '../services/featherIcons';
  */
 async function listIconsJSON(_req: Request, res: Response): Promise<void> {
   res.status(200).json({
-    icons: await iconDatabase.getIcons(),
+    icons: await IconDatabaseService.getIcons(),
   });
 }
 
@@ -32,17 +32,19 @@ async function getBadge(req: Request, res: Response): Promise<void> {
     const slug = typeof req.query.logo === 'string' ? req.query.logo : '';
     // get logoSource from query as a string, use 'octicons' as the default
     const logoSource = typeof req.query.logoSource === 'string' ? req.query.logoSource : 'octicons';
+    // check for logoColor parameter if it is SVG
+    const color = typeof req.query.logoColor === 'string' ? req.query.logoColor : null;
     // check if slug exists
     let item = null;
     if (slug) {
       // get item from requested source
       if (logoSource === 'octicons') {
-        item = octicons.getIcon(slug);
+        item = await OcticonsService.getIcon(slug, color);
       } else if (logoSource === 'feather') {
-        item = featherIcons.getIcon(slug);
+        item = await FeatherIconsService.getIcon(slug, color);
       }
       // default to database if logoSource is not in the requested source
-      item ??= await iconDatabase.getIcon(slug);
+      item ??= await IconDatabaseService.getIcon(slug, color);
     }
     // get badge for item
     response = await fetchBadgeFromRequest(req, item);
@@ -103,7 +105,7 @@ async function postIcon(req: Request, res: Response): Promise<void> {
   }
 
   // check for slug in the database
-  const item = octicons.getIcon(slug) ?? await iconDatabase.getIcon(slug);
+  const item = await OcticonsService.getIcon(slug) ?? await IconDatabaseService.getIcon(slug);
 
   // Get default badge with the logo set to the slug
   const defaultBadgeResponse = await fetchDefaultBadge(slug);
@@ -125,7 +127,7 @@ async function postIcon(req: Request, res: Response): Promise<void> {
   // All checks passed, add the icon to the database
   console.info(`Creating new icon for ${slug}`);
   // create item
-  const body = await iconDatabase.insertIcon(slug, type, data);
+  const body = await IconDatabaseService.insertIcon(slug, type, data);
   // return success response
   res.status(200).json({
     type: 'success',

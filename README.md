@@ -69,7 +69,7 @@ All [250+ Feather Icons](https://feathericons.com/) are supported by Custom Icon
 | Slug               | Example                                       |
 | ------------------ | --------------------------------------------- |
 | `activity`         | [![activity][activity]][activity]             |
-| `airplay`          | [![airplay][alert-triangle]][alert-triangle]                |
+| `alert-triangle`          | [![alert-triangle][alert-triangle]][alert-triangle]                |
 | `award`             | [![award][award]][award]                         |
 | `bar-chart`        | [![bar-chart][bar-chart]][bar-chart]          |
 | `box`              | [![box][box]][box]                            |

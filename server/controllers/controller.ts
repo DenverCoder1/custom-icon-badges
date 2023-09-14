@@ -8,6 +8,7 @@ import {
 import IconDatabaseService from '../services/icons/iconDatabase';
 import OcticonsService from '../services/icons/OcticonsService';
 import FeatherIconsService from '../services/icons/FeatherIconsService';
+import IconsService from '../services/icons/IconsService';
 
 /**
  * List all icons in the database
@@ -30,21 +31,20 @@ async function getBadge(req: Request, res: Response): Promise<void> {
   try {
     // get logo from query as a string, use nothing if multiple or empty
     const slug = typeof req.query.logo === 'string' ? req.query.logo : '';
-    // get logoSource from query as a string, use 'octicons' as the default
-    const logoSource = typeof req.query.logoSource === 'string' ? req.query.logoSource : 'octicons';
-    // check for logoColor parameter if it is SVG
-    const color = typeof req.query.logoColor === 'string' ? req.query.logoColor : null;
+    // get logoSource from query as a string
+    const logoSource = typeof req.query.logoSource === 'string' ? req.query.logoSource : '';
+    // check for logoColor in query
+    const logoColor = typeof req.query.logoColor === 'string' ? req.query.logoColor : null;
     // check if slug exists
     let item = null;
     if (slug) {
-      // get item from requested source
-      if (logoSource === 'octicons') {
-        item = await OcticonsService.getIcon(slug, color);
-      } else if (logoSource === 'feather') {
-        item = await FeatherIconsService.getIcon(slug, color);
-      }
+      // get item from requested source, default to octicons
+      const iconService: typeof IconsService = {
+        octicons: OcticonsService,
+        feather: FeatherIconsService,
+      }[logoSource] ?? OcticonsService;
       // default to database if logoSource is not in the requested source
-      item ??= await IconDatabaseService.getIcon(slug, color);
+      item = await iconService.getIcon(slug, logoColor) ?? await IconDatabaseService.getIcon(slug, logoColor);
     }
     // get badge for item
     response = await fetchBadgeFromRequest(req, item);

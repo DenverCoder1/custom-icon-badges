@@ -67,7 +67,7 @@ function setLogoColor(data: string, logoColor: string): string {
   // validate color
   const color = normalizeColor(logoColor);
   // insert style tag after opening svg tag
-  const svg = decoded.replace(/<svg[^>]*>/, `$&<style>* { fill: ${color}!important; }</style>`);
+  const svg = decoded.replace(/<svg[^>]*>/, `$&<style>* { color: ${color}!important; fill: currentColor; }</style>`);
   // convert back to base64
   return Buffer.from(svg, 'utf8').toString('base64');
 }

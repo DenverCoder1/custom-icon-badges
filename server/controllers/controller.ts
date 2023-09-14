@@ -7,6 +7,7 @@ import {
 } from '../services/fetchBadges';
 import iconDatabase from '../services/iconDatabase';
 import octicons from '../services/octicons';
+import featherIcons from '../services/featherIcons';
 
 /**
  * List all icons in the database
@@ -29,8 +30,20 @@ async function getBadge(req: Request, res: Response): Promise<void> {
   try {
     // get logo from query as a string, use nothing if multiple or empty
     const slug = typeof req.query.logo === 'string' ? req.query.logo : '';
+    // get logoSource from query as a string, use 'octicons' as the default
+    const logoSource = typeof req.query.logoSource === 'string' ? req.query.logoSource : 'octicons';
     // check if slug exists
-    const item = slug ? octicons.getIcon(slug) || await iconDatabase.getIcon(slug) : null;
+    let item = null;
+    if (slug) {
+      // get item from requested source
+      if (logoSource === 'octicons') {
+        item = octicons.getIcon(slug);
+      } else if (logoSource === 'feather') {
+        item = featherIcons.getIcon(slug);
+      }
+      // default to database if logoSource is not in the requested source
+      item ??= await iconDatabase.getIcon(slug);
+    }
     // get badge for item
     response = await fetchBadgeFromRequest(req, item);
   } catch (error) {
@@ -43,7 +56,7 @@ async function getBadge(req: Request, res: Response): Promise<void> {
     }
   }
   // get content type
-  const contentType = response.headers.get('content-type') || 'image/svg+xml';
+  const contentType = response.headers.get('content-type') ?? 'image/svg+xml';
   // send response
   res.status(response.status).type(contentType).send(await response.text());
 }
@@ -90,7 +103,7 @@ async function postIcon(req: Request, res: Response): Promise<void> {
   }
 
   // check for slug in the database
-  const item = octicons.getIcon(slug) || await iconDatabase.getIcon(slug);
+  const item = octicons.getIcon(slug) ?? await iconDatabase.getIcon(slug);
 
   // Get default badge with the logo set to the slug
   const defaultBadgeResponse = await fetchDefaultBadge(slug);

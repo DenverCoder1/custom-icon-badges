@@ -1,7 +1,6 @@
 import fetch, { Response } from 'node-fetch';
 import { Request } from 'express';
 import { ParsedQs } from 'qs';
-import setLogoColor from './setLogoColor';
 
 /**
  * Error class for exceptions caused during building and fetching of badges
@@ -64,12 +63,7 @@ function buildQueryStringFromItem(
   if (item === null) {
     return buildQueryString(req.query);
   }
-  let { data } = item;
-  // check for logoColor parameter if it is SVG
-  if (typeof req.query.logoColor === 'string' && item.type === 'svg+xml') {
-    const color = req.query.logoColor;
-    data = setLogoColor(data, color);
-  }
+  const { data } = item;
   // replace logo with data url in query
   const newQuery = replacedLogoQuery(req, item.type, data);
   // remove "host" parameter from query string

@@ -60,6 +60,43 @@ All [250+ Octicons](https://primer.style/octicons/) from GitHub are supported by
 [heart]: https://custom-icon-badges.demolab.com/badge/Heart-D15E9B.svg?logo=heart
 [mail]: https://custom-icon-badges.demolab.com/badge/Mail-E61B23.svg?logo=mail
 
+### Feather Icons
+
+All [250+ Feather Icons](https://feathericons.com/) are supported by Custom Icon Badges.
+
+**Note:** To use Feather Icons, you must use add the query parameter `logoSource=feather` to the URL in addition to the `logo` parameter.
+
+| Slug               | Example                                       |
+| ------------------ | --------------------------------------------- |
+| `activity`         | [![activity][activity]][activity]             |
+| `airplay`          | [![airplay][airplay]][airplay]                |
+| `bell`             | [![bell][bell]][bell]                         |
+| `bluetooth`        | [![bluetooth][bluetooth]][bluetooth]          |
+| `box`              | [![box][box]][box]                            |
+| `calendar`         | [![calendar][calendar]][calendar]             |
+| `cast`             | [![cast][cast]][cast]                         |
+| `command`          | [![command][command]][command]                |
+| `lock`             | [![lock][lock]][lock]                         |
+| `unlock`           | [![unlock][unlock]][unlock]                   |
+| `upload-cloud`     | [![upload-cloud][upload-cloud]][upload-cloud] |
+| `tv`               | [![tv][tv]][tv]                               |
+| `youtube`          | [![youtube][youtube]][youtube]                |
+| More Feather Icons | [View all ⇨](https://feathericons.com/)       |
+
+[activity]: https://custom-icon-badges.demolab.com/badge/Activity-red.svg?logo=activity&logoSource=feather&logoColor=white
+[airplay]: https://custom-icon-badges.demolab.com/badge/Airplay-orange.svg?logo=airplay&logoSource=feather&logoColor=white
+[bell]: https://custom-icon-badges.demolab.com/badge/Bell-yellow.svg?logo=bell&logoSource=feather&logoColor=white
+[bluetooth]: https://custom-icon-badges.demolab.com/badge/Bluetooth-green.svg?logo=bluetooth&logoSource=feather&logoColor=white
+[box]: https://custom-icon-badges.demolab.com/badge/Box-blue.svg?logo=box&logoSource=feather&logoColor=white
+[calendar]: https://custom-icon-badges.demolab.com/badge/Calendar-purple.svg?logo=calendar&logoSource=feather&logoColor=white
+[cast]: https://custom-icon-badges.demolab.com/badge/Cast-pink.svg?logo=cast&logoSource=feather&logoColor=white
+[command]: https://custom-icon-badges.demolab.com/badge/Command-brown.svg?logo=command&logoSource=feather&logoColor=white
+[lock]: https://custom-icon-badges.demolab.com/badge/Lock-grey.svg?logo=lock&logoSource=feather&logoColor=white
+[unlock]: https://custom-icon-badges.demolab.com/badge/Unlock-black.svg?logo=unlock&logoSource=feather&logoColor=white
+[upload-cloud]: https://custom-icon-badges.demolab.com/badge/Upload%20Cloud-purple.svg?logo=upload-cloud&logoSource=feather&logoColor=white
+[tv]: https://custom-icon-badges.demolab.com/badge/TV-blue.svg?logo=tv&logoSource=feather&logoColor=white
+[youtube]: https://custom-icon-badges.demolab.com/badge/YouTube-red.svg?logo=youtube&logoSource=feather&logoColor=white
+
 ### Miscellaneous
 
 |                                                  |                                               |                                         |                                            |

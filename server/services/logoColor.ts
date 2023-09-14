@@ -38,7 +38,7 @@ function isHexColor(color: string): boolean {
  * @param color color to normalize
  * @returns {string} normalized color
  */
-function normalizeColor(color: string): string {
+export function normalizeColor(color: string): string {
   // if color is in the list of named colors, return the hex color
   if (color in namedColors) {
     return namedColors[color];
@@ -61,15 +61,13 @@ function normalizeColor(color: string): string {
  * @param logoColor color to fill with
  * @returns {string} base64 encoded svg with fill color
 */
-function setLogoColor(data: string, logoColor: string): string {
+export function setLogoColor(data: string, logoColor: string): string {
   // decode base64
   const decoded = Buffer.from(data, 'base64').toString('utf8');
   // validate color
   const color = normalizeColor(logoColor);
   // insert style tag after opening svg tag
-  const svg = decoded.replace(/<svg[^>]*>/, `$&<style>* { fill: ${color}!important; }</style>`);
+  const svg = decoded.replace(/<svg[^>]*>/, `$&<style>* { fill: ${color} !important; }</style>`);
   // convert back to base64
   return Buffer.from(svg, 'utf8').toString('base64');
 }
-
-export default setLogoColor;

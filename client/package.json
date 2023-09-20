@@ -8,7 +8,7 @@
     "@testing-library/user-event": "^14.5.1",
     "@types/jest": "^29.5.5",
     "@types/node": "^20.6.2",
-    "@types/react": "^18.2.21",
+    "@types/react": "^18.2.22",
     "@types/react-dom": "^18.2.7",
     "bootstrap": "^5.3.2",
     "react": "^18.2.0",

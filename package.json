@@ -20,11 +20,11 @@
     "web-vitals": "^3.4.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.22.20",
+    "@babel/core": "^7.23.0",
     "@babel/eslint-parser": "^7.22.15",
-    "@types/express": "^4.17.17",
+    "@types/express": "^4.17.18",
     "@types/feather-icons": "^4.29.2",
-    "@types/primer__octicons": "^19.6.0",
+    "@types/primer__octicons": "^19.6.1",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
     "eslint": "^7.32.0",

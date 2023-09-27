@@ -19,7 +19,7 @@ class IconDatabaseService extends IconsService {
       return null;
     }
     // set color if it is not null
-    const data = color ? setLogoColor(icon.data, color) : icon.data;
+    const data = color && icon.type === 'svg+xml' ? setLogoColor(icon.data, color) : icon.data;
     // return icon
     return {
       slug: icon.slug,

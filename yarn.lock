@@ -1368,10 +1368,10 @@ etag@~1.8.1:
   version "1.8.1"
   resolved "https://registry.npmjs.org/etag/-/etag-1.8.1.tgz"
 
-express-rate-limit@^7.0.1:
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/express-rate-limit/-/express-rate-limit-7.0.1.tgz#933af24166990ea4fc8004335e6cd6c86fd31562"
-  integrity sha512-oTIPm094gh8c7nbShl4TNLqnayzOcbDGY7dCRnFqUAvptyb0pp5231LaH34JtvVEbZlOJMiixikU5AVK8VN3FA==
+express-rate-limit@^7.0.2:
+  version "7.0.2"
+  resolved "https://registry.yarnpkg.com/express-rate-limit/-/express-rate-limit-7.0.2.tgz#0257a823d1547bca35c268d4111e2c7da2473407"
+  integrity sha512-EZoojG9civtJ6GRR7vE0JErow5q/ltbIl0RGbYhrNJKwBC9/kp2HckpdAvQkkE0sRAAtFDBvILvwZSR2kQroDw==
 
 express@^4.18.2:
   version "4.18.2"

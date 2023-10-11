@@ -1795,9 +1795,9 @@
   version "1.2.4"
   resolved "https://registry.npmjs.org/@types/range-parser/-/range-parser-1.2.4.tgz"
 
-"@types/react-dom@^18.0.0", "@types/react-dom@^18.2.12":
-  version "18.2.12"
-  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-18.2.12.tgz#58479c463d1e0b7f1ee7cd80e09186189f9ec32d"
+"@types/react-dom@^18.0.0", "@types/react-dom@^18.2.13":
+  version "18.2.13"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-18.2.13.tgz#89cd7f9ec8b28c8b6f0392b9591671fb4a9e96b7"
   dependencies:
     "@types/react" "*"
 
@@ -1807,9 +1807,9 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@>=16.9.11", "@types/react@^18.2.27":
-  version "18.2.27"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.27.tgz#746e52b06f3ccd5d7a724fd53769b70792601440"
+"@types/react@*", "@types/react@>=16.9.11", "@types/react@^18.2.28":
+  version "18.2.28"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.28.tgz#86877465c0fcf751659a36c769ecedfcfacee332"
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"

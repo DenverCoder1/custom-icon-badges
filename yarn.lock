@@ -372,20 +372,20 @@
     "@types/qs" "*"
     "@types/range-parser" "*"
 
-"@types/express@^4.17.19":
-  version "4.17.19"
-  resolved "https://registry.yarnpkg.com/@types/express/-/express-4.17.19.tgz#6ff9b4851fda132c5d3dcd2f89fdb6a7a0031ced"
-  integrity sha512-UtOfBtzN9OvpZPPbnnYunfjM7XCI4jyk1NvnFhTVz5krYAnW4o5DCoIekvms+8ApqhB4+9wSge1kBijdfTSmfg==
+"@types/express@^4.17.20":
+  version "4.17.20"
+  resolved "https://registry.yarnpkg.com/@types/express/-/express-4.17.20.tgz#e7c9b40276d29e38a4e3564d7a3d65911e2aa433"
+  integrity sha512-rOaqlkgEvOW495xErXMsmyX3WKBInbhG5eqojXYi3cGUaLoRDlXa5d52fkfWZT963AZ3v2eZ4MbKE6WpDAGVsw==
   dependencies:
     "@types/body-parser" "*"
     "@types/express-serve-static-core" "^4.17.33"
     "@types/qs" "*"
     "@types/serve-static" "*"
 
-"@types/feather-icons@^4.29.2":
-  version "4.29.2"
-  resolved "https://registry.yarnpkg.com/@types/feather-icons/-/feather-icons-4.29.2.tgz#73a24fa7e166439da25c8fa855f87f1c6accd383"
-  integrity sha512-qm/vTmSd+8Z75NKI2/gwiXbq+UJk+jcEecas2FdYXti19xaZvuIOZf3sfQvSOT/xwFJNUf7IA53acauLffQW+Q==
+"@types/feather-icons@^4.29.3":
+  version "4.29.3"
+  resolved "https://registry.yarnpkg.com/@types/feather-icons/-/feather-icons-4.29.3.tgz#83a41854c773f3910eaa6a297803ddb2fe1dccf1"
+  integrity sha512-DU5pZVD75WpswT9uGv06BQJMYNtXyDKG7Y5kJ6n2NA8hjk168gWa2z9VRG3A78bKIuGySJbQWHCleHhXARvOTw==
 
 "@types/json-schema@^7.0.7":
   version "7.0.11"

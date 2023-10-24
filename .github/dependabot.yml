@@ -23,7 +23,7 @@ updates:
   - package-ecosystem: "npm"
     directory: "/client"
     schedule:
-      interval: "daily"
+      interval: "weekly"
     groups:
       production-dependencies:
         dependency-type: "production"

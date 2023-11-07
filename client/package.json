@@ -19,14 +19,6 @@
     "typescript": "^5.1.6"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.22.15",
-    "eslint": "^8.52.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-react-app": "^7.0.1",
-    "eslint-plugin-import": "^2.29.0",
-    "eslint-plugin-jsx-a11y": "^6.7.1",
-    "eslint-plugin-react": "^7.33.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
     "react-test-renderer": "^18.2.0",
     "sass": "^1.69.5"
   },

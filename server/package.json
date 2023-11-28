@@ -1,9 +1,8 @@
 {
   "name": "custom-icon-badges",
   "version": "0.12.1",
-  "description": "Allows users to more easily use their own icons and logos in shields.io badges",
-  "author": "Jonah Lawrence",
-  "license": "MIT",
+  "private": true,
+  "type": "module",
   "dependencies": {
     "@primer/octicons": "^19.8.0",
     "@types/express": "^4.17.20",
@@ -25,19 +24,11 @@
   "devDependencies": {
     "eslint": "^7.32.0"
   },
-  "type": "module",
   "scripts": {
     "start": "node dist/index.js",
     "build": "yarn install && yarn tsc",
     "test": "exit 0",
     "lint": "yarn eslint . --ext .ts,.tsx",
     "fix": "yarn eslint . --ext .ts,.tsx --fix"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DenverCoder1/custom-icon-badges.git"
-  },
-  "bugs": {
-    "url": "https://github.com/DenverCoder1/custom-icon-badges/issues"
   }
 }

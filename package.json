@@ -1,7 +1,16 @@
 {
   "name": "custom-icon-badges-client",
   "version": "0.12.1",
-  "private": true,
+  "description": "Allows users to more easily use their own icons and logos in shields.io badges",
+  "author": "Jonah Lawrence",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DenverCoder1/custom-icon-badges.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DenverCoder1/custom-icon-badges/issues"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^6.1.4",
     "@testing-library/react": "^14.0.0",
@@ -41,7 +50,7 @@
     "lint": "yarn eslint . --ext .ts,.tsx && cd server && yarn lint",
     "fix": "yarn eslint . --ext .ts,.tsx --fix && cd server && yarn fix",
     "dev": "yarn lint && yarn build && yarn start",
-    "install-modules": "yarn install && (cd server && yarn install)"
+    "install-all": "yarn install && cd server && yarn install"
   },
   "browserslist": {
     "production": [

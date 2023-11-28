@@ -1,6 +1,10 @@
+import dotenv from 'dotenv';
 import monk, { FindResult } from 'monk';
+import path from 'path';
 import IconsService from './IconsService.js';
 import { setLogoColor } from '../logoColor.js';
+
+dotenv.config({ path: path.resolve('..', '.env') });
 
 const DB_NAME = 'custom-icon-badges';
 const DB_URL = process.env.DB_URL ?? `mongodb://localhost:27017/${DB_NAME}`;

@@ -25,12 +25,12 @@ cd custom-icon-badges
 ### Installing dependencies
 
 ```bash
-yarn && yarn install-client
+yarn install-all
 ```
 
 ### Config vars
 
-To work with a database, add a `.env` file on the root level with the following:
+To work with a database, add a `.env` file in the root directory with the following:
 
 ```bash
 DB_URL=mongodb+srv://<username>:<password>@<cluster>.mongodb.net/<dbname>?retryWrites=true&w=majority&tls=true
@@ -39,6 +39,12 @@ DB_URL=mongodb+srv://<username>:<password>@<cluster>.mongodb.net/<dbname>?retryW
 The URL should be the URL provided by MongoDB and the database should have a collection named `icons`.
 
 More info on setting up a free Atlas database on [MongoDB's documentation](https://docs.atlas.mongodb.com/getting-started/).
+
+Optionally, you can also set the `PORT` variable to change the port the server runs on (by default, it runs on port 5000):
+
+```bash
+PORT=5000
+```
 
 ### Build and run the app locally
 
@@ -62,10 +68,16 @@ yarn start-client
 
 <http://localhost:3000/> will be opened in your browser
 
-### Linting
+### Show linting errors
 
 ```bash
 yarn lint
+```
+
+### Fix linting errors
+
+```bash
+yarn fix
 ```
 
 ### Commit style guide

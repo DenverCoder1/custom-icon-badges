@@ -12,6 +12,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Install modules
-      run: yarn && yarn install-client
+      run: yarn install-modules
     - name: Run lint script
       run: yarn lint

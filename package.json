@@ -25,12 +25,13 @@
   "scripts": {
     "start-client": "react-scripts start",
     "start": "cd server && yarn start",
-    "build": "yarn install && react-scripts build && (cd server && yarn install && yarn build)",
+    "build": "yarn install && react-scripts build && (cd server && yarn build)",
     "test": "react-scripts test --transformIgnorePatterns 'node_modules/(?!(react-github-btn|react-bootstrap))'",
     "eject": "react-scripts eject",
-    "lint": "yarn eslint . --ext .ts,.tsx",
-    "fix": "yarn eslint . --ext .ts,.tsx --fix",
-    "dev": "yarn lint && yarn build && yarn start"
+    "lint": "yarn eslint . --ext .ts,.tsx && cd server && yarn lint",
+    "fix": "yarn eslint . --ext .ts,.tsx --fix && cd server && yarn fix",
+    "dev": "yarn lint && yarn build && yarn start",
+    "install-modules": "yarn install && (cd server && yarn install)"
   },
   "browserslist": {
     "production": [

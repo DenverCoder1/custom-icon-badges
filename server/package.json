@@ -39,7 +39,7 @@
   "type": "module",
   "scripts": {
     "start": "node dist/index.js",
-    "build": "yarn tsc",
+    "build": "yarn install && yarn tsc",
     "test": "exit 0",
     "lint": "yarn eslint . --ext .ts,.tsx",
     "fix": "yarn eslint . --ext .ts,.tsx --fix"

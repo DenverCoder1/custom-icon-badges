@@ -4,11 +4,11 @@ import {
   fetchBadgeFromRequest,
   fetchDefaultBadge,
   fetchErrorBadge,
-} from '../services/fetchBadges';
-import IconDatabaseService from '../services/icons/iconDatabase';
-import OcticonsService from '../services/icons/OcticonsService';
-import FeatherIconsService from '../services/icons/FeatherIconsService';
-import IconsService from '../services/icons/IconsService';
+} from '../services/fetchBadges.js';
+import IconDatabaseService from '../services/icons/iconDatabase.js';
+import OcticonsService from '../services/icons/OcticonsService.js';
+import FeatherIconsService from '../services/icons/FeatherIconsService.js';
+import IconsService from '../services/icons/IconsService.js';
 
 /**
  * List all icons in the database

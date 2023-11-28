@@ -1,65 +1,50 @@
 {
-  "name": "custom-icon-badges",
+  "name": "custom-icon-badges-client",
   "version": "0.12.1",
-  "description": "Allows users to more easily use their own icons and logos in shields.io badges",
-  "author": "Jonah Lawrence",
-  "license": "MIT",
+  "private": true,
   "dependencies": {
-    "@primer/octicons": "^19.8.0",
-    "body-parser": "^1.20.2",
-    "concurrently": "^8.2.2",
-    "cors": "^2.8.5",
-    "dotenv": "^16.3.1",
-    "express": "^4.18.2",
-    "express-rate-limit": "^7.1.3",
-    "feather-icons": "^4.29.1",
-    "monk": "^7.3.4",
-    "node-fetch": "^3.3.2",
-    "qs": "^6.11.2",
-    "typescript": "^5.1.6",
-    "web-vitals": "^3.5.0"
+    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.5.1",
+    "@types/jest": "^29.5.7",
+    "@types/node": "^20.8.10",
+    "@types/react": "^18.2.35",
+    "@types/react-dom": "^18.2.14",
+    "bootstrap": "^5.3.2",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.9.1",
+    "react-dom": "^18.2.0",
+    "react-github-btn": "^1.4.0",
+    "react-scripts": "^5.0.1",
+    "typescript": "^5.1.6"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.2",
-    "@babel/eslint-parser": "^7.22.15",
-    "@types/express": "^4.17.20",
-    "@types/feather-icons": "^4.29.3",
-    "@types/primer__octicons": "^19.6.2",
-    "@typescript-eslint/eslint-plugin": "^4.33.0",
-    "@typescript-eslint/parser": "^4.33.0",
-    "eslint": "^7.32.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-react-app": "^7.0.1",
-    "eslint-plugin-import": "^2.29.0",
-    "eslint-plugin-jsx-a11y": "^6.8.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react": "^7.33.2"
+    "react-test-renderer": "^18.2.0",
+    "sass": "^1.69.5"
   },
-  "type": "module",
   "scripts": {
-    "install-client": "cd client && yarn",
-    "build": "tsc && cd client && yarn build",
-    "heroku-postbuild": "yarn install-client && yarn heroku-postbuild-client && yarn build",
-    "heroku-postbuild-client": "cd client && npm rebuild node-sass",
-    "dev": "yarn lint && yarn build && yarn start",
-    "start": "NODE_OPTIONS='--experimental-specifier-resolution=node --require dotenv/config' node dist/index.js",
-    "start-client": "cd client && yarn start",
-    "test": "yarn test-server && yarn test-client",
-    "test-server": "exit 0",
-    "test-client": "cd client && yarn test",
-    "lint": "yarn lint-server && yarn lint-client",
-    "lint-server": "yarn eslint . --ext .ts,.tsx",
-    "lint-client": "cd client && yarn lint",
-    "fix": "yarn fix-server && yarn fix-client",
-    "fix-server": "yarn eslint . --ext .ts,.tsx --fix",
-    "fix-client": "cd client && yarn fix"
+    "start-client": "react-scripts start",
+    "start": "cd server && yarn start",
+    "build": "yarn install && react-scripts build && (cd server && yarn install && yarn build)",
+    "test": "react-scripts test --transformIgnorePatterns 'node_modules/(?!(react-github-btn|react-bootstrap))'",
+    "eject": "react-scripts eject",
+    "lint": "yarn eslint . --ext .ts,.tsx",
+    "fix": "yarn eslint . --ext .ts,.tsx --fix",
+    "dev": "yarn lint && yarn build && yarn start"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DenverCoder1/custom-icon-badges.git"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
-  "bugs": {
-    "url": "https://github.com/DenverCoder1/custom-icon-badges/issues"
+  "resolutions": {
+    "autoprefixer": "10.4.5"
   }
 }

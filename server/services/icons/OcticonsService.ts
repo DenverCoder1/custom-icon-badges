@@ -1,6 +1,6 @@
 import octicons, { IconName } from '@primer/octicons';
-import IconsService from './IconsService';
-import { normalizeColor } from '../logoColor';
+import IconsService from './IconsService.js';
+import { normalizeColor } from '../logoColor.js';
 
 class OcticonsService extends IconsService {
   public static async getIcon(slug: string, color: string|null = null):

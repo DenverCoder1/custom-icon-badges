@@ -4,37 +4,28 @@
         "es2021": true
     },
     "extends": [
-        "airbnb-base"
+        "plugin:react/recommended",
+        "react-app",
+        "react-app/jest"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
         "ecmaVersion": 12,
         "sourceType": "module"
     },
     "plugins": [
+        "react",
         "@typescript-eslint"
     ],
     "rules": {
-        "no-console": "off",
-        "no-restricted-syntax": [
-            "error",
-            {
-                "selector": "CallExpression[callee.object.name='console'][callee.property.name!=/^(log|warn|error|info|trace)$/]",
-                "message": "Unexpected property on console object was called"
-            }
-        ],
         "import/no-unresolved": "off",
         "import/extensions": "off",
+        "import/first": "off",
+        "no-unused-expressions": "off",
         "no-underscore-dangle": "off",
-        "function-paren-newline": [
-            "error",
-            "consistent"
-        ],
-        "max-len": [
-            "warn",
-            {
-                "code": 180
-            }
-        ]
+        "react/jsx-filename-extension": "off"
     }
 }

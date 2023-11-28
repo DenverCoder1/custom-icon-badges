@@ -1,6 +1,6 @@
 import monk, { FindResult } from 'monk';
-import IconsService from './IconsService';
-import { setLogoColor } from '../logoColor';
+import IconsService from './IconsService.js';
+import { setLogoColor } from '../logoColor.js';
 
 const DB_NAME = 'custom-icon-badges';
 const DB_URL = process.env.DB_URL ?? `mongodb://localhost:27017/${DB_NAME}`;

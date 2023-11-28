@@ -5,15 +5,15 @@ import rateLimit from 'express-rate-limit';
 import router from './routes/routes.js';
 
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
-dotenv.config({path: path.join(__dirname, '.env')});
+dotenv.config({ path: path.join(__dirname, '.env') });
 
 const PORT = process.env.PORT || 5000;
-const BUILD_PATH = path.resolve( '..', 'build');
+const BUILD_PATH = path.resolve('..', 'build');
 
 const app = express();
 app.set('trust proxy', 1);
 app.use(express.json());
-app.use(express.static(BUILD_PATH)); //For the production server
+app.use(express.static(BUILD_PATH)); // For the production server
 app.use(router);
 
 // set rate limit on post requests
@@ -45,15 +45,13 @@ const server = app.listen(PORT, () => {
   console.log(`Server listening at port ${PORT}`);
 });
 
-//Must get at the end of the file!
+// Must get at the end of the file!
 /*
     Endpoint: /
     Returns as the response: The base webpage of the site.
 */
-app.get('/*', function (req, res)
-{
-	res.sendFile(path.join(BUILD_PATH, "index.html"));
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(BUILD_PATH, 'index.html'));
 });
-
 
 export default server;

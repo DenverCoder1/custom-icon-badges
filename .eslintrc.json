@@ -1,31 +1,24 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["plugin:react/recommended", "react-app", "react-app/jest"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "extends": [
-        "plugin:react/recommended",
-        "react-app",
-        "react-app/jest"
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": 12,
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react",
-        "@typescript-eslint"
-    ],
-    "rules": {
-        "import/no-unresolved": "off",
-        "import/extensions": "off",
-        "import/first": "off",
-        "no-unused-expressions": "off",
-        "no-underscore-dangle": "off",
-        "react/jsx-filename-extension": "off"
-    }
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint"],
+  "rules": {
+    "import/no-unresolved": "off",
+    "import/extensions": "off",
+    "import/first": "off",
+    "no-unused-expressions": "off",
+    "no-underscore-dangle": "off",
+    "react/jsx-filename-extension": "off"
+  }
 }

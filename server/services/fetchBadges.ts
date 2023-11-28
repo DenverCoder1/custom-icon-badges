@@ -33,7 +33,9 @@ async function fetchUrl(url: string): Promise<Response> {
  * @returns {string} query string
  */
 function buildQueryString(parsedQs: ParsedQs): string {
-  return Object.keys(parsedQs).map((key) => `${key}=${encodeURIComponent(parsedQs[key] as string)}`).join('&');
+  return Object.keys(parsedQs)
+    .map((key) => `${key}=${encodeURIComponent(parsedQs[key] as string)}`)
+    .join('&');
 }
 
 /**
@@ -55,10 +57,8 @@ function replacedLogoQuery(req: Request, type: string, data: string): ParsedQs {
  * @param {Request} req request object
  * @param {Object} item data about the icon or null if not found
  * @returns {string} query string
-*/
-function buildQueryStringFromItem(
-  req: Request, item: { slug: string, type: string, data: string } | null,
-): string {
+ */
+function buildQueryStringFromItem(req: Request, item: { slug: string; type: string; data: string } | null): string {
   // if item not found build query string from request params
   if (item === null) {
     return buildQueryString(req.query);
@@ -78,10 +78,7 @@ function buildQueryStringFromItem(
  * @returns {boolean} True if host is valid, otherwise false
  */
 function isValidHost(host: string): boolean {
-  const validHosts = [
-    'img.shields.io',
-    'staging.shields.io',
-  ];
+  const validHosts = ['img.shields.io', 'staging.shields.io'];
   return validHosts.includes(host);
 }
 
@@ -91,11 +88,11 @@ function isValidHost(host: string): boolean {
  * @param {Object} item data about the icon or null if not found
  * @returns {string} url to badge
  */
-function getBadgeUrl(
-  req: Request, item: { slug: string, type: string, data: string } | null,
-): string {
+function getBadgeUrl(req: Request, item: { slug: string; type: string; data: string } | null): string {
   // build url using request params and query
-  const params = Object.values(req.params).map((p) => encodeURIComponent(p)).join('/');
+  const params = Object.values(req.params)
+    .map((p) => encodeURIComponent(p))
+    .join('/');
   const userHost = req.query.host;
   const host = typeof userHost === 'string' && isValidHost(userHost) ? userHost : 'img.shields.io';
   const queryString = buildQueryStringFromItem(req, item);
@@ -110,7 +107,8 @@ function getBadgeUrl(
  * @throws {BadgeError} if fetch fails
  */
 function fetchBadgeFromRequest(
-  req: Request, item: { slug: string, type: string, data: string } | null,
+  req: Request,
+  item: { slug: string; type: string; data: string } | null,
 ): Promise<Response> {
   // get shields url
   const url = getBadgeUrl(req, item);
@@ -146,8 +144,5 @@ function fetchErrorBadge(message: string): Promise<Response> {
 }
 
 export {
-  BadgeError,
-  fetchBadgeFromRequest,
-  fetchDefaultBadge,
-  fetchErrorBadge,
+  BadgeError, fetchBadgeFromRequest, fetchDefaultBadge, fetchErrorBadge,
 };

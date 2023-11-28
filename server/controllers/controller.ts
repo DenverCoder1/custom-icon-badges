@@ -1,9 +1,6 @@
 import { Request, Response } from 'express';
 import {
-  BadgeError,
-  fetchBadgeFromRequest,
-  fetchDefaultBadge,
-  fetchErrorBadge,
+  BadgeError, fetchBadgeFromRequest, fetchDefaultBadge, fetchErrorBadge,
 } from '../services/fetchBadges.js';
 import IconDatabaseService from '../services/icons/iconDatabase.js';
 import OcticonsService from '../services/icons/OcticonsService.js';
@@ -44,7 +41,7 @@ async function getBadge(req: Request, res: Response): Promise<void> {
         feather: FeatherIconsService,
       }[logoSource] ?? OcticonsService;
       // default to database if logoSource is not in the requested source
-      item = await iconService.getIcon(slug, logoColor) ?? await IconDatabaseService.getIcon(slug, logoColor);
+      item = (await iconService.getIcon(slug, logoColor)) ?? (await IconDatabaseService.getIcon(slug, logoColor));
     }
     // get badge for item
     response = await fetchBadgeFromRequest(req, item);
@@ -60,7 +57,10 @@ async function getBadge(req: Request, res: Response): Promise<void> {
   // get content type
   const contentType = response.headers.get('content-type') ?? 'image/svg+xml';
   // send response
-  res.status(response.status).type(contentType).send(await response.text());
+  res
+    .status(response.status)
+    .type(contentType)
+    .send(await response.text());
 }
 
 /**
@@ -69,7 +69,7 @@ async function getBadge(req: Request, res: Response): Promise<void> {
  * @param {Response} res The response object
  */
 async function postIcon(req: Request, res: Response): Promise<void> {
-  const { slug, type, data }: { slug: string, type: string, data: string } = req.body;
+  const { slug, type, data }: { slug: string; type: string; data: string } = req.body;
 
   // Check for missing fields in the request
   if (!slug || !type || !data) {
@@ -84,7 +84,11 @@ async function postIcon(req: Request, res: Response): Promise<void> {
   console.info(`Received icon for ${slug}`);
 
   // get the badge for item data
-  const logoBadgeResponse = await fetchBadgeFromRequest(req, { slug, type, data });
+  const logoBadgeResponse = await fetchBadgeFromRequest(req, {
+    slug,
+    type,
+    data,
+  });
   // if the response is 414, the icon is too big
   if (logoBadgeResponse.status === 414) {
     res.status(logoBadgeResponse.status).json({
@@ -105,7 +109,7 @@ async function postIcon(req: Request, res: Response): Promise<void> {
   }
 
   // check for slug in the database
-  const item = await OcticonsService.getIcon(slug) ?? await IconDatabaseService.getIcon(slug);
+  const item = (await OcticonsService.getIcon(slug)) ?? (await IconDatabaseService.getIcon(slug));
 
   // Get default badge with the logo set to the slug
   const defaultBadgeResponse = await fetchDefaultBadge(slug);

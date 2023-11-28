@@ -29,6 +29,6 @@
     "build": "yarn install && yarn tsc",
     "test": "exit 0",
     "lint": "yarn eslint . --ext .ts,.tsx",
-    "fix": "yarn eslint . --ext .ts,.tsx --fix"
+    "lint:fix": "yarn eslint . --ext .ts,.tsx --fix"
   }
 }

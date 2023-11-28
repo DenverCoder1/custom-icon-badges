@@ -48,7 +48,7 @@
     "test": "react-scripts test --transformIgnorePatterns 'node_modules/(?!(react-github-btn|react-bootstrap))'",
     "eject": "react-scripts eject",
     "lint": "yarn eslint . --ext .ts,.tsx && cd server && yarn lint",
-    "fix": "yarn eslint . --ext .ts,.tsx --fix && cd server && yarn fix",
+    "lint:fix": "yarn eslint . --ext .ts,.tsx --fix && cd server && yarn lint:fix",
     "dev": "yarn lint && yarn build && yarn start",
     "install-all": "yarn install && cd server && yarn install"
   },

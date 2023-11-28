@@ -66,22 +66,22 @@ All [250+ Feather Icons](https://feathericons.com/) are supported by Custom Icon
 
 **Note:** To use Feather Icons, you must use add the query parameter `logoSource=feather` to the URL in addition to the `logo` parameter.
 
-| Slug               | Example                                       |
-| ------------------ | --------------------------------------------- |
-| `activity`         | [![activity][activity]][activity]             |
-| `alert-triangle`          | [![alert-triangle][alert-triangle]][alert-triangle]                |
-| `award`             | [![award][award]][award]                         |
-| `bar-chart`        | [![bar-chart][bar-chart]][bar-chart]          |
-| `box`              | [![box][box]][box]                            |
-| `camera`         | [![camera][camera]][camera]             |
-| `cast`             | [![cast][cast]][cast]                         |
-| `command`          | [![command][command]][command]                |
-| `dollar-sign`             | [![dollar-sign][dollar-sign]][dollar-sign]                         |
-| `download-cloud`           | [![download-cloud][download-cloud]][download-cloud]                   |
-| `upload-cloud`     | [![upload-cloud][upload-cloud]][upload-cloud] |
-| `tv`               | [![tv][tv]][tv]                               |
-| `youtube`          | [![youtube][youtube]][youtube]                |
-| More Feather Icons | [View all ⇨](https://feathericons.com/)       |
+| Slug               | Example                                             |
+| ------------------ | --------------------------------------------------- |
+| `activity`         | [![activity][activity]][activity]                   |
+| `alert-triangle`   | [![alert-triangle][alert-triangle]][alert-triangle] |
+| `award`            | [![award][award]][award]                            |
+| `bar-chart`        | [![bar-chart][bar-chart]][bar-chart]                |
+| `box`              | [![box][box]][box]                                  |
+| `camera`           | [![camera][camera]][camera]                         |
+| `cast`             | [![cast][cast]][cast]                               |
+| `command`          | [![command][command]][command]                      |
+| `dollar-sign`      | [![dollar-sign][dollar-sign]][dollar-sign]          |
+| `download-cloud`   | [![download-cloud][download-cloud]][download-cloud] |
+| `upload-cloud`     | [![upload-cloud][upload-cloud]][upload-cloud]       |
+| `tv`               | [![tv][tv]][tv]                                     |
+| `youtube`          | [![youtube][youtube]][youtube]                      |
+| More Feather Icons | [View all ⇨](https://feathericons.com/)             |
 
 [activity]: https://custom-icon-badges.demolab.com/badge/activity-red.svg?logo=activity&logoSource=feather
 [alert-triangle]: https://custom-icon-badges.demolab.com/badge/alert--triangle-orange.svg?logo=alert-triangle&logoSource=feather
@@ -201,8 +201,8 @@ By default, fetching a badge from Custom Icon Badges will use [`img.shields.io`]
 
 You can set the `host` parameter to one of the following to override the hostname of the badge URL:
 
--   [`img.shields.io`](https://img.shields.io)
--   [`staging.shields.io`](https://staging.shields.io)
+- [`img.shields.io`](https://img.shields.io)
+- [`staging.shields.io`](https://staging.shields.io)
 
 If you would like to use a different badge host, fork and modify this repository. Create a PR if it may be useful to others.
 

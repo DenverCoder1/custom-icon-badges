@@ -3,8 +3,10 @@ import IconsService from './IconsService.js';
 import { normalizeColor } from '../logoColor.js';
 
 class OcticonsService extends IconsService {
-  public static async getIcon(slug: string, color: string|null = null):
-        Promise<{ slug: string; type: string; data: string } | null> {
+  public static async getIcon(
+    slug: string,
+    color: string | null = null,
+  ): Promise<{ slug: string; type: string; data: string } | null> {
     const normalized = slug.toLowerCase();
     if (!(normalized in octicons)) {
       return null;

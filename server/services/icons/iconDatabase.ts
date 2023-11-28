@@ -1,6 +1,10 @@
+import dotenv from 'dotenv';
 import monk, { FindResult } from 'monk';
-import IconsService from './IconsService';
-import { setLogoColor } from '../logoColor';
+import path from 'path';
+import IconsService from './IconsService.js';
+import { setLogoColor } from '../logoColor.js';
+
+dotenv.config({ path: path.resolve('..', '.env') });
 
 const DB_NAME = 'custom-icon-badges';
 const DB_URL = process.env.DB_URL ?? `mongodb://localhost:27017/${DB_NAME}`;
@@ -10,8 +14,10 @@ icons.createIndex({ slug: 1 }, { unique: true });
 
 class IconDatabaseService extends IconsService {
   // eslint-disable-next-line no-unused-vars
-  public static async getIcon(slug: string, color: string|null = null):
-        Promise<{ slug: string; type: string; data: string } | null> {
+  public static async getIcon(
+    slug: string,
+    color: string | null = null,
+  ): Promise<{ slug: string; type: string; data: string } | null> {
     // find slug in database, returns null if not found
     const icon = await icons.findOne({ slug: slug.toLowerCase() });
     // return null if not found
@@ -35,8 +41,11 @@ class IconDatabaseService extends IconsService {
    * @param {string} data The base64 encoded data for the icon
    * @returns {Object} The icon data
    */
-  public static async insertIcon(slug: string, type: string, data: string):
-    Promise<{ slug: string, type: string, data: string }> {
+  public static async insertIcon(
+    slug: string,
+    type: string,
+    data: string,
+  ): Promise<{ slug: string; type: string; data: string }> {
     // create item
     const item = { slug: slug.toLowerCase(), type, data };
     // insert item
@@ -46,11 +55,10 @@ class IconDatabaseService extends IconsService {
   }
 
   /**
-  * Get all icons from the database
-  * @returns {FindResult} The icons in the database
-  */
-  public static async getIcons():
-    Promise<FindResult<{ slug: string, type: string, data: string }>> {
+   * Get all icons from the database
+   * @returns {FindResult} The icons in the database
+   */
+  public static async getIcons(): Promise<FindResult<{ slug: string; type: string; data: string }>> {
     // return all items
     return icons.find({}, { sort: { _id: -1 } });
   }

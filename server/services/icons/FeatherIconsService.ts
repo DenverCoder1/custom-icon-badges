@@ -1,10 +1,12 @@
 import feather, { FeatherIcon } from 'feather-icons';
-import IconsService from './IconsService';
-import { normalizeColor } from '../logoColor';
+import IconsService from './IconsService.js';
+import { normalizeColor } from '../logoColor.js';
 
 class FeatherIconsService extends IconsService {
-  public static async getIcon(slug: string, color: string|null = null):
-        Promise<{ slug: string; type: string; data: string } | null> {
+  public static async getIcon(
+    slug: string,
+    color: string | null = null,
+  ): Promise<{ slug: string; type: string; data: string } | null> {
     const normalized = slug.toLowerCase();
     if (!(normalized in feather.icons)) {
       return null;

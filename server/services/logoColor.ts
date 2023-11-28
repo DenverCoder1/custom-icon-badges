@@ -1,7 +1,7 @@
 /**
  * Color aliases from shields.io
  * https://github.com/badges/shields/blob/7d452472defa0e0bd71d6443393e522e8457f856/badge-maker/lib/color.js#L5-L26
-*/
+ */
 const namedColors: { [key: string]: string } = {
   brightgreen: '#4c1',
   green: '#97ca00',
@@ -28,7 +28,7 @@ const aliases: { [key: string]: string } = {
  * Check if color is a hex color without #
  * @param color color to check
  * @returns {boolean} whether the color is valid
-*/
+ */
 function isHexColor(color: string): boolean {
   return /^([\da-f]{3}){1,2}$/i.test(color);
 }
@@ -60,7 +60,7 @@ export function normalizeColor(color: string): string {
  * @param data base64 encoded svg
  * @param logoColor color to fill with
  * @returns {string} base64 encoded svg with fill color
-*/
+ */
 export function setLogoColor(data: string, logoColor: string): string {
   // decode base64
   const decoded = Buffer.from(data, 'base64').toString('utf8');

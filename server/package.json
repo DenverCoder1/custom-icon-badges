@@ -11,7 +11,7 @@
     "body-parser": "^1.20.2",
     "concurrently": "^8.2.2",
     "cors": "^2.8.5",
-    "dotenv": "^16.3.1",
+    "dotenv": "^16.4.1",
     "express": "^4.18.2",
     "express-rate-limit": "^7.1.5",
     "feather-icons": "^4.29.1",
@@ -19,7 +19,7 @@
     "node-fetch": "^3.3.2",
     "qs": "^6.11.2",
     "typescript": "^5.3.3",
-    "web-vitals": "^3.5.0"
+    "web-vitals": "^3.5.2"
   },
   "devDependencies": {
     "eslint": "^8.55.0"

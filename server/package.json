@@ -11,7 +11,7 @@
     "body-parser": "^1.20.2",
     "concurrently": "^8.2.2",
     "cors": "^2.8.5",
-    "dotenv": "^16.4.1",
+    "dotenv": "^16.4.5",
     "express": "^4.18.2",
     "express-rate-limit": "^7.1.5",
     "feather-icons": "^4.29.1",

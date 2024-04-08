@@ -28,8 +28,8 @@
     "typescript": "^5.1.6"
   },
   "devDependencies": {
-    "@babel/core": "^7.24.0",
-    "@babel/eslint-parser": "^7.23.10",
+    "@babel/core": "^7.24.4",
+    "@babel/eslint-parser": "^7.24.1",
     "eslint": "^8.57.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb": "^19.0.4",
@@ -39,7 +39,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react": "^7.34.1",
     "react-test-renderer": "^18.2.0",
-    "sass": "^1.72.0"
+    "sass": "^1.74.1"
   },
   "scripts": {
     "start-client": "react-scripts start",

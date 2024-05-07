@@ -33,3 +33,56 @@
 .icon-preview-interface .copy-url-btn {
   margin-top: 1rem;
 }
+
+/* Styles for the separate tab interface for the icon preview */
+.icon-tabs {
+  border-bottom: 1px solid #2c2f36;
+  padding-left: 0;
+  margin-bottom: 2rem;
+  list-style: none;
+  padding: 0;
+}
+
+.icon-tab {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.icon-tab a {
+  padding: 0.5rem 1rem;
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #24272e;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.icon-tab a:hover,
+.icon-tab a:focus,
+.icon-tab a.active {
+  color: #ffffff;
+  background-color: #1e212b;
+  border-color: #2c2f36;
+}
+
+.icon-tab-content {
+  border: 1px solid #2c2f36;
+  border-radius: 8px;
+  background-color: #24272e;
+  color: #ffffff;
+  padding: 1rem;
+  margin-top: -1px;
+}
+
+@media (max-width: 768px) {
+  .icon-tabs {
+    display: block;
+  }
+
+  .icon-tab {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+}

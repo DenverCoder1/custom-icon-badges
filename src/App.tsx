@@ -2,6 +2,7 @@ import React from 'react';
 import './App.scss';
 import UploadForm from './UploadForm';
 import GitHubButtons from './GitHubButtons';
+import IconPreviewInterface from './IconPreviewInterface';
 
 /**
  * The root component of the application
@@ -13,6 +14,7 @@ function App() {
         <h1>Custom Icon Badges</h1>
         <GitHubButtons user="DenverCoder1" repo="custom-icon-badges" />
         <UploadForm />
+        <IconPreviewInterface /> {/* */}
       </header>
     </div>
   );

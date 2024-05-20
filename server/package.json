@@ -19,7 +19,7 @@
     "node-fetch": "^3.3.2",
     "qs": "^6.12.1",
     "typescript": "^5.4.5",
-    "web-vitals": "^3.5.2"
+    "web-vitals": "^4.0.0"
   },
   "devDependencies": {
     "eslint": "^8.57.0"

@@ -86,10 +86,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@primer/octicons@^19.9.0":
-  version "19.9.0"
-  resolved "https://registry.yarnpkg.com/@primer/octicons/-/octicons-19.9.0.tgz#c56c381989664c96b50edf1c8cdbeb377bcc7ebb"
-  integrity sha512-uAZa9cMgWkzbEsZnYWB7tg0vt7QprubD7ljtprz2fBJ8CjyqoxFRRsFvH4UiJdjK/3o87ODgDkhiflyJXDh+Lg==
+"@primer/octicons@^19.10.0":
+  version "19.10.0"
+  resolved "https://registry.yarnpkg.com/@primer/octicons/-/octicons-19.10.0.tgz#633d8777ed6bf37f53ddc188949a8961b8cf34c4"
+  integrity sha512-9eyr8PimExAIosTLyiSBDdnAol9EwIL55mUCJMYcvg85NaCxWoSSyC6dNFmNnfxxLWHR+8u+bg5Ve8onckn3aQ==
   dependencies:
     object-assign "^4.1.1"
 
@@ -616,10 +616,10 @@ etag@~1.8.1:
   version "1.8.1"
   resolved "https://registry.npmjs.org/etag/-/etag-1.8.1.tgz"
 
-express-rate-limit@^7.2.0:
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/express-rate-limit/-/express-rate-limit-7.2.0.tgz#06ce387dd5388f429cab8263c514fc07bf90a445"
-  integrity sha512-T7nul1t4TNyfZMJ7pKRKkdeVJWa2CqB8NA1P8BwYaoDI5QSBZARv5oMS43J7b7I5P+4asjVXjb7ONuwDKucahg==
+express-rate-limit@^7.3.1:
+  version "7.3.1"
+  resolved "https://registry.yarnpkg.com/express-rate-limit/-/express-rate-limit-7.3.1.tgz#c0887ba746cdd358d17b8ab63d6eba1bae0f670b"
+  integrity sha512-BbaryvkY4wEgDqLgD18/NSy2lDO2jTuT9Y8c1Mpx0X63Yz0sYd5zN6KPe7UvpuSVvV33T6RaE1o1IVZQjHMYgw==
 
 express@^4.19.2:
   version "4.19.2"
@@ -1472,10 +1472,10 @@ type-is@~1.6.18:
     media-typer "0.3.0"
     mime-types "~2.1.24"
 
-typescript@^5.4.5:
-  version "5.4.5"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.4.5.tgz#42ccef2c571fdbd0f6718b1d1f5e6e5ef006f611"
-  integrity sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==
+typescript@^5.5.2:
+  version "5.5.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.5.2.tgz#c26f023cb0054e657ce04f72583ea2d85f8d0507"
+  integrity sha512-NcRtPEOsPFFWjobJEtfihkLCZCXZt/os3zf8nTxjVH3RvTSxjrCamJpbExGvYOF+tFHc3pA65qpdwPbzjohhew==
 
 unpipe@1.0.0, unpipe@~1.0.0:
   version "1.0.0"

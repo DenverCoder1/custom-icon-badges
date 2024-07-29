@@ -616,10 +616,10 @@ etag@~1.8.1:
   version "1.8.1"
   resolved "https://registry.npmjs.org/etag/-/etag-1.8.1.tgz"
 
-express-rate-limit@^7.3.1:
-  version "7.3.1"
-  resolved "https://registry.yarnpkg.com/express-rate-limit/-/express-rate-limit-7.3.1.tgz#c0887ba746cdd358d17b8ab63d6eba1bae0f670b"
-  integrity sha512-BbaryvkY4wEgDqLgD18/NSy2lDO2jTuT9Y8c1Mpx0X63Yz0sYd5zN6KPe7UvpuSVvV33T6RaE1o1IVZQjHMYgw==
+express-rate-limit@^7.4.0:
+  version "7.4.0"
+  resolved "https://registry.yarnpkg.com/express-rate-limit/-/express-rate-limit-7.4.0.tgz#5db412b8de83fa07ddb40f610c585ac8c1dab988"
+  integrity sha512-v1204w3cXu5gCDmAvgvzI6qjzZzoMWKnyVDk3ACgfswTQLYiGen+r8w0VnXnGMmzEN/g8fwIQ4JrFFd4ZP6ssg==
 
 express@^4.19.2:
   version "4.19.2"
@@ -1472,10 +1472,10 @@ type-is@~1.6.18:
     media-typer "0.3.0"
     mime-types "~2.1.24"
 
-typescript@^5.5.3:
-  version "5.5.3"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.5.3.tgz#e1b0a3c394190838a0b168e771b0ad56a0af0faa"
-  integrity sha512-/hreyEujaB0w76zKo6717l3L0o/qEUtRgdvUBvlkhoWeOVMjMuHNHk0BRBzikzuGDqNmPQbg5ifMEqsHLiIUcQ==
+typescript@^5.5.4:
+  version "5.5.4"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.5.4.tgz#d9852d6c82bad2d2eda4fd74a5762a8f5909e9ba"
+  integrity sha512-Mtq29sKDAEYP7aljRgtPOpTvOfbwRWlS6dPRzwjdE+C0R4brX/GUyhHSecbHMFLNBLcJIPt9nl9yG5TZ1weH+Q==
 
 unpipe@1.0.0, unpipe@~1.0.0:
   version "1.0.0"

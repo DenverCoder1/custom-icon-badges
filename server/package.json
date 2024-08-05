@@ -17,7 +17,7 @@
     "feather-icons": "^4.29.2",
     "monk": "^7.3.4",
     "node-fetch": "^3.3.2",
-    "qs": "^6.12.3",
+    "qs": "^6.13.0",
     "typescript": "^5.5.4",
     "web-vitals": "^4.2.2"
   },

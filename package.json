@@ -28,7 +28,7 @@
     "typescript": "^5.5.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.24.9",
+    "@babel/core": "^7.25.2",
     "@babel/eslint-parser": "^7.25.1",
     "eslint": "^8.57.0",
     "eslint-config-airbnb-base": "^15.0.0",

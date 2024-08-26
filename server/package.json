@@ -22,7 +22,7 @@
     "web-vitals": "^4.2.3"
   },
   "devDependencies": {
-    "eslint": "^8.57.0"
+    "eslint": "^9.9.1"
   },
   "scripts": {
     "start": "node dist/index.js",

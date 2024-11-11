@@ -9,7 +9,7 @@
     "@types/feather-icons": "^4.29.3",
     "@types/primer__octicons": "^19.11.0",
     "body-parser": "^1.20.3",
-    "concurrently": "^9.0.1",
+    "concurrently": "^9.1.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",

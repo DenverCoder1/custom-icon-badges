@@ -79,10 +79,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@primer/octicons@^19.13.0":
-  version "19.13.0"
-  resolved "https://registry.yarnpkg.com/@primer/octicons/-/octicons-19.13.0.tgz#ec7e7b2cbd6f4775fba38e38c27045e9f8d32e7f"
-  integrity sha512-U5g7Bv89At8qFXUy9MQlOUs4iPXR5XR4QPnSZWhmOn2oCgwf4LjdvfC+8OzhUFx2wC8k9TbRRAMVuCkqFLPlfQ==
+"@primer/octicons@^19.14.0":
+  version "19.14.0"
+  resolved "https://registry.yarnpkg.com/@primer/octicons/-/octicons-19.14.0.tgz#6885734d30ae39978f07d103534a84258c82313e"
+  integrity sha512-9Ovw/xcUFHC/zbsNhr/Hkp1+m9XnNeQvnGHDHrI5vhlf6PRZVzSsdMnesV2xCzQh7jXP3EVRcaeXsUGlsZrfcA==
   dependencies:
     object-assign "^4.1.1"
 
@@ -605,10 +605,10 @@ etag@~1.8.1:
   version "1.8.1"
   resolved "https://registry.npmjs.org/etag/-/etag-1.8.1.tgz"
 
-express-rate-limit@^7.4.1:
-  version "7.4.1"
-  resolved "https://registry.yarnpkg.com/express-rate-limit/-/express-rate-limit-7.4.1.tgz#90954ecbcde9e7ae7b5000325395f86991191d94"
-  integrity sha512-KS3efpnpIDVIXopMc65EMbWbUht7qvTCdtCR2dD/IZmi9MIkopYESwyRqLgv8Pfu589+KqDqOdzJWW7AHoACeg==
+express-rate-limit@^7.5.0:
+  version "7.5.0"
+  resolved "https://registry.yarnpkg.com/express-rate-limit/-/express-rate-limit-7.5.0.tgz#6a67990a724b4fbbc69119419feef50c51e8b28f"
+  integrity sha512-eB5zbQh5h+VenMPM3fh+nw1YExi5nMr6HUCR62ELSP11huvxm/Uir1H1QEyTkk5QX6A58pX6NmaTMceKZ0Eodg==
 
 express@^4.21.2:
   version "4.21.2"

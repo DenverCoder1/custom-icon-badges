@@ -9,7 +9,7 @@
     "@types/feather-icons": "^4.29.3",
     "@types/primer__octicons": "^19.11.0",
     "body-parser": "^1.20.3",
-    "concurrently": "^9.1.1",
+    "concurrently": "^9.1.2",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
@@ -18,7 +18,7 @@
     "monk": "^7.3.4",
     "node-fetch": "^3.3.2",
     "qs": "^6.13.1",
-    "typescript": "^5.7.2",
+    "typescript": "^5.7.3",
     "web-vitals": "^4.2.4"
   },
   "devDependencies": {

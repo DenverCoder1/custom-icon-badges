@@ -168,7 +168,7 @@ Click to get the URL!
 [![use template][23]][23]
 [![github action][24]][24]
 
-[1]: https://custom-icon-badges.demolab.com/github/stars/DenverCoder1/custom-icon-badges?logo=star
+[1]: https://custom-icon-badges.demolab.com/github/stars/DenverCoder1/custom-icon-badges?logo=star&logoColor=black
 [2]: https://custom-icon-badges.demolab.com/github/issues-raw/DenverCoder1/custom-icon-badges?logo=issue
 [3]: https://custom-icon-badges.demolab.com/github/license/denvercoder1/custom-icon-badges?logo=law
 [4]: https://custom-icon-badges.demolab.com/github/actions/workflow/status/DenverCoder1/custom-icon-badges/ci.yml?branch=main&logo=check-circle-fill&logoColor=white
